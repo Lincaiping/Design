@@ -1,0 +1,48 @@
+
+/*loading*/
+.thickdiv{position:fixed !important;_position:absolute;top:0;left:0;z-index:10000001;width:100%;background:#000;border:0;opacity:0.20;filter:alpha(opacity=20);}
+.loadingStyle{ background:url(../../../images/newImages/front_loding.png) no-repeat;width:260px;height:50px;z-index:10000003;position:absolute;left:500px;padding:5px;}
+.loadingStyle img{width:115px; vertical-align:middle;}
+.loadingStyle1 b{background:url(../../../newImages/images/load1.gif) no-repeat 50% 50%;}
+.loadingStyle1{width:126px;margin:10px auto;text-align:center;color:#999}
+.loadingStyle1 b{display:block;width:24px;height:24px;margin:0 auto 5px;}
+.loadingStyle2 b{background:url(../../../newImages/images/loading.gif) no-repeat 50% 50%;}
+.loadingStyle2{width:126px;margin:120px auto;text-align:center;color:#999;}
+.loadingStyle2 b {display:block;width:32px;height:32px;margin:0 auto 5px;}
+
+
+.loadingStyle_300{ background:#fff;width:300px;height:150px;z-index:10000003;position:absolute;left:500px;padding:5px;border-radius:10px;-webkit-box-shadow: 5px 5px 15px #999;-moz-box-shadow: 5px 5px 15px #999;box-shadow: 5px 5px 15px #999;}
+.loadingStyle_300 .regList {  margin: 25px auto 15px auto; font-size:14px; color:#333;}
+.loadingStyle_300 .regList dl{ }
+.loadingStyle_300 .regList dl input{ border-left:1px solid #d0d0d0; border-top:1px solid #d0d0d0; border-right:1px solid #f3f1f1;  border-bottom:1px solid #f3f1f1; padding-top:5px; line-height:25px; height:25px; margin:0;  font-size:14px; text-indent:5px; }
+.loadingStyle_300 .regList dl dt{ width:110px; text-align:right; float:left; line-height:30px;}
+.loadingStyle_300 .regList i{ font-style:normal;}
+.loadingStyle_300 .regList dl dd{ padding-bottom:20px; text-align:left;  line-height:30px; color:#666; }
+.loadingStyle_300 .regList dl a{ color:#f60; text-decoration:none; display: inline-block;  margin-left:10px;}
+.loadingStyle_300 .regList dl button{ padding: 5px 0; border:none; cursor:pointer; border-radius:3px;  color:#fff; font-size:16px; }
+.loadingStyle_300 .regList dl .orange{ background:#ff3c3c;}
+.loadingStyle_300 .regList dl .orange:hover{background:#444; }
+.loadingStyle_300 .regList .enterBtn{margin-top:30px;}
+
+/*浮动框*/
+.floatWin {
+  background-color: #fff;
+  position: absolute !important;
+  z-index: 10000003;
+  display: block !important;
+  -webkit-box-shadow: 0 0 3px 3px #dedede;
+  border-radius: 5px;
+}
+
+.thickdiv2 {
+  position: fixed !important;
+  _position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000010;
+  width: 100%;
+  background: #000;
+  border: 0;
+  opacity: 0.20;
+  filter: alpha(opacity=20);
+}

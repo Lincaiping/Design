@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+/*个人中心_手机绑定 begin*/
+.pc_kqgb2{width:100%;height:auto;float:left;margin-top:20px;margin-bottom:20px;}
+.phone_wz01{color:#918f8f;font-size:16px;text-align:center;}
+.phone_wz02{padding-left:60px;color:#918f8f;font-size:14px;}
+.phone_wz03{color:#918f8f;font-size:28px;text-align:center;}
+.phone_sjctw{font-weight:600;font-size:28px;}
+.phone_nr{width:100%;height:auto;float:left;}
+.phone_alj{display:block;height:32px;padding:0 6px;float:left;margin-left:6px;background:#d8d3d3;font-size:12px;color:#848080;}
+.phone_button{width:100%;height:70px;float:left;margin-top:20px;line-height:32px;font-size:14px;}
+.phone_bd{display:block;text-align:center;border-radius:10px;height:50px;padding:10px 30px;line-height:50px;background:#ff6600;color:#ffffff;width:86%;font-size:30px;margin: 10px auto;}
+.phone_back{display:block;text-align:center;border-radius:10px;height:50px;padding:10 30px;line-height:50px;background:#ff6600;color:#ffffff;width:86%;font-size:30px;margin: 10px auto;}
+.phone_button02{width: 86%;margin: 20px auto;}
+/*个人中心_手机绑定 over*/
+
+.pc_tgsj{width:440px;height:auto;float:left;margin-top:20px;}
+.pc_tgsj ul{margin:0;padding:0;display:block;width:100%;height:32px;float:left;padding-bottom:20px;}
+.pc_tgsj ul li{display:block;width:50%;height:32px;float:left;line-height:32px;text-align:center;font-size:14px;}
+.pc_tgsj ul li a{display:block;color:#ffffff;}
+
+.pc_dxYzm,.pc_dijiao{width:100%;height:32px;float:left;margin-top:10px;line-height:32px;font-size:14px;}
+.pc_dxYzm input{border:0;display:block;width:210px;height:32px;line-height:32px;float:left;padding-left:10px;background:#d8d3d3;font-size:14px;}

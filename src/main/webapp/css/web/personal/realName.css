@@ -1,0 +1,3 @@
+@CHARSET "UTF-8";
+.phone_button{width:100%;height:32px;float:left;margin-top:20px;line-height:32px;font-size:14px;}
+.phone_bd{display:block;height:32px;padding:0 30px;float:left;margin-left:114px;line-height:32px;background:#ff8b00;color:#ffffff;}

@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+body{color:#333333;font:12px/1.5 arial,"Microsoft Yahei","黑体","Hiragino Sans GB",sans-serif;}
+ul,ol{list-style:none;}
+img { border:0;}
+a{text-decoration:none;}
+.clear{clear:both;}
+
+/*关闭密码 begin*/
+.box_close{width:90%;height:auto;margin:0 auto;border:1px solid #e0e0e0;background:#f7f7f7;}
+.box_close_top{width:100%;height:70px;float:left;border-bottom:1px solid #6b6c6f;}
+.box_clt_span{display:block;height:70px;line-height:65px;float:center;padding-left:20px;font-size:28px;color:#6b6c6f;text-align:center;}
+.box_clt_close{display:block;width:19px;height:17px;float:right;margin:15px 20px 0 0;background:url(../images/box_close.png) no-repeat;}
+
+.box_clt_main{width:400px;height:auto;margin:0 auto;}
+.box_xxtc{width:100%;float:left;padding:0 0 40px 0;}
+.box_clt_dlmm{width:100%;height:32px;float:left;margin-top:30px;}
+.box_dlLogin{display:block;width:130px;height:32px;float:left;line-height:32px;text-align:right;font-size:14px;color:#9c9b9b;}
+.box_dlt_inp{border:0;display:block;width:210px;height:32px;float:left;margin-left:10px;line-height:32px;padding-left:10px;background:#d8d3d3;}
+
+.box_dlt_sure{font-size:28px;  -webkit-border-radius: 8px;text-align: center;display:block;height:65px;padding:0 22px;float:left;margin-left:20px;line-height:65px;background:#ff8b00;font-size:14px;color:#ffffff;width: 43%}
+.box_dlt_gb{font-size:28px;  -webkit-border-radius: 8px;text-align: center;display:block;height:65px;padding:0 22px;float:left;margin-left:20px;line-height:65px;background:#4ec9f5;font-size:14px;color:#ffffff;width: 43%}
+/*关闭密码 over*/
+
+/*删除账户 begin*/
+.box_close_top2{width:100%;height:40px;float:left;}
+.box_delete{text-align:center;font-size:25px;color:#9c9b9b;font-weight:600;}
+/*删除账户 over*/
+
+/*分享红包 begin*/
+.fenxi_main{width:410px;height:auto;margin:0 auto;}
+.fenx_ljwz{width:100%;float:left;margin-top:10px;line-height:26px;font-size:14px;color:#918f8f;}
+.fenx_ljwz p{color:#918f8f; font-size:25px; padding:10px 0;}
+.fenx_ljwz p span{width:250px; display:inline-block; text-align:right;}
+
+.fenx_ljwz p a{color:#918f8f;text-decoration:underline;}
+.fenx_fasong{display:block;height:32px;width:210px;float:left;margin-left:140px;line-height:32px;text-align:center;background:#ff8b00;font-size:14px;color:#ffffff;}
+/*分享红包 over*/
+
+
+/*领取红包 begin*/
+.lq_left{width:75px;height:120px;float:left;margin:30px 0 0 30px;}
+.lq_left_img{width:75px;height:111px;float:left;background:url(../images/box_tp01.png) no-repeat;}
+.lq_right{width:210px;height:120px;float:left;margin:30px 0 0 20px;}
+.lq_hbsm{display:block;width:100%;color:#9c9b9b;font-size:14px;}
+.lq_inp{border:0;display:block;width:200px;height:32px;float:left;margin-top:10px;line-height:32px;padding-left:10px;background:#d8d3d3;}
+.lq_lingqu{display:block;height:32px;width:210px;float:left;margin-top:20px;line-height:32px;text-align:center;background:#ff8b00;font-size:14px;color:#ffffff;}
+/*领取红包 over*/
+
+
+/*制作红包 begin*/
+.box_clt_dlmm2{width:100%;height:32px;float:left;margin-top:10px;}
+.zz_select{border:0;display:block;width:220px;padding:6px 0;float:left;font-size:14px;margin-left:10px;border:1px solid #949292;}
+.zz_dcwz{height:32px;float:left;line-height:32px;margin-left:10px;color:#9c9b9b;}
+.zz_bigwz{font-size:18px;}
+/*制作红包 over*/
+
+
+
+/*重置密码 begin*/
+.czm_clt_main{width:460px;height:auto;margin:0 auto;}
+
+.czm_tgsj{width:440px;height:auto;float:left;margin-top:20px;}
+.czm_tgsj ul{margin:0;padding:0;display:block;width:100%;height:32px;float:left;padding-bottom:20px;}
+.czm_tgsj ul li{display:block;width:50%;height:32px;float:left;line-height:32px;text-align:center;font-size:14px;}
+.czm_tgsj ul li a{display:block;color:#ffffff;}
+.czm_tgBlueBg{background:#4ec9f5;}
+.czm_tgGreyBg{background:#d8d3d3;}
+.czm_xxnr{width:100%;height:auto;float:left;}
+.czm_bdPhone{width:100%;height:32px;float:left;line-height:32px;font-size:14px;}
+.czm_sp01{display:block;width:26%;float:left;text-align:right;color:#918f8f;}
+.czm_sp02{display:block;float:left;color:#918f8f;}
+.czm_alj{display:block;height:32px;padding:0 15px;float:left;margin-left:42px;background:#d8d3d3;font-size:12px;color:#848080;}
+.czm_dxYzm,.czm_dijiao{width:100%;height:32px;float:left;margin-top:10px;line-height:32px;font-size:14px;}
+.czm_dxYzm input{border:0;display:block;width:210px;height:32px;line-height:32px;float:left;padding-left:10px;background:#d8d3d3;font-size:14px;}
+.czm_tijLj{display:block;width:220px;height:32px;float:left;margin-left:114px;line-height:32px;text-align:center;color:#ffffff;background:#ff8708;}
+
+/*重置密码 over*/
+/*支付结果 begin*/
+.jie_p{margin:20px auto 0 auto; width:95%; line-height:30px;font-size:1.2rem;color:#918f8f;}
+.jie_sure{height:32px;padding:5px 22px;margin-left:30px;line-height:32px;background:#ff8b00;font-size:1.3rem;color:#ffffff;}
+/*支付结果 over*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

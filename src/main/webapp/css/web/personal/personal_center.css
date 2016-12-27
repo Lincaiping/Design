@@ -1,0 +1,1514 @@
+.accountLink {
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 10px;
+    color: #646464;
+}
+
+/*新手上路 begin*/
+.body_color {
+    background: #eeeeee;
+}
+
+.xins_dh {
+    width: 100%;
+    height: 80px;
+    float: left;
+    background: #ff6600;
+}
+
+.xins_dhBg {
+    width: 352PX;
+    height: 80PX;
+    float: left;
+}
+
+.xins_icon01 {
+    width: 34px;
+    height: 32px;
+    float: left;
+    margin: 24px 0 0 20px;
+}
+
+.xins_dhBg span {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+    color: #ffffff;
+}
+
+.xins_span01 {
+    padding-left: 8px;
+}
+
+.xins_span02 {
+    padding-left: 66px;
+}
+
+.xins_search {
+    width: 100%;
+    height: 80px;
+    float: left;
+    background: #c1c2c2;
+    font-size: 1.6rem;
+}
+
+.xins_sswk {
+    position: relative;
+    width: 70%;
+    height: 54px;
+    float: left;
+    margin: 12px 0 0 20px;
+}
+
+.xins_sswk input {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 54px;
+    float: left;
+    text-indent: 50px;
+    line-height: 54px;
+    background: #e8eaeb;
+    font-size: 30px;
+}
+
+.xins_icon02 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    top: 12px;
+}
+
+.xins_alj {
+    display: block;
+    height: 80px;
+    float: left;
+    margin-left: 20px;
+    line-height: 80px;
+    color: #646464;
+    cursor: pointer;
+}
+
+.xins_stb {
+    width: 100%;
+    height: 150px;
+    float: left;
+    margin-top: 20px;
+    background: #f28108;
+}
+
+.xins_stb ul {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.xins_stb ul li {
+    display: block;
+    width: 33%;
+    float: left;
+}
+
+.xins_stb ul li a {
+    display: block;
+}
+
+.xins_yjjx {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 26px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.xins_yjjx img {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.xins_dbwz {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.xins_jtnr {
+    position: relative;
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top: 1px solid #696a69;
+    border-bottom: 1px solid #696a69;
+    background: #ffffff;
+}
+
+.xins_jtnr_jiantou {
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    left: 14%;
+    top: -25px;
+}
+
+.xins_jtnr ul {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.xins_jtnr ul li {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 16px 0;
+    border-bottom: 1px solid #646464;
+    font-size: 1.4rem;
+}
+
+.xins_jtnr ul li span {
+    display: block;
+    width: 80%;
+    float: left;
+    line-height: 50px;
+    color: #646464;
+}
+
+.xins_jtnr ul li i {
+    display: block;
+    width: 18px;
+    height: 32px;
+    float: right;
+    margin-top: 9px;
+}
+
+.xins_jtnr ul li a {
+    display: block;
+}
+
+/*新手上路 over*/
+
+/*下载客户端 begin*/
+.down_bt {
+    width: 100%;
+    height: 98px;
+    float: left;
+    background: #f28108;
+}
+
+.down_bt img {
+    display: block;
+    width: 57px;
+    height: 57px;
+    float: left;
+    margin: 20px 0 0 20px;
+}
+
+.down_bt span {
+    display: block;
+    height: 98px;
+    float: left;
+    line-height: 98px;
+    padding-left: 10px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.down_gd {
+    width: 100%;
+    float: left;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #646464;
+}
+
+.down_khd {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.down_khwk {
+    width: 90%;
+    height: 140px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.down_khwk img {
+    display: block;
+    width: 86px;
+    height: 86px;
+    float: left;
+    margin: 17px 20px 0 30px;
+}
+
+.down_khwk p {
+    display: block;
+    float: left;
+    font-size: 1.5rem;
+    color: #ff6600;
+}
+
+.down_p1 {
+    margin-top: 14px;
+}
+
+/*下载客户端 over*/
+
+/*查看明细 begin*/
+.cha_bit {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.cha_bt {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #9e9e9e;
+}
+
+.cha_bt img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    float: left;
+    margin-top: 4px;
+}
+
+.cha_bt p {
+    text-align: center;
+    font-size: 32px;
+    color: #646464;
+}
+
+.cha_wzms, .cha_jitu {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.cha_wzms p {
+    margin-top: 6px;
+    font-size: 24px;
+    color: #646464;
+}
+
+.cha_jitu img {
+    display: block;
+    width: 100%;
+}
+
+/*查看明细 over*/
+
+/*4g流量明细 begin*/
+.xins_dhBg2 {
+    width: 463PX;
+    height: 80PX;
+    float: left;
+}
+
+.xins_dhBg2 span {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+    color: #ffffff;
+}
+
+.sg_qkj {
+    width: 100%;
+    float: left;
+    margin-top: 60px;
+}
+
+.sg_jzb {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #8d8d8d;
+}
+
+.sg_qin {
+    font-size: 3rem;
+}
+
+.sg_jsz {
+    font-size: 1.5rem;
+    line-height: 180%;
+}
+
+.sg_jzb img {
+    width: 118px;
+    height: 158px;
+    margin-top: 30px;
+}
+
+/*4g流量明细 over*/
+
+/*个人信息 begin*/
+.xins_dhBg3 {
+    width: 470PX;
+    height: 80PX;
+    float: left;
+    background-size: 100% 100%;
+}
+
+.xins_dhBg3 span {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+    color: #ffffff;
+}
+
+.xins_span02_2 {
+    padding-left: 30px;
+}
+
+.xins_span03 {
+    padding-left: 42px;
+}
+
+.ger_zh {
+    width: 100%;
+    height: 150px;
+    float: left;
+    margin-top: 20px;
+    background: #ef6e0e;
+}
+
+.ger_bk {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ger_xmh {
+    height: 150px;
+    float: left;
+}
+
+.ger_xmh p {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.ger_xmh a {
+    border: 0;
+    display: block;
+    height: 36px;
+    padding: 0 12px;
+    float: left;
+    margin-top: 10px;
+    line-height: 36px;
+    border-radius: 10px;
+    background: #fffdfd;
+    color: #ff6600;
+    font-size: 1.4rem;
+}
+
+.ger_tpk {
+    height: 150px;
+    float: right;
+}
+
+.ger_tpk a {
+    display: block;
+    width: 18px;
+    height: 150px;
+    float: right;
+    text-align: center;
+}
+
+.ger_tpk a img {
+    width: 18px;
+    height: 32px;
+    float: left;
+    margin: 62px 0 0 0;
+}
+
+.ger_tou {
+    display: block;
+    width: 108px;
+    height: 118px;
+    float: right;
+    margin: 13px 20px 0 0;
+    padding: 6px;
+    border: 1px solid #bfbfbf;
+    background: #ffffff;
+}
+
+.ger_lbz {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+
+.ger_lis {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ger_lis ul {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.ger_lis ul li {
+    display: block;
+    width: 100%;
+    height: 60px;
+    float: left;
+    margin-top: 8px;
+    line-height: 60px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #646464;
+    font-size: 1.4rem;
+}
+
+.ger_lis ul li i {
+    display: block;
+    width: 12px;
+    height: 21px;
+    float: right;
+    margin: 34px 10px 0 0;
+}
+
+.ger_lis ul li span {
+    display: block;
+    height: 88px;
+}
+
+.ger_left {
+    float: left;
+    padding-left: 10px;
+}
+
+.ger_right {
+    float: right;
+    padding-right: 10px;
+}
+
+/*个人信息 over*/
+
+/*删除账户 begin*/
+.del_hol {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+
+.del_wkb {
+    width: 90%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.del_wkb_top {
+    width: 100%;
+    height: 60px;
+    float: left;
+    line-height: 60px;
+    border-radius: 10px 10px 0 0;
+    background: #ff6d2c;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.del_in {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.del_in input {
+    border: 0;
+    display: block;
+    width: 100%;
+    height: 60px;
+    float: left;
+    line-height: 60px;
+    border-radius: 10px;
+    background: #c8c8c8;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.del_in button {
+    border: 0;
+    display: block;
+    width: 100%;
+    height: 60px;
+    float: left;
+    margin: 30px 0 10px 0;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 10px;
+    background: #ff6d2c;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.del_zhu {
+    width: 100%;
+    float: left;
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 140%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/*删除账户 over*/
+
+/*实名认证2 begin*/
+.name_wzc {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+
+.name_jzk {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.name_cbt {
+    width: 95%;
+    float: left;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #898989;
+    color: #646464;
+    font-weight: 600;
+    text-align: center;
+    line-height: 180%;
+}
+
+.name_zhus {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #918f8f;
+    line-height: 150%;
+}
+
+.name_srkh {
+    width: 100%;
+    height: 74px;
+    float: left;
+    margin-top: 0px;
+}
+
+.name_srkh span {
+    display: block;
+    width: 28%;
+    height: 60px;
+    float: left;
+    line-height: 60px;
+    text-align: left;
+    color: #646464;
+    font-size: 1.5rem;
+}
+
+.name_srkh input {
+    display: block;
+    border: 0;
+    width: 70%;
+    height: 60px;
+    float: right;
+    line-height: 60px;
+    font-size: 1.5rem;
+    color: #646464;
+    background: #ffffff;
+    border-radius: 10px;
+    text-indent: 10px;
+    font-size: 1.5rem;
+}
+
+.name_tis {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+
+.name_tswz {
+    width: 90%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #646464;
+}
+
+.name_tswz p {
+    padding: 20px;
+    line-height: 36px;
+}
+
+/*实名认证2 over*/
+
+/*实名认证1 begin*/
+.name1_top {
+    width: 100%;
+    height: 82px;
+    float: left;
+    background: #e2e3e3;
+    font-size: 2rem;
+}
+
+.name1_jz {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.name1_jz img {
+    display: block;
+    width: 47px;
+    height: 47px;
+    float: left;
+    margin: 17px 0 0 0;
+}
+
+.name1_jz p {
+    text-align: center;
+    line-height: 82px;
+}
+
+/*实名认证1 over*/
+
+/*实名认证3 begin*/
+.name3_btou {
+    width: 100%;
+    float: left;
+    color: #646464;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+/*实名认证3 over*/
+
+/*绑定手机1 begin*/
+.ph1_zs {
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    background: #c8c8c8;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ph1_wzbz {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    color: #999999;
+}
+
+/*绑定手机1 over*/
+
+/*绑定手机2 begin*/
+.ph2_fs {
+    margin-top: 20px;
+    text-align: center;
+    color: #646464;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.ph2_zs {
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    color: #646464;
+    border-radius: 10px;
+    text-align: center;
+    background: #c8c8c8;
+    font-size: 24px;
+}
+
+/*绑定手机2 over*/
+
+/*绑定手机流量明细 begin*/
+.bph_dsk {
+    padding: 10px 0;
+    float: left;
+    background: #ee6e0a;
+}
+
+.bph_syl {
+    width: 45%;
+    float: left;
+}
+
+.bph_syTop {
+    text-align: center;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.bph_yuan {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-size: 100% 100%;
+}
+
+.bph_yuan p {
+    display: block;
+    height: 150px;
+    line-height: 140px;
+    text-align: center;
+    font-size: 50px;
+    color: #fff57a;
+}
+
+.bph_yysm {
+    width: 50%;
+    float: right;
+    margin-right: 10px;
+}
+
+.bph_riTop {
+    width: 100%;
+    float: left;
+    border-bottom: 2px solid #f69937;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.bph_riTop p, .bph_riBot p {
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.bph_p01 {
+    font-size: 40px;
+}
+
+.bph_riBot {
+    width: 100%;
+    float: left;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.bph_riBot button {
+    border: 0;
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    color: #ff6600;
+    font-size: 24px;
+}
+
+.bph_lsyq {
+    display: block;
+    height: 40px;
+    float: left;
+    padding: 0 20px;
+    border-radius: 10px;
+    line-height: 40px;
+    background: #ff6600;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.bph_zTable {
+    width: 100%;
+    color: #646464;
+    font-size: 24px;
+}
+
+.bph_zTable td {
+    text-align: left;
+}
+
+.bph_border {
+    border-right: 1px solid #000000;
+}
+
+.bph_TabKd {
+    width: 54%;
+    padding-left: 16px;
+}
+
+/*绑定手机流量明细 over*/
+
+/*流量明细 begin*/
+.mx_skd {
+    padding: 10px 0;
+    float: left;
+    background: #ee6e0b;
+}
+
+.mx_skdTop {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #feee72;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.mx_skdTop span {
+    line-height: 30px;
+}
+
+.mx_skdBot {
+    padding: 10px 0;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.mx_sbt_left {
+    width: 48%;
+    float: left;
+    border-right: 1px solid #fbc84f;
+}
+
+.mx_sbt_left p, .mx_sbt_right p {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.mx_sbt_right {
+    width: 50%;
+    float: right;
+}
+
+.mx_xxk {
+    width: 100%;
+    float: left;
+}
+
+.mx_xxk ul {
+    display: table;
+    width: 96%;
+    height: 3rem;
+    margin: 0 auto;
+    line-height: 3rem;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.mx_xxk ul li {
+    display: table-cell;
+    width: 32%;
+    border-left: 1px solid #f7ac8b;
+    text-align: center;
+    vertical-align: middle;
+    background: #f8a17a;
+}
+
+.mx_xxk ul li a {
+    font-size: 1.4rem;
+    color: #ffffff;
+    display: block;
+}
+
+.mx_xxk ul li a:hover {
+    background: #ff6d2c;
+    color: #fff;
+}
+
+.mx_xxk ul li a.current {
+    background: #ff6d2c;
+    color: #fff;
+}
+
+.mx_lbBG {
+    background: #ffffff;
+}
+
+.mx_lbli {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mx_lbli ul {
+    display: block;
+    width: 100%;
+}
+
+.mx_lbli ul li {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #a2a2a2;
+    font-size: 1.4rem;
+    color: #646464;
+}
+
+.mx_kd01 {
+    width: 22%;
+}
+
+.mx_kd02 {
+    width: 56%;
+}
+
+.mx_kd03 {
+    width: 22%;
+}
+
+.mx_touGray {
+    width: 80px;
+    height: 78px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #b5b6b6;
+    text-align: center;
+}
+
+.mx_touGray img {
+    width: 52px;
+    height: 51px;
+    margin-top: 15px;
+}
+
+.mx_touRed {
+    width: 80px;
+    height: 78px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #ed1f24;
+    text-align: center;
+}
+
+.mx_touRed img {
+    width: 56px;
+    height: 41px;
+    margin-top: 21px;
+}
+
+.mx_kd01 p {
+    text-align: center;
+    margin-top: 6px;
+}
+
+.mx_pxst {
+    margin-top: 6px;
+    font-size: 24px;
+}
+
+.mx_kd03 p {
+    text-align: right;
+}
+
+.mx_kd3_p01 {
+    color: #000000;
+}
+
+.mx_kd3_p02 {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.mx_kd3_p03 {
+    color: #ff6d2c;
+}
+
+/*流量明细 over*/
+
+/*我的订单 begin*/
+.mdd_xxk {
+    width: 100%;
+    float: left;
+}
+
+.mdd_xxk ul {
+    display: table;
+    width: 96%;
+    height: 3rem;
+    margin: 0 auto;
+    line-height: 3rem;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.mdd_xxk ul li {
+    display: table-cell;
+    width: 32%;
+    border-left: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    background: #c8c8c8;
+}
+
+.mdd_xxk ul li a {
+    font-size: 1.4rem;
+    color: #ffffff;
+    display: block;
+}
+
+.mdd_xxk ul li a:hover {
+    background: #005aff;
+    color: #fff;
+}
+
+.mdd_xxk ul li a.current {
+    background: #005aff;
+    color: #fff;
+}
+
+.mdd_bor {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #9b9b9b;
+    font-size: 1.4rem;
+    color: #646464;
+}
+
+.mdd_alj {
+    color: #646464;
+}
+
+.mdd_alj:hover {
+    color: #005aff;
+}
+
+.mdd_lib {
+    padding: 10px 0;
+    background: #ffffff;
+    border-top: 1px solid #bababa;
+    border-bottom: 1px solid #ddd;
+}
+
+.mdd_libTop {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #646464;
+}
+
+.mdd_libTop span {
+    display: block;
+    font-size: 1.4rem;
+}
+
+.mdd_ltop_span01 {
+    height: 36px;
+    padding: 0 10px;
+    line-height: 36px;
+    background: #c8c8c8;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.mdd_libBot {
+    padding-top: 10px;
+}
+
+.mdd_yuan {
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    background: #ffc949;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.mdd_yuanp01 {
+    margin-top: 16px;
+    font-size: 32px;
+}
+
+.mdd_rcwz {
+    margin-left: 10px;
+    font-size: 1.4rem;
+    color: #646464;
+}
+
+.mdd_rcwz_p01 {
+    padding-top: 16px;
+}
+
+.mdd_rcwz_p02 {
+    padding-top: 6px;
+}
+
+.mdd_jiage {
+    color: #ed6c00;
+}
+
+.mdd_wzsc {
+    padding-left: 6px;
+    font-size: 22px;
+    text-decoration: line-through;
+    color: #999999;
+}
+
+.mdd_anniu {
+    hieght: 36px;
+}
+
+.mdd_anniu button {
+    border: 0;
+    display: block;
+    padding: 0 16px;
+    height: 36px;
+    float: right;
+    line-height: 36px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.mdd_buttonRed {
+    background: #ff6600;
+}
+
+.mdd_buttonGray {
+    margin-right: 20px;
+    background: #c8c8c8;
+}
+
+/*我的订单 over*/
+
+/*我的账户 begin*/
+.mus_skt {
+    padding: 10px 0;
+    background: #ee6e0a;
+}
+
+.mus_tou {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 0 auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mus_tou img {
+    width: 53px;
+    height: 58px;
+    margin-top: 11px;
+}
+
+.mus_yong {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.mus_zll {
+    width: 25%;
+    float: left;
+    border-right: 1px solid #ffffff;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.0rem;
+}
+
+.mus_zllp01 {
+    margin-top: 6px;
+    font-size: 1.0rem;
+}
+
+.mus_zsll {
+    width: 62%;
+    float: left;
+    color: #ffffff;
+    font-size: 1.0rem;
+}
+
+.mus_ksl {
+    width: 100%;
+    float: left;
+    padding-left: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.mus_gsn {
+    width: 100%;
+    float: left;
+    padding-left: 6px;
+}
+
+.mus_gsn p {
+    display: block;
+    float: left;
+}
+
+.mus_m1 {
+    padding-left: 10px;
+}
+
+.mus_yellow {
+    color: #e7f418;
+}
+
+.mus_cai {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mus_cai ul {
+    display: block;
+    width: 100%;
+    float: left;
+    font-size: 1.5rem;
+    color: #646464;
+}
+
+.mus_cai ul li {
+    display: block;
+    width: 100%;
+    height: 70px;
+    float: left;
+    margin-top: 6px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.mus_cai ul li a {
+    display: block;
+}
+
+.mus_cai ul li a img {
+    display: block;
+    width: 58px;
+    height: 56px;
+    float: left;
+    margin: 7px 0 0 10px;
+}
+
+.mus_cai ul li a span {
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 10px;
+    color: #646464;
+}
+
+.mus_cai ul li a i {
+    display: block;
+    width: 12px;
+    height: 22px;
+    float: right;
+    margin: 24px 10px 0 10px;
+    background: url(/images/personal/mus_cai_jiantou.png) no-repeat;
+}
+
+/*我的账户 over*/
+
+/*详情 begin*/
+.xq_bk {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.xq_bk ul {
+    display: block;
+    width: 100%;
+    float: left;
+    font-size: 1.5rem;
+    color: #646464;
+}
+
+.xq_bk ul li {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #aeaeae;
+}
+
+.xq_bk ul li span {
+    display: block;
+    float: left;
+}
+
+.xq_huang {
+    color: #ed6c00;
+}
+
+.xq_tou {
+    width: 88px;
+    height: 86px;
+    float: left;
+    background: #b5b6b6;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    text-align: center;
+}
+
+.xq_tou img {
+    width: 58px;
+    height: 57px;
+    margin-top: 14px;
+    background-size: 100% 100%;
+}
+
+.xq_tkw {
+    width: 92px;
+    float: left;
+}
+
+.xq_tkw p {
+    text-align: center;
+}
+
+/*详情 over*/
+
+/*选取头像 begin*/
+.box_toux {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.box_toux ul {
+    display: block;
+    width: 100%;
+    height: auto;
+    float: left;
+    padding-bottom: 25px;
+}
+
+.box_toux ul li {
+    position: relative;
+    display: block;
+    width: 84px;
+    height: 84px;
+    float: left;
+    margin: 20px 0 0 15px;
+}
+
+.box_toux ul li img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.box_border01 {
+    border: 1px solid #dddddd;
+}
+
+.box_border02 {
+    border: 2px solid #fb9708;
+}
+
+.box_toux_duigou {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 17px;
+    right: 2px;
+    bottom: 2px;
+}
+
+/*选取头像 over*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

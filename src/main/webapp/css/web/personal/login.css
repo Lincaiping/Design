@@ -1,0 +1,199 @@
+@charset "utf-8";
+.ui-form-login .input-per {
+  background-position: 20px -192px;
+}
+.ui-form-login .input-key1 {
+  background-position: 20px 12px;
+}
+.ui-form-login .input-key2 {
+  background-position: 20px -56px;
+}
+.ui-form-login .input-email {
+  background-position: 20px -260px;
+}
+.ui-form-login .form-item {
+  padding-left: 0px;
+}
+.ui-form-login .input70 {
+  font-size: 1.5rem;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* &::-webkit-input-placeholder{
+       color: #646464;
+     }*/
+}
+.ui-form-login .inputbg {
+  padding-left: 70px;
+  background-image: url("/images/personal/icon-input.png");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 48px 400px;
+}
+.ui-form-login .form-item-sel {
+  height: 70px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding-right: 20px;
+}
+.ui-form-login .select-wrap {
+  height: 70px;
+  line-height: 70px;
+  width: 25%;
+  float: left;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ui-form-login .select-wrap:first-child {
+  width: 50%;
+  background-position: 20px -126px;
+}
+.ui-form-login .select-wrap:after {
+  content: ' ';
+  position: absolute;
+  background: url("/images/personal/sel-icon.png") center center no-repeat;
+  background-size: 26px 26px;
+  width: 26px;
+  height: 26px;
+  right: 0px;
+  top: 24px;
+}
+.ui-form-login .select-wrap select {
+  width: 100%;
+  -webkit-appearance: none;
+  border: 0 none;
+  padding-right: 30px;
+  font-size: 1.4rem;
+}
+.ui-form-login .select-wrap option {
+  font-size: 24px;
+}
+.ui-form-login .check-wrap input {
+  width: 30px;
+    height: 30px;
+    float: left;
+}
+/* 登录密码管理 begin*/
+.pwdmgr-opt {
+  margin-top: 50px;
+  color: #91908f;
+  font-size: 24px;
+}
+.pwdmgr-opt .item {
+  background-color: #fff;
+  position: relative;
+  padding: 15px 25px 15px 80px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #91908f;
+}
+.pwdmgr-opt .item:before {
+  content: ' ';
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #91908f;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.pwdmgr-opt .item .rt {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+}
+.pwdmgr-opt .item .ui-arrow {
+  top: 5px;
+}
+/* 箭头设置 */
+.ui-arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-width: 2px 2px 0 0;
+  border-color: #949392;
+  border-style: solid;
+  margin-left: 15px;
+}
+.ui-arrow-right {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: -16px 9px;
+  transform-origin: -16px 9px;
+}
+/* 登录密码管理 end*/
+/* 账户注册 begin*/
+.msgt {
+  color: #676565;
+  text-align: center;
+  font-size: 1.4rem;
+    margin-top: 20px;
+}
+.msgt a {
+  text-decoration: underline;
+  color: #676565;
+}
+.lgset-hmsg {
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+.lgset-hmsg span {
+  margin: 0 8px;
+}
+.lgset-djs {
+  background-color: #c8c8c8;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 5px 30px;
+}
+.regist-state {
+  text-align: center;
+}
+.regist-state .icon {
+  margin-bottom: 20px;
+}
+.regist-name {
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+/* 注册切换*/
+.regist-switch {
+  text-align: center;
+  border: 2px solid #005aff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  display: inline-block;
+  font-size: 0;
+  margin-bottom: 40px;
+}
+.regist-switch span {
+  font-size: 24px;
+  color: #005aff;
+  display: inline-block;
+  padding: 4px 10px;
+}
+.regist-switch .selected {
+  background-color: #005aff;
+  color: #fff;
+}
+.switch-wrap {
+  text-align: center;
+}
+/* 账户注册 end */
+/*密码重置*/
+.resetpwd-opt .btn-wrap {
+  margin-top: 50px;
+  position: relative;
+}
+.resetpwd-opt .ui-arrow-right {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  border-color: #fff;
+}
+.input-label {
+  color: #646464;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
