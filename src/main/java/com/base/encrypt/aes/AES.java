@@ -53,9 +53,8 @@ public class AES {
             cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);    
             byte[] encrypted1 = Base64Utils.decodeFromString(sSrc);//先用bAES64解密    
             try {    
-                byte[] original = cipher.doFinal(encrypted1);    
-                String originalString = new String(original);    
-                return originalString;    
+                byte[] original = cipher.doFinal(encrypted1);
+                return new String(original);
             } catch (Exception e) {    
                 System.out.println(e.toString());    
                 return null;    

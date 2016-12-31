@@ -6,25 +6,26 @@ import com.table.user.entity.User;
 
 import java.util.List;
 
+@SuppressWarnings("unused")
 public interface UserService {
-	public User getUser(String id) ;
-	
-	public List<User> getAllUser();
-	
-	public void saveOrUpdate(User user);
-	
-	public boolean deleteUser(String id);
-	
-	public Pager<User> getByPage(PageBean pageBean);
-	
-	public User getUserByName(String name);
+	User getUser(String id);
 
-	public void disable(String id);
+	List<User> getAllUser();
 
-	public User getUserByPhone(String tel);
+	void saveOrUpdate(User user);
 
-	public User getUserByEmail(String email);
+	boolean deleteUser(String id);
 
-	public User getUserById(String userId);
-		
+	Pager<User> getByPage(PageBean pageBean);
+
+	User getUserByName(String name);
+
+	void disable(String id);
+
+	User getUserByPhone(String tel);
+
+	User getUserByEmail(String email);
+
+	User getUserById(String userId);
+
 }

@@ -14,7 +14,6 @@ public class HttpUtils {
 	public static String getTime() {
 		Date nowTime = new Date(System.currentTimeMillis());
 		SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String retStrFormatNowDate = sdFormatter.format(nowTime);
-		return retStrFormatNowDate;
+		return sdFormatter.format(nowTime);
 	}
 }

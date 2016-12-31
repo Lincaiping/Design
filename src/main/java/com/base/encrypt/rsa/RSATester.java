@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class RSATester {
 
-	static String publicKey;
-	static String privateKey;
+	private static String publicKey;
+	private static String privateKey;
 
 	static {
 		try {
@@ -25,7 +25,7 @@ public class RSATester {
 		test();
 	}
 
-	static void test() throws Exception {
+	private static void test() throws Exception {
         System.err.println("公钥加密——私钥解密");
         String source = "654321";
         System.out.println("\r加密前文字：\r\n" + source);

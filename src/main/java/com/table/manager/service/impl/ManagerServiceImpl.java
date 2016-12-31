@@ -26,6 +26,9 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 		if(manager.getEnable()==0){
 			return false;
 		}
+		if(password.equals(manager.getPassword())){
+			return true;
+		}
 		String truePassWord;
 		try {
 			String privateKey = manager.getPrivateKey();
@@ -113,11 +116,10 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 		return dao.findPager(hql, page, rows);
 	}
 
-	public String refFormatNowDate() {
+	private String refFormatNowDate() {
 		Date nowTime = new Date(System.currentTimeMillis());
 		SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String retStrFormatNowDate = sdFormatter.format(nowTime);
-		return retStrFormatNowDate;
+		return sdFormatter.format(nowTime);
 	}
 
 	public void disableThis(HttpServletRequest request){

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@SuppressWarnings("unused")
 @Service("userService")
 public class UserserviceImpl extends BaseService implements UserService {
 	
@@ -57,26 +58,22 @@ public class UserserviceImpl extends BaseService implements UserService {
 	@Override
 	public User getUserByName(String name){
 		String hql = "from User where userName =?";
-		User user = dao.findObject(hql, name);
-		return user;
+		return dao.findObject(hql, name);
 	}
 	
 	public User getUserByPhone(String tel){
 		String hql = "from User where tel=?";
-		User user = dao.findObject(hql, tel);
-		return user;
+		return dao.findObject(hql, tel);
 	}
 	
 	public User getUserByEmail(String email){
 		String hql = "from User where email =?";
-		User user = dao.findObject(hql, email);
-		return user;
+		return dao.findObject(hql, email);
 	}
 	
 	public User getUserById(String userId){
 		String hql = "from User where id =?";
-		User user = dao.findObject(hql, userId);
-		return user;
+		return dao.findObject(hql, userId);
 	}
 
 	@Override

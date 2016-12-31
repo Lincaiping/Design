@@ -37,12 +37,12 @@ public class CharacterRequest extends HttpServletRequestWrapper {
                                value[i] = value[i].replaceAll( "<", "&lt;" );
                                value[i] = value[i].replaceAll( ">", "&gt;" );
                       }
-                       return (String[]) value;
+                       return value;
             } else if (object instanceof String) {
                       String value = (String) object;
                       value = value.replaceAll( "<", "&lt;" );
                       value = value.replaceAll( ">", "&gt;" );
-                       return new String[] { (String) value };
+                       return new String[] {value};
             } else {
                        return new String[] { object.toString() };
             }
@@ -66,7 +66,7 @@ public class CharacterRequest extends HttpServletRequestWrapper {
                       String value = (String) object;
                       value = value.replaceAll( "<", "&lt;" );
                       value = value.replaceAll( ">", "&gt;" );
-                       return (String) value;
+                       return value;
             } else {
                        return object.toString();
             }

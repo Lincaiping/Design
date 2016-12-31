@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 此实体的定义应用了springmvc的注解，省去了传统的Hibernate跟数据库之间的映射配置文件
+ * 此实体的定义应用了springMvc的注解，省去了传统的Hibernate跟数据库之间的映射配置文件
  * @author gbq
  */
 @Entity

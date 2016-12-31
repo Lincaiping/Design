@@ -12,6 +12,7 @@ import javax.persistence.Table;
  * 此实体的定义应用了springmvc的注解，省去了传统的Hibernate跟数据库之间的映射配置文件
  * @author gbq
  */
+@SuppressWarnings("unused")
 @Entity
 @Table(name = "user")
 public class  User implements Serializable {
@@ -54,7 +55,7 @@ public class  User implements Serializable {
     @Column(length = 50)
     private String image;
     
-    @Column(name="android_image",length = 255)
+    @Column(name="android_image",length = 200)
     private String androidImage;
     
     @Column(length = 25)
@@ -89,6 +90,7 @@ public class  User implements Serializable {
 		return enable;
 	}
 
+	@SuppressWarnings("SameParameterValue")
 	public void setEnable(int enable) {
 		this.enable = enable;
 	}

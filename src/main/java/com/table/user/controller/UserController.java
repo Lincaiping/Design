@@ -17,6 +17,7 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@SuppressWarnings("unused")
 @Controller
 @RequestMapping("/user")
 public class UserController extends BaseController {
@@ -28,26 +29,19 @@ public class UserController extends BaseController {
     private UserService userService;
 
     @RequestMapping("/goList")
-    public String goList(HttpServletRequest request) {
+    public String goList() {
         return "table/user/list";
     }
 
     @RequestMapping("/getAllUser")
     @ResponseBody
-    public Pager<User> getAllUser(HttpServletRequest request, Integer page, Integer rows) {
+    public Pager<User> getAllUser(Integer page, Integer rows) {
         PageBean pageBean = new PageBean();
         pageBean.setPageNo(page);
         pageBean.setPageSize(rows);
-        Pager<User> pager = userService.getByPage(pageBean);
-        return pager;
+        return userService.getByPage(pageBean);
     }
 
-    /**
-     * 
-     * @param id
-     * @param request
-     * @return
-     */
     @RequestMapping("/getUser")
     public String getUser(String id, HttpServletRequest request) {
         request.setAttribute("user", userService.getUser(id));
@@ -61,16 +55,11 @@ public class UserController extends BaseController {
 
     @RequestMapping("/saveOrUpdate")
     @ResponseBody
-    public boolean saveOrUpdate(User user, HttpServletRequest request) {
+    public boolean saveOrUpdate(User user) {
         userService.saveOrUpdate(user);
         return true;
     }
 
-    /**
-     *
-     * @param id
-     * @param response
-     */
     @RequestMapping("/delUser")
     public void delUser(String id, HttpServletResponse response) {
 

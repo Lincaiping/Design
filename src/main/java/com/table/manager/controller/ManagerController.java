@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+@SuppressWarnings("unused")
 @Controller
 @RequestMapping("/managers")
 public class ManagerController extends BaseController {
@@ -36,21 +37,21 @@ public class ManagerController extends BaseController {
 		model.addAttribute("managerName", session.getAttribute("managerName"));
 		return "top";
 	}
-	
+
 	@RequestMapping("/index2")
 	public String index2(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		String managerName = (String) session.getAttribute("managerName");
-		Manager manager  = managerService.getManagerByName(managerName);
-		model.addAttribute("lastPassTime",manager.getLastPassTime());
-		model.addAttribute("managerName",managerName);
+		Manager manager = managerService.getManagerByName(managerName);
+		model.addAttribute("lastPassTime", manager.getLastPassTime());
+		model.addAttribute("managerName", managerName);
 		return "index2";
 	}
 
 	@RequestMapping("/login")
 	public String login(HttpServletRequest request, String loginName, String password, Model model) {
-		if(loginName.length()==0)
-		return "manager";
+		if (loginName.length() == 0)
+			return "manager";
 		if (managerService.login(request, loginName, password)) {
 			HttpSession session = request.getSession();
 			model.addAttribute("managerName", session.getAttribute("managerName"));
@@ -60,26 +61,19 @@ public class ManagerController extends BaseController {
 	}
 
 	@RequestMapping("/goList")
-	public String goList(HttpServletRequest request) {
+	public String goList() {
 		return "table/manager/list";
 	}
 
 	@RequestMapping("/getAllManager")
 	@ResponseBody
-	public Pager<Manager> getAllManager(HttpServletRequest request, Integer page, Integer rows) {
+	public Pager<Manager> getAllManager(Integer page, Integer rows) {
 		PageBean pageBean = new PageBean();
 		pageBean.setPageNo(page);
 		pageBean.setPageSize(rows);
-		Pager<Manager> pager = managerService.getByPage(pageBean);
-		return pager;
+		return managerService.getByPage(pageBean);
 	}
 
-	/**
-	 * 
-	 * @param id
-	 * @param request
-	 * @return
-	 */
 	@RequestMapping("/getManager")
 	public String getManager(String id, HttpServletRequest request) {
 		request.setAttribute("manager", managerService.getManager(id));
@@ -93,11 +87,11 @@ public class ManagerController extends BaseController {
 
 	@RequestMapping("/saveOrUpdate")
 	@ResponseBody
-	public boolean saveOrUpdate(Manager manager, HttpServletRequest request) {
+	public boolean saveOrUpdate(Manager manager) {
 		managerService.saveOrUpdate(manager);
 		return true;
 	}
-	
+
 	@RequestMapping("/loginOut_manager")
 	@ResponseBody
 	public boolean loginOut_manager(HttpServletRequest request) {
@@ -105,7 +99,7 @@ public class ManagerController extends BaseController {
 		session.invalidate();
 		return true;
 	}
-	
+
 	@RequestMapping("/disableThis")
 	@ResponseBody
 	public boolean disableThis(HttpServletRequest request) {
@@ -113,11 +107,6 @@ public class ManagerController extends BaseController {
 		return true;
 	}
 
-	/**
-	 *
-	 * @param id
-	 * @param response
-	 */
 	@RequestMapping("/delManager")
 	public void delManager(String id, HttpServletResponse response) {
 

@@ -2,6 +2,7 @@ package com.base.dao;
 
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class Pager<T> {
 	private int page; // current page
 	private Long total; // total pages
@@ -9,7 +10,6 @@ public class Pager<T> {
 	private List<T> rows;
 
 	public Pager(Long total, Integer page, Integer records, List<T> list) {
-		// TODO Auto-generated constructor stub
 		this.page = page;
 		this.total = total;
 		this.records = records;

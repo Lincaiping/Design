@@ -14,11 +14,6 @@ public class BaseController {
 
     /**
      * 封装了异常，不让异常抛出页面
-     * @param exception
-     * @param response
-     * @param request
-     * @throws IOException
-     * @gbq
      */
     @ExceptionHandler(Exception.class)
     // 在Controller类中添加该注解方法即可(注意：添加到某个controller，只针对该controller起作用)

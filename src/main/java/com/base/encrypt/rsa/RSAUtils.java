@@ -32,10 +32,8 @@ import javax.crypto.Cipher;
  * 非对称加密算法可以用来对对称加密的密钥加密，这样保证密钥的安全也就保证了数据的安全
  * </p>
  * 
- * @author IceWee
- * @date 2012-4-26
- * @version 1.0
  */
+@SuppressWarnings("WeakerAccess")
 public class RSAUtils {
 
     /**
@@ -72,9 +70,6 @@ public class RSAUtils {
      * <p>
      * 生成密钥对(公钥和私钥)
      * </p>
-     * 
-     * @return
-     * @throws Exception
      */
     public static Map<String, Object> genKeyPair() throws Exception {
         KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance(KEY_ALGORITHM);
@@ -82,7 +77,7 @@ public class RSAUtils {
         KeyPair keyPair = keyPairGen.generateKeyPair();
         RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
-        Map<String, Object> keyMap = new HashMap<String, Object>(2);
+        Map<String, Object> keyMap = new HashMap<>(2);
         keyMap.put(PUBLIC_KEY, publicKey);
         keyMap.put(PRIVATE_KEY, privateKey);
         return keyMap;
@@ -95,9 +90,6 @@ public class RSAUtils {
      * 
      * @param data 已加密数据
      * @param privateKey 私钥(BASE64编码)
-     * 
-     * @return
-     * @throws Exception
      */
     public static String sign(byte[] data, String privateKey) throws Exception {
         byte[] keyBytes = Base64Utils.decodeFromString(privateKey);
@@ -118,10 +110,6 @@ public class RSAUtils {
      * @param data 已加密数据
      * @param publicKey 公钥(BASE64编码)
      * @param sign 数字签名
-     * 
-     * @return
-     * @throws Exception
-     * 
      */
     public static boolean verify(byte[] data, String publicKey, String sign)
             throws Exception {
@@ -142,8 +130,6 @@ public class RSAUtils {
      * 
      * @param encryptedData 已加密数据
      * @param privateKey 私钥(BASE64编码)
-     * @return
-     * @throws Exception
      */
     public static byte[] decryptByPrivateKey(byte[] encryptedData, String privateKey)
             throws Exception {
@@ -181,8 +167,6 @@ public class RSAUtils {
      * 
      * @param encryptedData 已加密数据
      * @param publicKey 公钥(BASE64编码)
-     * @return
-     * @throws Exception
      */
     public static byte[] decryptByPublicKey(byte[] encryptedData, String publicKey)
             throws Exception {
@@ -220,8 +204,6 @@ public class RSAUtils {
      * 
      * @param data 源数据
      * @param publicKey 公钥(BASE64编码)
-     * @return
-     * @throws Exception
      */
     public static byte[] encryptByPublicKey(byte[] data, String publicKey)
             throws Exception {
@@ -260,8 +242,6 @@ public class RSAUtils {
      * 
      * @param data 源数据
      * @param privateKey 私钥(BASE64编码)
-     * @return
-     * @throws Exception
      */
     public static byte[] encryptByPrivateKey(byte[] data, String privateKey)
             throws Exception {
@@ -298,8 +278,6 @@ public class RSAUtils {
      * </p>
      * 
      * @param keyMap 密钥对
-     * @return
-     * @throws Exception
      */
     public static String getPrivateKey(Map<String, Object> keyMap)
             throws Exception {
@@ -313,8 +291,6 @@ public class RSAUtils {
      * </p>
      * 
      * @param keyMap 密钥对
-     * @return
-     * @throws Exception
      */
     public static String getPublicKey(Map<String, Object> keyMap)
             throws Exception {

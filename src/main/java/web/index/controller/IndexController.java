@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+@SuppressWarnings("unused")
 @Controller
 @RequestMapping("/index")
 public class IndexController extends BaseController {
 	@RequestMapping("/loginOut_manager")
-	public String loginOut(HttpServletRequest request, Model model) {
+	public String loginOut(HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		log.debug("管理员退出登录！");
 		session.setAttribute("managerName", null);
@@ -21,22 +22,22 @@ public class IndexController extends BaseController {
 	}
 
 	@RequestMapping("/goManager")
-	public String goList(HttpServletRequest request) {
+	public String goList() {
 		return "manage/login";
 	}
 
 	@RequestMapping("/404")
-	public String go404(HttpServletRequest request) {
+	public String go404() {
 		return "404";
 	}
 
 	@RequestMapping("/interfaces")
-	public String interfaces(HttpServletRequest request) {
+	public String interfaces() {
 		return "index/interfaces";
 	}
 
 	@RequestMapping("/safeKnow")
-	public String safeKnow(HttpServletRequest request) {
+	public String safeKnow() {
 		return "index/safeKnow";
 	}
 

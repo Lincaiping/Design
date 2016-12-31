@@ -9,19 +9,20 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 public interface ManagerService {
-	public Manager getManager(String id) ;
+	 Manager getManager(String id) ;
 	
-	public List<Manager> getAllManager();
+	 @SuppressWarnings("unused")
+	 List<Manager> getAllManager();
 	
-	public void saveOrUpdate(Manager manager);
+	 void saveOrUpdate(Manager manager);
 	
-	public boolean deleteManager(String id);
+	 boolean deleteManager(String id);
 	
-	public Pager<Manager> getByPage(PageBean pageBean);
+	 Pager<Manager> getByPage(PageBean pageBean);
 
-	public boolean login(HttpServletRequest request, String userName, String password);
+	 boolean login(HttpServletRequest request, String userName, String password);
 
-	public void disableThis(HttpServletRequest request);
+	 void disableThis(HttpServletRequest request);
 	
-	public Manager getManagerByName(String userName);
+	 Manager getManagerByName(String userName);
 }
