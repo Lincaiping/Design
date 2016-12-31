@@ -14,7 +14,7 @@
 .success p{
     display: block;
     margin:20px 0 0 11%;
-    font-family: "Microsoft YaHei";
+    font-family: "Microsoft YaHei", serif;
     font-size: 24px;
     color:#fff;
     text-align: center;
@@ -31,19 +31,19 @@
 }
 .s_title{
     display: block;
-    font-family: "Microsoft YaHei";
+    font-family: "Microsoft YaHei", serif;
     font-size: 14px;
     color:#323232;
     margin:20px 0 10px 10px;
 }
 .s_red{
-    font-family: "Microsoft YaHei";
+    font-family: "Microsoft YaHei", serif;
     color:red;
     font-size: 18px;
     text-align: center;
 }
 .s_redlink{
-    font-family: "Microsoft YaHei";
+    font-family: "Microsoft YaHei", serif;
     color:red;
     font-size: 18px;
     text-align: center;

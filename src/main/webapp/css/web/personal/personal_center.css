@@ -120,8 +120,7 @@
 .xins_yjjx {
     width: 80px;
     height: 80px;
-    margin: 0 auto;
-    margin-top: 26px;
+    margin: 26px auto 0;
     border-radius: 10px;
     background: #ffffff;
 }
@@ -299,8 +298,7 @@
 
 .cha_wzms, .cha_jitu {
     width: 90%;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0;
 }
 
 .cha_wzms p {
@@ -538,8 +536,7 @@
 
 .del_in {
     width: 90%;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto 0;
 }
 
 .del_in input {
@@ -621,7 +618,7 @@
     width: 100%;
     height: 74px;
     float: left;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .name_srkh span {
@@ -647,7 +644,6 @@
     background: #ffffff;
     border-radius: 10px;
     text-indent: 10px;
-    font-size: 1.5rem;
 }
 
 .name_tis {
@@ -728,8 +724,7 @@
 .ph1_wzbz {
     display: block;
     width: 80%;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 10px auto 0;
     line-height: 36px;
     text-align: center;
     font-size: 24px;
@@ -781,8 +776,7 @@
 .bph_yuan {
     width: 150px;
     height: 150px;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 10px auto 0;
     background-size: 100% 100%;
 }
 
@@ -925,12 +919,11 @@
     display: table;
     width: 96%;
     height: 3rem;
-    margin: 0 auto;
     line-height: 3rem;
     background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 20px;
+    margin: 20px auto 0;
 }
 
 .mx_xxk ul li {
@@ -1063,12 +1056,11 @@
     display: table;
     width: 96%;
     height: 3rem;
-    margin: 0 auto;
     line-height: 3rem;
     background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 20px;
+    margin: 20px auto 0;
 }
 
 .mdd_xxk ul li {

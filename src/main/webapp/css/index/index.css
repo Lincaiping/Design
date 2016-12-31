@@ -49,42 +49,42 @@
 
 #li_02 {
 	background:
-		url('/images/userSafe/720d5b97b4a0eaa12a0cd2.jpg');
+		url('/images/index/720d5b97b4a0eaa12a0cd2.jpg');
 }
 
 #li_03 {
 	background:
-		url('/images/userSafe/00f8ed803802ad6f402c8c.jpg');
+		url('/images/index/00f8ed803802ad6f402c8c.jpg');
 }
 
 #li_04 {
 	background:
-		url('/images/userSafe/1aa62f15eebe2be905b86a.jpg');
+		url('/images/index/1aa62f15eebe2be905b86a.jpg');
 }
 
 #li_05 {
 	background:
-		url('/images/userSafe/fe4dc40b65510b1fa67154.jpg');
+		url('/images/index/fe4dc40b65510b1fa67154.jpg');
 }
 
 #li_06 {
 	background:
-		url('/images/userSafe/d44ca1498620f606611c3a.jpg');
+		url('/images/index/d44ca1498620f606611c3a.jpg');
 }
 
 #li_07 {
 	background:
-		url('/images/userSafe/d91ee543996c710caedf5a.jpg');
+		url('/images/index/d91ee543996c710caedf5a.jpg');
 }
 
 #li_08 {
 	background:
-		url('/images/userSafe/63edb7c1ac28d76b4f1d21.jpg');
+		url('/images/index/63edb7c1ac28d76b4f1d21.jpg');
 }
 
 #li_09 {
 	background:
-		url('/images/userSafe/67feb1b841ce4d8f04fd34.jpg');
+		url('/images/index/67feb1b841ce4d8f04fd34.jpg');
 }
 
 .box_swipe {
@@ -93,7 +93,7 @@
 }
 
 .box_swipe ul {
-	-webkit-padding-start: 0px;
+	-webkit-padding-start: 0;
 }
 
 .box_swipe>ol {

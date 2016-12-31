@@ -22,4 +22,3 @@
 	<input type="BUTTON" id="delete" value="删除" style="margin-right: 100px"/>
 </body>
 <script type="text/javascript" src="/jsp/table/advise/list.js"></script>
-</html>

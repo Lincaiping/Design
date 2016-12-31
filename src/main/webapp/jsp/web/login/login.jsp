@@ -32,4 +32,3 @@
 <div class="bottom">欢迎使用账户中心 <a href="#" style="color: #555555">系统登陆</a></div>
 </div>
 </body>
-</html>

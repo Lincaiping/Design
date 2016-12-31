@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: '微软雅黑';
+    font-family: '微软雅黑', serif;
     margin: 0 auto;
     min-width: 980px;
 }
@@ -46,7 +46,6 @@ a, a:focus {
     text-decoration: none;
     color: #000;
     outline: none;
-    blr: expression(this.onFocus=this.blur());
 }
 
 a:hover {
@@ -78,8 +77,8 @@ h2 {
 
 .cloud {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: url(/images/manage/cloud.png) no-repeat;
@@ -102,7 +101,6 @@ h2 {
 }
 
 .logintop span {
-    color: #fff;
     line-height: 47px;
     background: url(/images/manage/loginsj.png) no-repeat 21px 18px;
     text-indent: 44px;
@@ -269,7 +267,6 @@ h2 {
     display: block;
     width: 87px;
     height: 88px;
-    -moz-transition: none;
     transition: background-color 0.3s linear;
     -moz-transition: background-color 0.3s linear;
     -webkit-transition: background-color 0.3s linear;
@@ -282,9 +279,8 @@ h2 {
 
 .nav li a:hover {
     display: block;
-    background: #000;
     color: #fff;
-    background: none repeat scroll 0% 0% rgb(43, 127, 181);
+    background: none repeat scroll 0 0 rgb(43, 127, 181);
 }
 
 .nav li img {
@@ -355,7 +351,6 @@ h2 {
     line-height: 30px;
     font-size: 14px;
     color: #b8ceda;
-    padding-left: 20px;
     padding-left: 35px;
 }
 
@@ -466,7 +461,6 @@ h2 {
     width: 6px;
     height: 11px;
     position: absolute;
-    right: 0;
     z-index: 10000;
     top: 9px;
     right: -1px;
@@ -868,7 +862,7 @@ h2 {
 
 .newlist li {
     line-height: 25px;
-    background: url(/images/manage/list2.png) no-repeat 0px 8px;
+    background: url(/images/manage/list2.png) no-repeat 0 8px;
     text-indent: 11px;
 }
 
@@ -979,19 +973,17 @@ h2 {
     width: 345px;
     height: 32px;
     line-height: 32px;
-    border-top: solid 1px #a7b5bc;
-    border-left: solid 1px #a7b5bc;
-    border-right: solid 1px #ced9df;
-    border-bottom: solid 1px #ced9df;
+    border: 1px solid #a7b5bc;
+    border-right-color: #ced9df;
+    border-bottom-color: #ced9df;
     background: url(/images/manage/inputbg.gif) repeat-x;
     text-indent: 10px;
 }
 
 .textinput {
-    border-top: solid 1px #a7b5bc;
-    border-left: solid 1px #a7b5bc;
-    border-right: solid 1px #ced9df;
-    border-bottom: solid 1px #ced9df;
+    border: 1px solid #a7b5bc;
+    border-right-color: #ced9df;
+    border-bottom-color: #ced9df;
     background: url(/images/manage/inputbg.gif) repeat-x;
     padding: 10px;
     width: 504px;
@@ -1458,7 +1450,7 @@ h2 {
 }
 
 .tabson {
-    margin: 18px 0px;
+    margin: 18px 0;
 }
 
 .formtext {
@@ -1556,10 +1548,9 @@ h2 {
     width: 150px;
     height: 32px;
     line-height: 32px;
-    border-top: solid 1px #a7b5bc;
-    border-left: solid 1px #a7b5bc;
-    border-right: solid 1px #ced9df;
-    border-bottom: solid 1px #ced9df;
+    border: 1px solid #a7b5bc;
+    border-right-color: #ced9df;
+    border-bottom-color: #ced9df;
     background: url(/images/manage/inputbg.gif) repeat-x;
     text-indent: 10px;
 }
