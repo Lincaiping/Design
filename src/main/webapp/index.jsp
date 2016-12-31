@@ -57,7 +57,7 @@
 						style='visibility: hidden;'>
 				</a>
 				</li>
-				<div style="display: block;margin: 20px;"></div>
+				<%--<div style="display: block;margin: 20px;"></div>--%>
 				<li class="icon07 li_back" id="li_08">
 					<a href="index/goManager.do" onclick="tongji(650728,0);">
 						<p>后台管理</p> <img
