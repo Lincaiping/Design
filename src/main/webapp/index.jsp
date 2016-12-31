@@ -82,7 +82,7 @@
 	</a>
 	<script type="text/javascript" src="/js/index/index_02.js"></script>
 	<a href="index/toUpload.do"> <footer>
-			账号安全中心提供服务 </footer>
+			同城租赁提供服务 </footer>
 	</a>
 	<div class="blankwhite" style="height: 30px;"></div>
 	<script src="/js/index/index_03.js"></script>
