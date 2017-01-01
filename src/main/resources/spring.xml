@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 引入属性文件 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${slave.jdbc.driverClassName}"/>
+        <!-- 后面的条件是为了解决hibernate中文存储乱码问题-->
+        <property name="url"
+                  value="${slave.jdbc.url}"/>
+        <property name="username" value="${slave.jdbc.username}"/>
+        <property name="password" value="${slave.jdbc.password}"/>
+        <!-- 配置连接数 -->
+        <property name="initialSize" value="1"/>
+        <property name="minIdle" value="1"/>
+        <property name="maxActive" value="20"/>
+        <!-- 配置单个连接最长等待时间 -->
+        <property name="maxWait" value="60000"/>
+        <!-- 间隔10分钟检查所有连接是否需要关闭或创建 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+        <!-- 配置最小生存的时间：5分钟 -->
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+        <property name="validationQuery" value="SELECT 'x'"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize"
+                  value="20"/>
+        <!-- 配置监控统计拦截的filters，监控界面sql统计 -->
+        <property name="filters" value="stat"/>
+    </bean>
+
+    <!-- 配置SessionFactory -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <!-- 注入数据源 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- hibernate属性配置 -->
+        <property name="hibernateProperties">
+            <props>
+                <!-- 数据库方言配置 -->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <!-- 自动创建|更新|验证数据库表结构 -->
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <!-- 输入执行的sql语句 -->
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <!-- 格式化sql语句 -->
+                <!-- <prop key="hibernate.format_sql">true</prop> -->
+            </props>
+        </property>
+        <!-- 自动扫描注解方式配置的hibernate类文件 -->
+        <property name="packagesToScan">
+            <list>
+                <value>com.table.*.entity</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 配置一个事务管理器 -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+          lazy-init="default">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 扫描除了控制器外的其他注解 -->
+    <context:component-scan base-package="com.*">
+        <context:exclude-filter type="regex"
+                                expression=".*controller$"/>
+    </context:component-scan>
+
+    <!-- 扫描除了控制器外的其他注解 -->
+    <context:component-scan base-package="web.*">
+        <context:exclude-filter type="regex"
+                                expression=".*controller$"/>
+    </context:component-scan>
+
+    <!-- 定义事务 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED"/>
+            <tx:method name="deleteUser" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 定义切面 -->
+    <aop:config>
+        <aop:pointcut id="interceptorPointCuts"
+                      expression="execution(* com.table.*.service.impl.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="interceptorPointCuts"/>
+    </aop:config>
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="maxUploadSize" value="10485760000"/>
+        <property name="maxInMemorySize" value="40960"/>
+    </bean>
+</beans>

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @SuppressWarnings("unused")
-@Service("userService")
+@Service("houseService")
 public class HouseServiceImpl extends BaseService implements HouseService {
 	
 	@Override
