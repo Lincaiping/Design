@@ -37,9 +37,6 @@ public class  User implements Serializable {
     @Column(length = 30)
     private String password;
     
-    @Column(length = 8)
-    private int age;
-
     @Column(name="create_time",length = 25)
     private String createTime;
     
@@ -54,15 +51,6 @@ public class  User implements Serializable {
     
     @Column(length = 50)
     private String image;
-    
-    @Column(name="android_image",length = 200)
-    private String androidImage;
-    
-    @Column(length = 25)
-    private String location;
-    
-    @Column(length = 25)
-    private String birdate;
     
     @Column(name="id_num",length = 25)
     private String idNum;
@@ -119,36 +107,12 @@ public class  User implements Serializable {
 		this.image = image;
 	}
 
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	public String getBirdate() {
-		return birdate;
-	}
-
-	public void setBirdate(String birdate) {
-		this.birdate = birdate;
-	}
-
 	public String getIdNum() {
 		return idNum;
 	}
 
 	public void setIdNum(String idNum) {
 		this.idNum = idNum;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
 	}
 
 	public String getId() {
@@ -186,13 +150,4 @@ public class  User implements Serializable {
 	public int getEnable() {
 		return enable;
 	}
-
-	public String getAndroidImage() {
-		return androidImage;
-	}
-
-	public void setAndroidImage(String androidImage) {
-		this.androidImage = androidImage;
-	}
-    
 }

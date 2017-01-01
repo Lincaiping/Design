@@ -9,5 +9,4 @@ out
 gen
 .gitignore
 .idea/workspace.xml
-src/main/resources/
 target/
