@@ -7,6 +7,4 @@
 *.iml
 out
 gen
-.gitignore
-.idea/workspace.xml
 target/
