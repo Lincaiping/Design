@@ -1,8 +1,8 @@
-﻿# Host: 127.0.0.1  (Version: 5.6.24)
-# Date: 2017-01-01 18:17:05
+# Host: 127.0.0.1  (Version: 5.6.24)
+# Date: 2017-01-13 20:50:58
 # Generator: MySQL-Front 5.3  (Build 4.214)
 
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES gb2312 */;
 
 #
 # Structure for table "advise"
@@ -121,14 +121,19 @@ CREATE TABLE `manager` (
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_num` varchar(50) DEFAULT NULL,
   `type` varchar(5) DEFAULT NULL,
+  `enable` int(11) DEFAULT NULL,
+  `last_pass_time` varchar(50) DEFAULT NULL,
+  `name` varchar(25) DEFAULT NULL,
+  `pass_count` int(11) DEFAULT NULL,
+  `private_key` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "manager"
 #
 
-INSERT INTO `manager` VALUES (1,'lcp','123456','','','2017-01-01 17:05:52',NULL,NULL);
+INSERT INTO `manager` VALUES (1,'lcp','123456','','','2017-01-01 17:05:52',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 #
 # Structure for table "user"
@@ -146,6 +151,8 @@ CREATE TABLE `user` (
   `real_name` varchar(50) DEFAULT NULL,
   `enable` varchar(5) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
+  `mac` varchar(55) DEFAULT NULL,
+  `user_name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

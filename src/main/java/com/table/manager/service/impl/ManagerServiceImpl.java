@@ -23,10 +23,10 @@ import javax.servlet.http.HttpSession;
 public class ManagerServiceImpl extends BaseService implements ManagerService {
 	public boolean login(HttpServletRequest request, String userName, String password) {
 		Manager manager = this.getManagerByName(userName);
-		if(manager.getEnable()==0){
+		if (null == manager || manager.getEnable() == 0) {
 			return false;
 		}
-		if(password.equals(manager.getPassword())){
+		if (password.equals(manager.getPassword())) {
 			return true;
 		}
 		String truePassWord;
@@ -35,7 +35,7 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 			byte[] data = Base64Utils.decodeFromString(manager.getPassword());
 			byte[] decodedData = RSAUtils.decryptByPrivateKey(data, privateKey);
 			truePassWord = Base64Utils.encodeToString(decodedData);
-			password = password.substring(0, password.length()-1);
+			password = password.substring(0, password.length() - 1);
 			truePassWord = truePassWord.substring(0, password.length());
 			if (truePassWord.endsWith(password)) {
 				String currentTime = this.refFormatNowDate();
@@ -55,7 +55,7 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 
 	public Manager getManagerByName(String userName) {
 		// TODO Auto-generated method stub
-		String hql = "from Manager where name=?";
+		String hql = "from Manager where username=?";
 		return dao.findObject(hql, userName);
 	}
 
@@ -122,7 +122,7 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 		return sdFormatter.format(nowTime);
 	}
 
-	public void disableThis(HttpServletRequest request){
+	public void disableThis(HttpServletRequest request) {
 		HttpSession session = HttpUtils.getSession(request);
 		String managerName = (String) session.getAttribute("managerName");
 		Manager manager = this.getManagerByName(managerName);

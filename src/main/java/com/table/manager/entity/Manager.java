@@ -28,7 +28,7 @@ public class  Manager implements Serializable {
     private String id;
 
     @Column(length = 25)
-    private String name;
+    private String username;
 
     @Column
     private int type;
@@ -55,14 +55,6 @@ public class  Manager implements Serializable {
     public void setId(String id) {
         this.id = id;
     }
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public int getType() {
 		return type;

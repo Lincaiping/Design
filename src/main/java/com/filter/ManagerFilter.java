@@ -28,7 +28,7 @@ public class ManagerFilter implements Filter{
         HttpServletResponse response=(HttpServletResponse)res;
         HttpSession session=request.getSession();
         if(null==session.getAttribute("managerName")){
-            response.sendRedirect("http://127.0.0.1:8080/index/goManager.dos"); 
+            response.sendRedirect("http://127.0.0.1:8080/index/goManager.do");
         }
         chain.doFilter(req, res);
     }

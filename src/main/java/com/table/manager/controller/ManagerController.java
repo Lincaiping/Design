@@ -57,7 +57,7 @@ public class ManagerController extends BaseController {
 			model.addAttribute("managerName", session.getAttribute("managerName"));
 			return "manager";
 		}
-		return "404";
+		return "/404";
 	}
 
 	@RequestMapping("/goList")
