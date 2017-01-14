@@ -10,61 +10,53 @@ import javax.persistence.Table;
 
 /**
  * 此实体的定义应用了springmvc的注解，省去了传统的Hibernate跟数据库之间的映射配置文件
+ *
  * @author gbq
  */
 @SuppressWarnings("unused")
 @Entity
 @Table(name = "user")
-public class  User implements Serializable {
-    /**
-     * 2016年3月3日
-     */
-    private static final long serialVersionUID = 1L;
+public class User implements Serializable {
+	/**
+	 * 2016年3月3日
+	 */
+	private static final long serialVersionUID = 1L;
 
-    //指定主键
-    @Id  
-    //主键自动增长型
-    @GeneratedValue 
-    @Column(name="Id",length = 11)
-    private String id;
+	//指定主键
+	@Id
+	//主键自动增长型
+	@GeneratedValue
+	@Column(name = "Id", length = 11)
+	private String id;
 
-    @Column(name="user_name",length = 50)
-    private String userName;
-    
-    @Column(name="real_name",length = 50)
-    private String realName;
+	@Column(name = "user_name", length = 50)
+	private String userName;
 
-    @Column(length = 30)
-    private String password;
-    
-    @Column(name="create_time",length = 25)
-    private String createTime;
-    
-    @Column(length = 4)
-    private int enable;
-    
-    @Column(length = 25)
-    private String tel;
-    
-    @Column(length = 25)
-    private String email;
-    
-    @Column(length = 50)
-    private String image;
-    
-    @Column(name="id_num",length = 25)
-    private String idNum;
-    
-    @Column(name="mac",length = 55)
-    private String mac;
-    
-    public String getMac() {
-		return mac;
-	}
+	@Column(length = 300)
+	private String password;
 
-	public void setMac(String mac) {
-		this.mac = mac;
-	}
+	@Column(length = 25)
+	private String tel;
+
+	@Column(length = 25)
+	private String email;
+
+
+	@Column(name = "create_time", length = 25)
+	private String createTime;
+
+	@Column(name = "id_num", length = 25)
+	private String idNum;
+
+	@Column(name = "real_name", length = 50)
+	private String realName;
+
+	@Column(length = 4)
+	private int enable;
+
+
+	@Column(length = 50)
+	private String image;
 
 	public String getCreateTime() {
 		return createTime;
@@ -116,28 +108,28 @@ public class  User implements Serializable {
 	}
 
 	public String getId() {
-        return id;
-    }
+		return id;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public String getUserName() {
-        return userName;
-    }
+	public String getUserName() {
+		return userName;
+	}
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getRealName() {
 		return realName;

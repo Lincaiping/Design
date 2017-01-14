@@ -43,7 +43,7 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 				manager.setPassCount(manager.getPassCount() + 1);
 				this.saveOrUpdate(manager);
 				HttpSession session = request.getSession();
-				session.setAttribute("managerName", manager.getName());
+				session.setAttribute("managerName", manager.getUsername());
 				return true;
 			}
 			return false;

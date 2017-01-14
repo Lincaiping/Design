@@ -30,23 +30,32 @@ public class  Manager implements Serializable {
     @Column(length = 25)
     private String username;
 
+	@Column(length = 500)
+	private String password;
+
+	@Column(length = 25)
+	private String tel;
+
+	@Column(length = 25)
+	private String email;
+
+	@Column(length = 25)
+	private String idNum;
+
     @Column
     private int type;
     
     @Column
     private int enable;
+
+	@Column(name="last_pass_time",length = 50)
+	private String lastPassTime;
     
     @Column(name="pass_count")
     private int passCount;
-    
-    @Column(length = 1024)
-    private String password;
-    
+
     @Column(length = 1024)
     private String privateKey;
-
-    @Column(name="last_pass_time",length = 50)
-    private String lastPassTime;
 
 	public String getId() {
         return id;
@@ -104,4 +113,35 @@ public class  Manager implements Serializable {
 		this.enable = enable;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getIdNum() {
+		return idNum;
+	}
+
+	public void setIdNum(String idNum) {
+		this.idNum = idNum;
+	}
 }
