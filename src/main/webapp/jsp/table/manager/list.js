@@ -9,7 +9,7 @@ function pageInit(){
         colNames : [ 'id', '用户名','管理员类型', '密码','最后登录时间','登录次数'],
         colModel : [ 
                      {name : 'id',index : 'id',width : 55,editable:true}, 
-                     {name : 'name',index : 'name',width : 90,editable:true}, 
+                     {name : 'username',index : 'username',width : 90,editable:true},
                      {name : 'type',index : 'type',width : 100,editable:true},
                      {name : 'password',index : 'password',width : 100,editable:true},
                      {name : 'lastPassTime',index : 'lastPassTime',width : 80,editable:true},

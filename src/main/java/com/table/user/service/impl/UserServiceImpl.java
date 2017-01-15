@@ -12,7 +12,7 @@ import java.util.List;
 
 @SuppressWarnings("unused")
 @Service("userService")
-public class UserserviceImpl extends BaseService implements UserService {
+public class UserServiceImpl extends BaseService implements UserService {
 	
 	@Override
 	public User getUser(String id) {
@@ -29,7 +29,7 @@ public class UserserviceImpl extends BaseService implements UserService {
 	@Override
 	public void saveOrUpdate(User user) {
 		// TODO Auto-generated method stub
-		if (null==user.getId()) {
+		if (null==user.getId()||user.getId().equals("")) {
 			user.setEnable(1);
 			dao.saveObject(user);
 		}
