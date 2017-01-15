@@ -27,6 +27,8 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 			return false;
 		}
 		if (password.equals(manager.getPassword())) {
+			HttpSession session = request.getSession();
+			session.setAttribute("managerName", manager.getUsername());
 			return true;
 		}
 		String truePassWord;

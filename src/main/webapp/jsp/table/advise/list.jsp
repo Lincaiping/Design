@@ -15,7 +15,7 @@
 </head>
 <body>
 <body>
-	<table id="user"></table>
+	<table id="advise"></table>
 	<div id="pager"></div>
 	<input type="BUTTON" id="add" value="add" style="margin-right: 100px" />
 	<input type="BUTTON" id="edit" value="编辑" style="margin-right: 100px"/>

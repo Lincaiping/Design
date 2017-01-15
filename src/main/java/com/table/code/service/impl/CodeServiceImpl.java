@@ -1,87 +1,78 @@
-package com.table.house.service.impl;
+package com.table.code.service.impl;
 
 import com.base.BaseService;
 import com.base.dao.PageBean;
 import com.base.dao.Pager;
-import com.table.house.entity.House;
-import com.table.house.service.HouseService;
+import com.table.code.entity.Code;
+import com.table.code.service.CodeService;
 
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @SuppressWarnings("unused")
-@Service("houseService")
-public class HouseServiceImpl extends BaseService implements HouseService {
-	
+@Service("codeService")
+public class CodeServiceImpl extends BaseService implements CodeService {
+
 	@Override
-	public House getHouse(String id) {
+	public Code getCode(String id) {
 		// TODO Auto-generated method stub
-		return dao.getObject(House.class, id);
+		return dao.getObject(Code.class, id);
 	}
 
 	@Override
-	public List<House> getAllHouse() {
+	public List<Code> getAllCode() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void saveOrUpdate(House house) {
+	public void saveOrUpdate(Code code) {
 		// TODO Auto-generated method stub
-		if (null==house.getId()) {
-			dao.saveObject(house);
-		}
-		else {
-			dao.updateObject(house);
+		if (null == code.getId()) {
+			dao.saveObject(code);
+		} else {
+			dao.updateObject(code);
 		}
 	}
 
 	@Override
-	public boolean deleteHouse(String id) {
+	public boolean deleteCode(String id) {
 		// TODO Auto-generated method stub
-		House user = this.getHouse(id);
+		Code user = this.getCode(id);
 		dao.delete(user);
 		return true;
 	}
 
 	@Override
-	public Pager<House> getByPage(PageBean pageBean) {
+	public Pager<Code> getByPage(PageBean pageBean) {
 		// TODO Auto-generated method stub
-		String hql="from Contract";
+		String hql = "from Contract";
 		int page = pageBean.getPageNo();
 		int rows = pageBean.getPageSize();
 		return dao.findPager(hql, page, rows);
 	}
-	
+
 	@Override
-	public House getHouseByName(String name){
+	public Code getCodeByName(String name) {
 		String hql = "from Contract where userName =?";
 		return dao.findObject(hql, name);
 	}
-	
-	public House getHouseByPhone(String tel){
+
+	public Code getCodeByPhone(String tel) {
 		String hql = "from Contract where tel=?";
 		return dao.findObject(hql, tel);
 	}
-	
-	public House getHouseByEmail(String email){
+
+	public Code getCodeByEmail(String email) {
 		String hql = "from Contract where email =?";
 		return dao.findObject(hql, email);
 	}
-	
-	public House getHouseById(String houseId){
+
+	public Code getCodeById(String codeId) {
 		String hql = "from Contract where id =?";
-		return dao.findObject(hql, houseId);
+		return dao.findObject(hql, codeId);
 	}
-
-
-
-
-
-
-
-
 
 	@Override
 	public void disable(String id) {

@@ -2,7 +2,7 @@ $(function(){
   pageInit();
 });
 function pageInit(){
-  jQuery("#user").jqGrid(
+  jQuery("#managers").jqGrid(
       {
         url : "/managers/getAllManager.do",
         datatype : "json",
@@ -37,12 +37,12 @@ function pageInit(){
       });
   jQuery("#m1").click(function() {
     var rowId;
-    rowId = jQuery("#user").jqGrid('getGridParam', 'selarrrow');
-    var celldata = $("#user").jqGrid('getCell',rowId,'id');
+    rowId = jQuery("#managers").jqGrid('getGridParam', 'selarrrow');
+    var celldata = $("#managers").jqGrid('getCell',rowId,'id');
     alert(celldata);
   });
   $("#edit").click(function() {
-        var gr = jQuery("#user").jqGrid('getGridParam', 'selrow');
+        var gr = jQuery("#managers").jqGrid('getGridParam', 'selrow');
         if (gr != null)
           jQuery("#user").jqGrid('editGridRow', gr, {
             height : 300,
@@ -52,17 +52,17 @@ function pageInit(){
           alert("请选择需要编辑的记录");
       });
   $("#add").click(function() {
-        jQuery("#user").jqGrid('editGridRow', "new", {
+        jQuery("#managers").jqGrid('editGridRow', "new", {
           height : 300,
           reloadAfterSubmit : false
         });
       });
   $("#delete").click(function() {
-      var gr = jQuery("#user").jqGrid('getGridParam', 'selrow');
+      var gr = jQuery("#managers").jqGrid('getGridParam', 'selrow');
       if (gr != null){
     	  $.ajax({
     			type : "POST",
-    			url : "/manager/delUser.do",
+    			url : "/manager/delManager.do",
     			data : {
     				id:gr,
     			},

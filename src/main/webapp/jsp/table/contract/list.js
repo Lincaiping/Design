@@ -2,18 +2,17 @@ $(function(){
   pageInit();
 });
 function pageInit(){
-  jQuery("#user").jqGrid(
+  jQuery("#contract").jqGrid(
       {
-        url : "/web/getAllWeb.do",
+        url : "/contract/getAllContract.do",
         datatype : "json",
-        colNames : [ 'id', '网站名称', '描述','链接地址','得分（10为满分）','成员数目'],
+        colNames : [ 'id', '用户名', '标题','描述','操作'],
         colModel : [ 
                      {name : 'id',index : 'id',width : 55,editable:true}, 
-                     {name : 'title',index : 'userName',width : 90,editable:true}, 
-                     {name : 'describle',index : 'password',width : 100,editable:true},
-                     {name : 'link',index : 'age',width : 80,editable:true},
-                     {name : 'score',width : 80,editable:true},
-                     {name : 'member',width : 80,editable:true},
+                     {name : 'userName',index : 'userName',width : 90,editable:true}, 
+                     {name : 'ownerName',index : 'ownerName',width : 100,editable:true},
+                     {name : 'cost',index : 'cost',width : 80,editable:true},
+                     {name : 'oprate',width : 80,editable:false},
                    ],
         rowNum : 10,
         rowList : [ 10, 20, 30 ],
@@ -32,17 +31,17 @@ function pageInit(){
         viewrecords : true,
         sortorder : "desc",
         multiselect : true,
-        editurl : "/web/saveOrUpdate.do",
+        editurl : "/contract/saveOrUpdate.do",
         caption : "用户信息管理"
       });
   jQuery("#m1").click(function() {
     var rowId;
-    rowId = jQuery("#user").jqGrid('getGridParam', 'selarrrow');
-    var celldata = $("#user").jqGrid('getCell',rowId,'id');
+    rowId = jQuery("#contract").jqGrid('getGridParam', 'selarrrow');
+    var celldata = $("#contract").jqGrid('getCell',rowId,'id');
     alert(celldata);
   });
   $("#edit").click(function() {
-        var gr = jQuery("#user").jqGrid('getGridParam', 'selrow');
+        var gr = jQuery("#contract").jqGrid('getGridParam', 'selrow');
         if (gr != null)
           jQuery("#user").jqGrid('editGridRow', gr, {
             height : 300,
@@ -52,7 +51,7 @@ function pageInit(){
           alert("请选择需要编辑的记录");
       });
   $("#add").click(function() {
-        jQuery("#user").jqGrid('editGridRow', "new", {
+        jQuery("#contract").jqGrid('editGridRow', "new", {
           height : 300,
           reloadAfterSubmit : false
         });
@@ -62,7 +61,7 @@ function pageInit(){
       if (gr != null){
     	  $.ajax({
     			type : "POST",
-    			url : "/web/delWeb.do",
+    			url : "/limit/delContract.do",
     			data : {
     				id:gr,
     			},

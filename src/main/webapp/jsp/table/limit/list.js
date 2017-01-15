@@ -2,7 +2,7 @@ $(function(){
   pageInit();
 });
 function pageInit(){
-  jQuery("#user").jqGrid(
+  jQuery("#limit").jqGrid(
       {
         url : "/limit/getAllAdvise.do",
         datatype : "json",
