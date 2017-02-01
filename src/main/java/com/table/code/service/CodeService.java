@@ -27,5 +27,4 @@ public interface CodeService {
 	Code getCodeByEmail(String email);
 
 	Code getCodeById(String userId);
-
 }

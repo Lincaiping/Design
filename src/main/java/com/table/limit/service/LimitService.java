@@ -28,4 +28,9 @@ public interface LimitService {
 
 	Limit getLimitById(String userId);
 
+	int getCurrentCount(String userId, Integer type);
+
+	int countAdd(String userId, Integer type);
+
+	void disable(String userId, Integer type);
 }

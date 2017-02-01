@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * Created by linCP on 2017/1/1.
  */
 @Entity
-@Table(name = "limit")
+@Table(name = "error_limit")
 public class Limit implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -28,7 +28,7 @@ public class Limit implements Serializable {
 	private String userId;
 
 	@Column(length = 10)
-	private String enable;
+	private int enable;
 
 	@Column(name = "current_time",length = 50)
 	private String currentTime;
@@ -38,6 +38,13 @@ public class Limit implements Serializable {
 
 	@Column(length = 10)
 	private int code;
+
+	@Column(length = 3)
+	private int type;
+
+
+	@Column(length = 11)
+	private int currentCount;
 
 	public String getId() {
 		return id;
@@ -55,11 +62,11 @@ public class Limit implements Serializable {
 		this.userId = userId;
 	}
 
-	public String getEnable() {
+	public int getEnable() {
 		return enable;
 	}
 
-	public void setEnable(String enable) {
+	public void setEnable(int enable) {
 		this.enable = enable;
 	}
 
@@ -85,5 +92,21 @@ public class Limit implements Serializable {
 
 	public void setCode(int code) {
 		this.code = code;
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public int getCurrentCount() {
+		return currentCount;
+	}
+
+	public void setCurrentCount(int currentCount) {
+		this.currentCount = currentCount;
 	}
 }

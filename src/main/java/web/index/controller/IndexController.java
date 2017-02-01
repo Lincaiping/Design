@@ -1,10 +1,17 @@
 package web.index.controller;
 
 import com.base.BaseController;
+import com.base.HttpUtils;
+import com.table.advise.entity.Advise;
+import com.table.advise.service.AdviseService;
+import com.table.user.entity.User;
+import com.table.user.service.UserService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -13,6 +20,12 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/index")
 public class IndexController extends BaseController {
+	@Autowired
+	private UserService userService;
+
+	@Autowired
+	private AdviseService adviseService;
+
 	@RequestMapping("/loginOut_manager")
 	public String loginOut(HttpServletRequest request) {
 		HttpSession session = request.getSession();
@@ -31,9 +44,46 @@ public class IndexController extends BaseController {
 		return "404";
 	}
 
+	@RequestMapping("/toLogin")
+	public String toLogin() {
+		return "web/login/login";
+	}
+
 	@RequestMapping("/interfaces")
 	public String interfaces() {
 		return "index/interfaces";
+	}
+
+	@RequestMapping("/advise")
+	public String advise(HttpServletRequest request, Model model) {
+		HttpSession session = HttpUtils.getSession(request);
+		String userId = (String) session.getAttribute("userId");
+		if (null != userId) {
+			User user = userService.getUser(userId);
+			model.addAttribute("userName", user.getUserName());
+		}
+		return "index/advise";
+	}
+
+	@RequestMapping("/addAdvise")
+	@ResponseBody
+	public String addAdvise(HttpServletRequest request, String userName, String tel, String content, String email) {
+		Advise advise = new Advise();
+		HttpSession session = HttpUtils.getSession(request);
+		String userId = (String) session.getAttribute("userId");
+		if(null!=userId){
+			advise.setUserId(userId);
+		}
+		advise.setDescrible(content);
+		advise.setEmail(email);
+		advise.setTel(tel);
+		advise.setUsername(userName);
+		try {
+			adviseService.saveOrUpdate(advise);
+			return "success";
+		} catch (Exception e) {
+			return "error";
+		}
 	}
 
 	@RequestMapping("/safeKnow")

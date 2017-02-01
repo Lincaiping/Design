@@ -3,18 +3,6 @@ function submit() {
 	var userName = $("#realName").val();
 	var email = $("#email").val();
 	var tel = $("#serviceNum").val();
-//	if(tel!="" && !validSvcNum(tel)){
-//		alert("请输入正确的手机号码！");
-//    	return;
-//    } 
-//	if(email!="" && !validEmail($("#email"))){
-//		alert("请输入正确的邮箱！");
-//		return;
-//	};
-//	if(content.length > 2990){
-//		alert("输入的内容过长！意见内容长度不能超过3000字");
-//		return;
-//	}
 	$.ajax({
 		type : "POST",
 		url : "/index/addAdvise.do",
@@ -34,7 +22,7 @@ function submit() {
 	});
 }
 //验证手机格式
-function validSvcNum(inputObj,tipObj){
+function validSvcNum(inputObj){
 	var result = true;
 	var re = /^1\d{10}$/
 	if(!re.test(inputObj.val())){

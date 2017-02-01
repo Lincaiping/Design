@@ -8,7 +8,11 @@ import com.table.limit.service.LimitService;
 
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+
+import web.login.entity.PassType;
 
 @SuppressWarnings("unused")
 @Service("limitService")
@@ -79,5 +83,65 @@ public class LimitServiceImpl extends BaseService implements LimitService {
 		// TODO Auto-generated method stub
 		String hql = "update Contract set enable=0 where id=?";
 		dao.executeSql(hql, id);
+	}
+
+	@Override
+	public int getCurrentCount(String userId, Integer type) {
+		String hql = "from ErrorLimit where userId=? and type=?";
+
+		String currentTime = this.refFormatNowDate();
+		int count = dao.countObjects(hql, userId, type);
+		if (count == 0) {
+			Limit limit = new Limit();
+			limit.setUserId(userId);
+			limit.setType(type);
+			limit.setEnable(1);
+			limit.setCurrentCount(0);
+			limit.setEnableTime(this.refFormatNowDate(PassType.getTime(type)));
+			limit.setCurrentTime(currentTime);
+			this.saveOrUpdate(limit);
+			return 1;
+		} else {
+			Limit limit = dao.findObject(hql, userId, type);
+			if(limit.getEnable()==0){
+				return 100;
+			}
+			this.countAdd(userId, type);
+			return ++count;
+		}
+	}
+
+	@Override
+	public int countAdd(String userId, Integer type) {
+		try {
+			String hql = "from ErrorLimit where userId=? and type=?";
+			Limit limit = dao.findObject(hql, userId, type);
+			limit.setCurrentCount(limit.getCurrentCount() + 1);
+			dao.updateObject(limit);
+			return 1;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return 0;
+		}
+	}
+
+	private String refFormatNowDate(Long time) {
+		Date nowTime = new Date(System.currentTimeMillis()+time*60);
+		SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return sdFormatter.format(nowTime);
+	}
+
+	private String refFormatNowDate() {
+		Date nowTime = new Date(System.currentTimeMillis());
+		SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return sdFormatter.format(nowTime);
+	}
+
+	public void disable(String userId, Integer type) {
+		String hql = "from ErrorLimit where userId=? and type=?";
+		Limit limit = dao.findObject(hql, userId, type);
+		limit.setEnableTime(this.refFormatNowDate(PassType.getTime(type)));
+		limit.setEnable(0);
+		this.saveOrUpdate(limit);
 	}
 }

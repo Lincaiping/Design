@@ -36,9 +36,11 @@ public class Advise implements Serializable {
 	@Column(length = 25)
 	private String tel;
 
+	@Column(length = 100)
+	private String email;
 
 	@Column(length = 100)
-	private String emai;
+	private String username;
 
 	public String getId() {
 		return id;
@@ -80,11 +82,19 @@ public class Advise implements Serializable {
 		this.tel = tel;
 	}
 
-	public String getEmai() {
-		return emai;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmai(String emai) {
-		this.emai = emai;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 }
