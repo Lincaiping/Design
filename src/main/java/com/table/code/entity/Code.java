@@ -30,8 +30,17 @@ public class Code implements Serializable {
 	@Column(length = 200)
 	private String code;
 
+	@Column(length = 20)
+	private String tel;
+
+	@Column(length = 50)
+	private String email;
+
 	@Column(name = "enable_time",length = 50)
 	private String enableTime;
+
+	@Column(length = 5)
+	private int type;
 
 	public String getId() {
 		return id;
@@ -63,5 +72,29 @@ public class Code implements Serializable {
 
 	public void setEnableTime(String enableTime) {
 		this.enableTime = enableTime;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
 	}
 }

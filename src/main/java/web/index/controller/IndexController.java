@@ -2,6 +2,7 @@ package web.index.controller;
 
 import com.base.BaseController;
 import com.base.HttpUtils;
+import com.base.random.RandomSecret;
 import com.table.advise.entity.Advise;
 import com.table.advise.service.AdviseService;
 import com.table.user.entity.User;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import web.index.service.IndexService;
+
 @SuppressWarnings("unused")
 @Controller
 @RequestMapping("/index")
@@ -25,6 +28,31 @@ public class IndexController extends BaseController {
 
 	@Autowired
 	private AdviseService adviseService;
+
+	@Autowired
+	IndexService indexService;
+
+	@RequestMapping("/getCode")
+	@ResponseBody
+	public String getCode(HttpServletRequest request, String email, String tel) {
+		Integer code = Integer.valueOf(RandomSecret.getNum());
+		if (null == email) {
+			if (indexService.setTelCode(tel,  String.valueOf(code))) {
+				return "success";
+			} else {
+				return "error";
+			}
+
+		}
+		if (null == tel) {
+			if (indexService.setEmailCode(email, String.valueOf(code))) {
+				return "success";
+			} else {
+				return "error";
+			}
+		}
+		return "success";
+	}
 
 	@RequestMapping("/loginOut_manager")
 	public String loginOut(HttpServletRequest request) {
