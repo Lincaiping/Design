@@ -1,5 +1,5 @@
 # Host: 127.0.0.1  (Version: 5.6.24)
-# Date: 2017-02-01 17:22:40
+# Date: 2017-02-17 20:04:07
 # Generator: MySQL-Front 5.3  (Build 4.214)
 
 /*!40101 SET NAMES gb2312 */;
@@ -8,7 +8,6 @@
 # Structure for table "advise"
 #
 
-DROP TABLE IF EXISTS `advise`;
 CREATE TABLE `advise` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) unsigned DEFAULT NULL,
@@ -23,15 +22,9 @@ CREATE TABLE `advise` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 #
-# Data for table "advise"
-#
-
-
-#
 # Structure for table "code"
 #
 
-DROP TABLE IF EXISTS `code`;
 CREATE TABLE `code` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) unsigned DEFAULT NULL,
@@ -39,19 +32,14 @@ CREATE TABLE `code` (
   `enable_time` timestamp(5) NULL DEFAULT NULL,
   `tel` varchar(20) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
+  `type` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-#
-# Data for table "code"
-#
-
 
 #
 # Structure for table "contract"
 #
 
-DROP TABLE IF EXISTS `contract`;
 CREATE TABLE `contract` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) unsigned DEFAULT NULL,
@@ -65,15 +53,9 @@ CREATE TABLE `contract` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 #
-# Data for table "contract"
-#
-
-
-#
 # Structure for table "error_limit"
 #
 
-DROP TABLE IF EXISTS `error_limit`;
 CREATE TABLE `error_limit` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `current_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -83,19 +65,15 @@ CREATE TABLE `error_limit` (
   `count` int(11) unsigned DEFAULT NULL,
   `type` tinyint(3) unsigned DEFAULT NULL,
   `current_count` int(11) unsigned DEFAULT NULL,
+  `code` int(11) DEFAULT NULL,
+  `currentCount` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-#
-# Data for table "error_limit"
-#
-
 
 #
 # Structure for table "house"
 #
 
-DROP TABLE IF EXISTS `house`;
 CREATE TABLE `house` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) DEFAULT '',
@@ -111,15 +89,9 @@ CREATE TABLE `house` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 #
-# Data for table "house"
-#
-
-
-#
 # Structure for table "manager"
 #
 
-DROP TABLE IF EXISTS `manager`;
 CREATE TABLE `manager` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL DEFAULT '',
@@ -138,15 +110,9 @@ CREATE TABLE `manager` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 #
-# Data for table "manager"
-#
-
-
-#
 # Structure for table "user"
 #
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL DEFAULT '',
@@ -161,8 +127,3 @@ CREATE TABLE `user` (
   `user_name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
-#
-# Data for table "user"
-#
-
