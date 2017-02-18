@@ -36,6 +36,7 @@ public class LoginController extends BaseController {
 			model.addAttribute("tel", user.getTel());
 			model.addAttribute("email", user.getEmail());
 			model.addAttribute("idNum", user.getIdNum());
+			model.addAttribute("houseList", null);
 			return "web/index";
 		}
 		return "404";
