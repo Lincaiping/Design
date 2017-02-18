@@ -55,29 +55,29 @@ public class CodeServiceImpl extends BaseService implements CodeService {
 
 	@Override
 	public Code getCodeByName(String name) {
-		String hql = "from Contract where userName =?";
+		String hql = "from Code where userName =?";
 		return dao.findObject(hql, name);
 	}
 
 	public Code getCodeByPhone(String tel) {
-		String hql = "from Contract where tel=?";
+		String hql = "from Code where tel=?";
 		return dao.findObject(hql, tel);
 	}
 
 	public Code getCodeByEmail(String email) {
-		String hql = "from Contract where email =?";
+		String hql = "from Code where email =?";
 		return dao.findObject(hql, email);
 	}
 
 	public Code getCodeById(String codeId) {
-		String hql = "from Contract where id =?";
+		String hql = "from Code where id =?";
 		return dao.findObject(hql, codeId);
 	}
 
 	@Override
 	public void disable(String id) {
 		// TODO Auto-generated method stub
-		String hql = "update Contract set enable=0 where id=?";
+		String hql = "update Code set enable=0 where id=?";
 		dao.executeSql(hql, id);
 	}
 }

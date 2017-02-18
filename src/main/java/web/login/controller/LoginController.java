@@ -29,14 +29,14 @@ public class LoginController extends BaseController {
 	public String login(HttpServletRequest request, String userName, String password, Model model) {
 		User user = loginService.userLogin(request, userName, password, null);
 		if (!indexService.limitAble(request, 1)) {
-			return "400";
+			return "404";
 		}
 		if (null != user) {
 			model.addAttribute("image", user.getImage());
 			model.addAttribute("tel", user.getTel());
 			model.addAttribute("email", user.getEmail());
 			model.addAttribute("idNum", user.getIdNum());
-			return "web/personal/personal";
+			return "web/index";
 		}
 		return "404";
 	}

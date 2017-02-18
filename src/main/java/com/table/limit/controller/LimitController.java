@@ -4,7 +4,7 @@ import com.base.BaseController;
 import com.base.HttpUtils;
 import com.base.dao.PageBean;
 import com.base.dao.Pager;
-import com.table.limit.entity.Limit;
+import com.table.limit.entity.ErrorLimit;
 import com.table.limit.service.LimitService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +37,7 @@ public class LimitController extends BaseController {
 
 	@RequestMapping("/getAllLimit")
 	@ResponseBody
-	public Pager<Limit> getAllLimit(Integer page, Integer rows) {
+	public Pager<ErrorLimit> getAllLimit(Integer page, Integer rows) {
 		PageBean pageBean = new PageBean();
 		pageBean.setPageNo(page);
 		pageBean.setPageSize(rows);
@@ -57,7 +57,7 @@ public class LimitController extends BaseController {
 
 	@RequestMapping("/saveOrUpdate")
 	@ResponseBody
-	public boolean saveOrUpdate(Limit limit) {
+	public boolean saveOrUpdate(ErrorLimit limit) {
 		limitService.saveOrUpdate(limit);
 		return true;
 	}

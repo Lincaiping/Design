@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>账号安全中心</title>
+    <title>家家乐</title>
     <!-- 移动设备支持 -->
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <%@ include file="/header.jsp" %>

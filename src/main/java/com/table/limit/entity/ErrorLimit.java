@@ -14,7 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "error_limit")
-public class Limit implements Serializable {
+public class ErrorLimit implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	//指定主键
@@ -30,20 +30,19 @@ public class Limit implements Serializable {
 	@Column(length = 10)
 	private int enable;
 
-	@Column(name = "current_time",length = 50)
+	@Column(name = "now_time",length = 100)
 	private String currentTime;
 
-	@Column(name = "enable_time",length = 50)
+	@Column(name = "enable_time",length = 100)
 	private String enableTime;
-
-	@Column(length = 10)
-	private int code;
 
 	@Column(length = 3)
 	private int type;
 
+	@Column(length = 3)
+	private int count;
 
-	@Column(length = 11)
+	@Column(name = "current_count",length = 11)
 	private int currentCount;
 
 	public String getId() {
@@ -86,14 +85,6 @@ public class Limit implements Serializable {
 		this.enableTime = enableTime;
 	}
 
-	public int getCode() {
-		return code;
-	}
-
-	public void setCode(int code) {
-		this.code = code;
-	}
-
 	public int getType() {
 		return type;
 	}
@@ -108,5 +99,13 @@ public class Limit implements Serializable {
 
 	public void setCurrentCount(int currentCount) {
 		this.currentCount = currentCount;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
 	}
 }

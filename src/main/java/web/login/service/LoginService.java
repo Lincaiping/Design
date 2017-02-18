@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * 用户登录模块功能类
- * 
+ *
  * @author gbq 2016年4月19日
  */
 @Service
@@ -22,7 +22,7 @@ public class LoginService {
 
 	/**
 	 * 登录验证
-	 * 
+	 *
 	 * @param request
 	 * @param userName
 	 * @param password

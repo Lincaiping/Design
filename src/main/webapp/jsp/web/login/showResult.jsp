@@ -14,9 +14,9 @@
 		<p>恭喜您注册成功！</p>
 		<div class="s_msg">
 			<div class="s_title">
-				您的用户名：<span class="s_red">${username }</span>
+				您的用户名：<span class="s_red">${userName }</span>
 			</div>
-			<div class="s_title">进行个人中心，开始你账号安全之旅吧：</div>
+			<div class="s_title">进行个人中心，开始家家乐之旅吧：</div>
 			<span class="s_redlink">
 			<a href="/personal/toPersonal.do" target="_blank">个人中心</a>
 			</span>

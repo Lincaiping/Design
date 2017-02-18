@@ -2,31 +2,31 @@ package com.table.limit.service;
 
 import com.base.dao.PageBean;
 import com.base.dao.Pager;
-import com.table.limit.entity.Limit;
+import com.table.limit.entity.ErrorLimit;
 
 import java.util.List;
 
 @SuppressWarnings("unused")
 public interface LimitService {
-	Limit getLimit(String id);
+	ErrorLimit getLimit(String id);
 
-	List<Limit> getAllLimit();
+	List<ErrorLimit> getAllLimit();
 
-	void saveOrUpdate(Limit limit);
+	void saveOrUpdate(ErrorLimit limit);
 
 	boolean deleteLimit(String id);
 
-	Pager<Limit> getByPage(PageBean pageBean);
+	Pager<ErrorLimit> getByPage(PageBean pageBean);
 
-	Limit getLimitByName(String name);
+	ErrorLimit getLimitByName(String name);
 
 	void disable(String id);
 
-	Limit getLimitByPhone(String tel);
+	ErrorLimit getLimitByPhone(String tel);
 
-	Limit getLimitByEmail(String email);
+	ErrorLimit getLimitByEmail(String email);
 
-	Limit getLimitById(String userId);
+	ErrorLimit getLimitById(String userId);
 
 	int getCurrentCount(String userId, Integer type);
 

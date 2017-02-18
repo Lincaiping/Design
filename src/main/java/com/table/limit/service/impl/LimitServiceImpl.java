@@ -3,7 +3,7 @@ package com.table.limit.service.impl;
 import com.base.BaseService;
 import com.base.dao.PageBean;
 import com.base.dao.Pager;
-import com.table.limit.entity.Limit;
+import com.table.limit.entity.ErrorLimit;
 import com.table.limit.service.LimitService;
 
 import org.springframework.stereotype.Service;
@@ -19,19 +19,19 @@ import web.login.entity.PassType;
 public class LimitServiceImpl extends BaseService implements LimitService {
 
 	@Override
-	public Limit getLimit(String id) {
+	public ErrorLimit getLimit(String id) {
 		// TODO Auto-generated method stub
-		return dao.getObject(Limit.class, id);
+		return dao.getObject(ErrorLimit.class, id);
 	}
 
 	@Override
-	public List<Limit> getAllLimit() {
+	public List<ErrorLimit> getAllLimit() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void saveOrUpdate(Limit limit) {
+	public void saveOrUpdate(ErrorLimit limit) {
 		// TODO Auto-generated method stub
 		if (null == limit.getId()) {
 			dao.saveObject(limit);
@@ -43,13 +43,13 @@ public class LimitServiceImpl extends BaseService implements LimitService {
 	@Override
 	public boolean deleteLimit(String id) {
 		// TODO Auto-generated method stub
-		Limit user = this.getLimit(id);
+		ErrorLimit user = this.getLimit(id);
 		dao.delete(user);
 		return true;
 	}
 
 	@Override
-	public Pager<Limit> getByPage(PageBean pageBean) {
+	public Pager<ErrorLimit> getByPage(PageBean pageBean) {
 		// TODO Auto-generated method stub
 		String hql = "from Contract";
 		int page = pageBean.getPageNo();
@@ -58,30 +58,30 @@ public class LimitServiceImpl extends BaseService implements LimitService {
 	}
 
 	@Override
-	public Limit getLimitByName(String name) {
-		String hql = "from Contract where userName =?";
+	public ErrorLimit getLimitByName(String name) {
+		String hql = "from ErrorLimit where userName =?";
 		return dao.findObject(hql, name);
 	}
 
-	public Limit getLimitByPhone(String tel) {
-		String hql = "from Contract where tel=?";
+	public ErrorLimit getLimitByPhone(String tel) {
+		String hql = "from ErrorLimit where tel=?";
 		return dao.findObject(hql, tel);
 	}
 
-	public Limit getLimitByEmail(String email) {
-		String hql = "from Contract where email =?";
+	public ErrorLimit getLimitByEmail(String email) {
+		String hql = "from ErrorLimit where email =?";
 		return dao.findObject(hql, email);
 	}
 
-	public Limit getLimitById(String limitId) {
-		String hql = "from Contract where id =?";
+	public ErrorLimit getLimitById(String limitId) {
+		String hql = "from ErrorLimit where id =?";
 		return dao.findObject(hql, limitId);
 	}
 
 	@Override
 	public void disable(String id) {
 		// TODO Auto-generated method stub
-		String hql = "update Contract set enable=0 where id=?";
+		String hql = "update ErrorLimit set enable=0 where id=?";
 		dao.executeSql(hql, id);
 	}
 
@@ -92,7 +92,7 @@ public class LimitServiceImpl extends BaseService implements LimitService {
 		String currentTime = this.refFormatNowDate();
 		int count = dao.countObjects(hql, userId, type);
 		if (count == 0) {
-			Limit limit = new Limit();
+			ErrorLimit limit = new ErrorLimit();
 			limit.setUserId(userId);
 			limit.setType(type);
 			limit.setEnable(1);
@@ -102,7 +102,7 @@ public class LimitServiceImpl extends BaseService implements LimitService {
 			this.saveOrUpdate(limit);
 			return 1;
 		} else {
-			Limit limit = dao.findObject(hql, userId, type);
+			ErrorLimit limit = dao.findObject(hql, userId, type);
 			if(limit.getEnable()==0){
 				return 100;
 			}
@@ -115,7 +115,7 @@ public class LimitServiceImpl extends BaseService implements LimitService {
 	public int countAdd(String userId, Integer type) {
 		try {
 			String hql = "from ErrorLimit where userId=? and type=?";
-			Limit limit = dao.findObject(hql, userId, type);
+			ErrorLimit limit = dao.findObject(hql, userId, type);
 			limit.setCurrentCount(limit.getCurrentCount() + 1);
 			dao.updateObject(limit);
 			return 1;
@@ -139,7 +139,7 @@ public class LimitServiceImpl extends BaseService implements LimitService {
 
 	public void disable(String userId, Integer type) {
 		String hql = "from ErrorLimit where userId=? and type=?";
-		Limit limit = dao.findObject(hql, userId, type);
+		ErrorLimit limit = dao.findObject(hql, userId, type);
 		limit.setEnableTime(this.refFormatNowDate(PassType.getTime(type)));
 		limit.setEnable(0);
 		this.saveOrUpdate(limit);

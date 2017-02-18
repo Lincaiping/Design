@@ -1,5 +1,5 @@
 # Host: 127.0.0.1  (Version: 5.6.24)
-# Date: 2017-02-17 20:04:07
+# Date: 2017-02-18 20:01:55
 # Generator: MySQL-Front 5.3  (Build 4.214)
 
 /*!40101 SET NAMES gb2312 */;
@@ -34,7 +34,7 @@ CREATE TABLE `code` (
   `email` varchar(50) DEFAULT NULL,
   `type` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 #
 # Structure for table "contract"
@@ -58,15 +58,13 @@ CREATE TABLE `contract` (
 
 CREATE TABLE `error_limit` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `current_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `enable_time` timestamp NULL DEFAULT NULL,
-  `enable` int(11) unsigned DEFAULT '0',
-  `user_id` int(11) unsigned DEFAULT '0',
-  `count` int(11) unsigned DEFAULT NULL,
-  `type` tinyint(3) unsigned DEFAULT NULL,
-  `current_count` int(11) unsigned DEFAULT NULL,
-  `code` int(11) DEFAULT NULL,
-  `currentCount` int(11) DEFAULT NULL,
+  `user_id` bigint(20) DEFAULT NULL,
+  `enable` int(11) DEFAULT NULL,
+  `now_time` varchar(100) DEFAULT NULL,
+  `enable_time` varchar(100) DEFAULT NULL,
+  `type` tinyint(3) DEFAULT NULL,
+  `count` tinyint(3) DEFAULT NULL,
+  `current_count` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -115,7 +113,6 @@ CREATE TABLE `manager` (
 
 CREATE TABLE `user` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL DEFAULT '',
   `password` varchar(255) NOT NULL DEFAULT '',
   `tel` varchar(25) DEFAULT '',
   `email` varchar(50) DEFAULT '',
@@ -126,4 +123,4 @@ CREATE TABLE `user` (
   `image` varchar(255) DEFAULT NULL,
   `user_name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
