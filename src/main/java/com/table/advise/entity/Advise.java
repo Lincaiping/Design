@@ -27,11 +27,8 @@ public class Advise implements Serializable {
 	@Column(name = "user_id", length = 50)
 	private String userId;
 
-	@Column(length = 200)
+	@Column(length = 255)
 	private String title;
-
-	@Column(length = 200)
-	private String describle;
 
 	@Column(length = 25)
 	private String tel;
@@ -41,6 +38,9 @@ public class Advise implements Serializable {
 
 	@Column(length = 100)
 	private String username;
+
+	@Column(length = 200)
+	private String describle;
 
 	public String getId() {
 		return id;

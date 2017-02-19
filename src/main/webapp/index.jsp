@@ -53,7 +53,7 @@
             </li>
 
             <li class="icon03 li_back" id="li_04">
-                <a href="index/interfaces.do" onclick="tongji(650724,0);">
+                <a href="index/toRend.do" onclick="tongji(650724,0);">
                     <p>租房</p> <img
                         src="/images/index/icon03.png"
                         style='visibility: hidden;'>
@@ -75,7 +75,7 @@
             </li>
             <%--<div style="display: block;margin: 20px;"></div>--%>
             <li class="icon08 li_back" id="li_09">
-                <a href="index/safeKnow.do" onclick="tongji(650729,0);">
+                <a href="/index/toRendOut.do" onclick="tongji(650729,0);">
                     <p>出租</p> <img
                         src="/images/index/icon08.png"
                         style='visibility: hidden;'>

@@ -1,5 +1,5 @@
 # Host: 127.0.0.1  (Version: 5.6.24)
-# Date: 2017-02-18 20:01:55
+# Date: 2017-02-19 12:52:02
 # Generator: MySQL-Front 5.3  (Build 4.214)
 
 /*!40101 SET NAMES gb2312 */;
@@ -12,10 +12,8 @@ CREATE TABLE `advise` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) unsigned DEFAULT NULL,
   `title` varchar(50) DEFAULT NULL,
-  `describe` varchar(255) DEFAULT NULL,
   `tel` varchar(25) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `emai` varchar(100) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   `describle` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`Id`)
@@ -45,7 +43,6 @@ CREATE TABLE `contract` (
   `user_id` int(11) unsigned DEFAULT NULL,
   `owner_id` int(11) unsigned DEFAULT NULL,
   `house_id` int(11) unsigned DEFAULT NULL,
-  `eable_time` timestamp NULL DEFAULT NULL,
   `cost` float unsigned DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `enable_time` varchar(50) DEFAULT NULL,
@@ -66,7 +63,7 @@ CREATE TABLE `error_limit` (
   `count` tinyint(3) DEFAULT NULL,
   `current_count` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 #
 # Structure for table "house"
@@ -102,7 +99,6 @@ CREATE TABLE `manager` (
   `enable` int(11) DEFAULT NULL,
   `last_pass_time` varchar(50) DEFAULT NULL,
   `pass_count` int(11) DEFAULT NULL,
-  `idNum` varchar(25) DEFAULT NULL,
   `privateKey` longtext,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;

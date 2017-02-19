@@ -39,7 +39,7 @@ public class  Manager implements Serializable {
 	@Column(length = 25)
 	private String email;
 
-	@Column(length = 25)
+	@Column(name = "id_num",length = 25)
 	private String idNum;
 
     @Column

@@ -125,4 +125,18 @@ public class IndexController extends BaseController {
 		log.error("到了");
 		return "test/upload/upload";
 	}
+
+	@RequestMapping("/toRendOut")
+	// @ResponseBody 返回json数据
+	public String toRendOut() {
+		log.error("到了");
+		return "web/rent/rent_out";
+	}
+
+	@RequestMapping("/toRend")
+	// @ResponseBody 返回json数据
+	public String toRend() {
+		log.error("到了");
+		return "web/index";
+	}
 }
