@@ -30,23 +30,23 @@ public class House implements Serializable {
 	@Column(length = 200)
 	private String describle;
 
-	@Column()
+	@Column(length = 20)
 	private float cost;
 
 	@Column(length = 25)
 	private String image;
 
 	@Column(length = 4)
-	private int type;
+	private String type;
 
 	@Column(length = 100)
 	private String location;
 
-	@Column()
+	@Column(length = 25)
 	private float area;
 
-	@Column()
-	private int floor;
+	@Column(length = 25)
+	private String floor;
 
 	@Column(length = 25)
 	private String owner;
@@ -91,11 +91,11 @@ public class House implements Serializable {
 		this.image = image;
 	}
 
-	public int getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
@@ -115,11 +115,11 @@ public class House implements Serializable {
 		this.area = area;
 	}
 
-	public int getFloor() {
+	public String getFloor() {
 		return floor;
 	}
 
-	public void setFloor(int floor) {
+	public void setFloor(String floor) {
 		this.floor = floor;
 	}
 

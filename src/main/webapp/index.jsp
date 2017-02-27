@@ -75,7 +75,7 @@
             </li>
             <%--<div style="display: block;margin: 20px;"></div>--%>
             <li class="icon08 li_back" id="li_09">
-                <a href="/index/toRendOut.do" onclick="tongji(650729,0);">
+                <a href="/personal/toRendOut.do" onclick="tongji(650729,0);">
                     <p>出租</p> <img
                         src="/images/index/icon08.png"
                         style='visibility: hidden;'>

@@ -140,4 +140,9 @@ public class PersonalController extends BaseController {
 		userService.saveOrUpdate(user);
 		return "success";
 	}
+
+	@RequestMapping("/toRendOut")
+	public String toRendOut() {
+		return "web/rent/rent_out";
+	}
 }

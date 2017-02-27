@@ -2,9 +2,12 @@ package web.index.controller;
 
 import com.base.BaseController;
 import com.base.HttpUtils;
+import com.base.dao.PageBean;
 import com.base.random.RandomSecret;
 import com.table.advise.entity.Advise;
 import com.table.advise.service.AdviseService;
+import com.table.house.entity.House;
+import com.table.house.service.HouseService;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
 
@@ -13,6 +16,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -30,7 +35,12 @@ public class IndexController extends BaseController {
 	private AdviseService adviseService;
 
 	@Autowired
-	IndexService indexService;
+	private IndexService indexService;
+
+	@Autowired
+	private HouseService houseService;
+
+	private static int i = 0;
 
 	@RequestMapping("/getCode")
 	@ResponseBody
@@ -126,17 +136,14 @@ public class IndexController extends BaseController {
 		return "test/upload/upload";
 	}
 
-	@RequestMapping("/toRendOut")
-	// @ResponseBody 返回json数据
-	public String toRendOut() {
-		log.error("到了");
-		return "web/rent/rent_out";
-	}
-
 	@RequestMapping("/toRend")
 	// @ResponseBody 返回json数据
-	public String toRend() {
-		log.error("到了");
+	public String toRend(Model model) {
+		PageBean pageBean = new PageBean();
+		pageBean.setPageNo(0);
+		pageBean.setPageSize(20);
+		List<House> houseList = houseService.getByPage(pageBean).getRows();
+		model.addAttribute("houseList", houseList);
 		return "web/index";
 	}
 }

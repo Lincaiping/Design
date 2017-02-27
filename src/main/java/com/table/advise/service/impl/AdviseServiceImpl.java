@@ -47,7 +47,7 @@ public class AdviseServiceImpl extends BaseService implements AdviseService {
 	@Override
 	public Pager<Advise> getByPage(PageBean pageBean) {
 		// TODO Auto-generated method stub
-		String hql = "from Contract";
+		String hql = "from Advise";
 		int page = pageBean.getPageNo();
 		int rows = pageBean.getPageSize();
 		return dao.findPager(hql, page, rows);
@@ -55,29 +55,29 @@ public class AdviseServiceImpl extends BaseService implements AdviseService {
 
 	@Override
 	public Advise getAdviseByName(String name) {
-		String hql = "from Contract where userName =?";
+		String hql = "from Advise where userName =?";
 		return dao.findObject(hql, name);
 	}
 
 	public Advise getAdviseByPhone(String tel) {
-		String hql = "from Contract where tel=?";
+		String hql = "from Advise where tel=?";
 		return dao.findObject(hql, tel);
 	}
 
 	public Advise getAdviseByEmail(String email) {
-		String hql = "from Contract where email =?";
+		String hql = "from Advise where email =?";
 		return dao.findObject(hql, email);
 	}
 
 	public Advise getAdviseById(String adviseId) {
-		String hql = "from Contract where id =?";
+		String hql = "from Advise where id =?";
 		return dao.findObject(hql, adviseId);
 	}
 
 	@Override
 	public void disable(String id) {
 		// TODO Auto-generated method stub
-		String hql = "update Contract set enable=0 where id=?";
+		String hql = "update Advise set enable=0 where id=?";
 		dao.executeSql(hql, id);
 	}
 }

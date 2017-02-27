@@ -10,19 +10,19 @@
 <body>
 <a href="/personal/toPersonal.do">个人中心</a>
 <select>
-    <option value="volvo">区域</option>
+    <option value="">区域</option>
     <option value="saab">Saab</option>
     <option value="opel">Opel</option>
     <option value="audi">Audi</option>
 </select>
 <select>
-    <option value="volvo">价格</option>
+    <option value="">价格</option>
     <option value="saab">Saab</option>
     <option value="opel">Opel</option>
     <option value="audi">Audi</option>
 </select>
 <select>
-    <option value="volvo">房型</option>
+    <option value="">房型</option>
     <option value="saab">Saab</option>
     <option value="opel">Opel</option>
     <option value="audi">Audi</option>

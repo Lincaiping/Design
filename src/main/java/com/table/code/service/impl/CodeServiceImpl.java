@@ -47,7 +47,7 @@ public class CodeServiceImpl extends BaseService implements CodeService {
 	@Override
 	public Pager<Code> getByPage(PageBean pageBean) {
 		// TODO Auto-generated method stub
-		String hql = "from Contract";
+		String hql = "from Code";
 		int page = pageBean.getPageNo();
 		int rows = pageBean.getPageSize();
 		return dao.findPager(hql, page, rows);

@@ -48,7 +48,7 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 	@Override
 	public Pager<House> getByPage(PageBean pageBean) {
 		// TODO Auto-generated method stub
-		String hql="from Contract";
+		String hql="from House";
 		int page = pageBean.getPageNo();
 		int rows = pageBean.getPageSize();
 		return dao.findPager(hql, page, rows);
@@ -56,22 +56,22 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 	
 	@Override
 	public House getHouseByName(String name){
-		String hql = "from Contract where userName =?";
+		String hql = "from House where userName =?";
 		return dao.findObject(hql, name);
 	}
 	
 	public House getHouseByPhone(String tel){
-		String hql = "from Contract where tel=?";
+		String hql = "from House where tel=?";
 		return dao.findObject(hql, tel);
 	}
 	
 	public House getHouseByEmail(String email){
-		String hql = "from Contract where email =?";
+		String hql = "from House where email =?";
 		return dao.findObject(hql, email);
 	}
 	
 	public House getHouseById(String houseId){
-		String hql = "from Contract where id =?";
+		String hql = "from House where id =?";
 		return dao.findObject(hql, houseId);
 	}
 
@@ -86,7 +86,7 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 	@Override
 	public void disable(String id) {
 		// TODO Auto-generated method stub
-		String hql = "update Contract set enable=0 where id=?";
+		String hql = "update House set enable=0 where id=?";
 		dao.executeSql(hql, id);
 	}
 }
