@@ -16,7 +16,7 @@
             <div class="swipe-wrap">
                 <%
                     //循环显示数据
-                    List<String> imageList = (List<String>) request.getAttribute("houseList"); // 取request里面的对象队列
+                    List<String> imageList = (List<String>) request.getAttribute("imageList"); // 取request里面的对象队列
                     if (null != imageList && imageList.size() != 0) {
                         for (String aHouseList : imageList) {
                             pageContext.setAttribute("imageList", aHouseList);
@@ -27,6 +27,12 @@
                          src="${aHouseList}"/></a></div>
             </div>
         </div>
+        <%
+            }
+        %>
+        <%
+            }
+        %>
         <ul id="position">
             <li class="cur"></li>
             <li class=""></li>
@@ -38,5 +44,11 @@
     <div>${house.cost}</div>
     <div>${house.floor}</div>
 </div>
+<form action="/webHouse/toEditHouse.do">
+    <input type="text" hidden id="houseId" name="houseId" value="${house.id}">
+    <input type="submit" class="input-style" value="编辑">
+</form>
 </body>
+<script src="/js/jquery-1.11.0.min.js"></script>
+<script src="/js/web/rent/houseDetail.js"></script>
 </html>

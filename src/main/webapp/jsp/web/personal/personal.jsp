@@ -19,7 +19,7 @@
 <!--导航 begin-->
 <div class="wrap100 topNav">
     <ul>
-        <li class="bg1"><a href="/login/toLogin.do"><i
+        <li class="bg1"><a href="/login/toIndex.do"><i
                 class="house-icon"></i>首页</a></li>
         <li><img src="/images/personal/jt1.jpg" height="60"/></li>
         <li class="bg2"><a

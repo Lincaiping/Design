@@ -1,6 +1,9 @@
 package web.upload.controller;
 
 import com.base.BaseController;
+import com.base.HttpUtils;
+import com.table.house.entity.House;
+import com.table.house.service.HouseService;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
 
@@ -33,6 +36,9 @@ public class UploadController extends BaseController {
 	@Autowired
 	private UploadService uploadService;
 
+	@Autowired
+	private HouseService houseService;
+
 	@RequestMapping("/toImage")
 	public String toImage() {
 		return "test/upload/image";
@@ -40,15 +46,14 @@ public class UploadController extends BaseController {
 
 	/**
 	 * 应用解析器上传文件。
-	 * 
+	 *
 	 * @param request
-	 * @param response
 	 * @return
 	 * @throws IllegalStateException
 	 * @throws IOException
 	 */
 	@RequestMapping("/upload")
-	public String upload(HttpServletRequest request, HttpServletResponse response)
+	public String upload(HttpServletRequest request, String houseId)
 			throws IllegalStateException, IOException {
 		// 创建一个通用的多部分解析器
 		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver(
@@ -81,11 +86,14 @@ public class UploadController extends BaseController {
 					if (myFileName.trim() != "") {
 						System.out.println(myFileName);
 						// 重命名上传后的文件名
-						String fileName = "demoUpload" + file.getOriginalFilename();
+						String fileName = "houseId" + HttpUtils.getTime() + file.getOriginalFilename();
 						// 定义上传路径
 						String path = "F:/design/files/" + fileName;
 						File localFile = new File(path);
 						file.transferTo(localFile);
+						House house = houseService.getHouse(houseId);
+						house.setImage(house.getImage() + fileName + ",");
+						houseService.saveOrUpdate(house);
 					}
 				}
 				// 记录上传该文件后的时间

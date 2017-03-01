@@ -7,5 +7,6 @@
 </head>
 <body>
 恭喜你的操作成功了！
+<a href="/login/toIndex.do">回到主页</a>
 </body>
 </html>

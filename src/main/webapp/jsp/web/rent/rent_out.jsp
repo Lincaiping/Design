@@ -6,23 +6,20 @@
     <%@ include file="/header.jsp" %>
     <title>房源</title>
 </head>
+<link href="/css/web/house/rent_out.css" rel="stylesheet" type="text/css"/>
 <body>
 <a href="/personal/toPersonal.do">个人中心</a>
 <h1>图片上传</h1>
 <form name="userForm1" action="/webHouse/rentHouse.do" method="post">
-    <div id="newUpload1">
-        <input type="file" id="file" name="file">
-    </div>
-    <input type="button" id="btn_add1" value="增加一行">
-    <input type="text" id="images" hidden name="images">
-    <input type="text" id="title" name="title" placeholder="标题">
-    <input type="text" id="describle" name="describle" placeholder="描述">
-    <input type="number" id="cost" name="cost" placeholder="房租">
-    <input type="text" id="type" name="type" placeholder="户型">
-    <input type="text" id="location" name="location" placeholder="位置">
-    <input type="number" id="area" name="area" placeholder="面积">
-    <input type="text" id="floor" name="floor" placeholder="楼层">
-    <input type="submit" value="确定">
+    <input type="text" class="input-style" id="images" hidden name="images">
+    <input type="text" class="input-style"  id="title" name="title" placeholder="标题">
+    <input type="text" class="input-style"  id="describle" name="describle" placeholder="描述">
+    <input type="number"  class="input-style" id="cost" name="cost" placeholder="房租">
+    <input type="text"  class="input-style" id="type" name="type" placeholder="户型">
+    <input type="text" class="input-style"  id="location" name="location" placeholder="位置">
+    <input type="number"  class="input-style" id="area" name="area" placeholder="面积">
+    <input type="text" class="input-style"  id="floor" name="floor" placeholder="楼层">
+    <input type="submit"  class="input-style"  value="确定">
 </form>
 </body>
 <script src="/js/jquery-1.11.0.min.js"></script>

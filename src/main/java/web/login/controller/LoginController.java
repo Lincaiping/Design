@@ -48,6 +48,12 @@ public class LoginController extends BaseController {
 		return "web/login/login";
 	}
 
+	@RequestMapping("/toIndex")
+	public String toIndex(HttpServletRequest request) {
+		log.debug("转到主页面!");
+		return "/";
+	}
+
 	@RequestMapping("/userOut")
 	public String loginOut(HttpServletRequest request) {
 		if (loginService.loginOut(request)) {
