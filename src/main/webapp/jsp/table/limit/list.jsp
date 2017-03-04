@@ -14,11 +14,11 @@
 <title>用户列表</title>
 </head>
 <body>
-	<table id="advise"></table>
+	<table id="limit"></table>
 	<div id="pager"></div>
 	<input type="BUTTON" id="add" value="add" style="margin-right: 100px" />
 	<input type="BUTTON" id="edit" value="编辑" style="margin-right: 100px"/>
 	<input type="BUTTON" id="delete" value="删除" style="margin-right: 100px"/>
 </body>
-<script type="text/javascript" src="/jsp/table/advise/list.js"></script>
+<script type="text/javascript" src="/jsp/table/limit/list.js"></script>
 </html>

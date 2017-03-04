@@ -4,7 +4,7 @@ $(function(){
 function pageInit(){
   jQuery("#limit").jqGrid(
       {
-        url : "/limit/getAllAdvise.do",
+        url : "/limit/getAllLimit.do",
         datatype : "json",
         colNames : [ 'id', 'userId', '限制时间','类型','操作'],
         colModel : [ 
