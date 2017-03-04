@@ -61,15 +61,9 @@
                 <img src="/images/personal/mus_cai_icon01.png"> <span
                     class="fl">密码管理</span> <i></i>
             </a></li>
-            <li><a href="/personal/realName.do">
-                <img src="/images/personal/mus_cai_icon03.png"> <span
-                    class="fl">实名认证</span> <i></i>
-                <c:if test='${!empty idNum}'>
-                    <span class="fr">已认证</span>
-                </c:if>
-                <c:if test='${empty idNum}'>
-                    <span class="fr">未认证</span>
-                </c:if>
+            <li><a href="/personal/myHouse.do">
+                <img src="/images/personal/mus_cai_icon07.png"> <span
+                    class="fl">我的出租</span> <i></i>
             </a></li>
             <li><a href="/personal/realName.do">
                 <img src="/images/personal/mus_cai_icon03.png"> <span

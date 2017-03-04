@@ -30,6 +30,9 @@ public class Contract implements Serializable {
 	@Column(name = "house_id", length = 50)
 	private String houseId;
 
+	@Column(name = "owner_id", length = 50)
+	private String ownerId;
+
 	@Column(name = "enable_time",length = 50)
 	private String enableTime;
 
@@ -85,5 +88,13 @@ public class Contract implements Serializable {
 
 	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
+	}
+
+	public String getOwnerId() {
+		return ownerId;
+	}
+
+	public void setOwnerId(String ownerId) {
+		this.ownerId = ownerId;
 	}
 }

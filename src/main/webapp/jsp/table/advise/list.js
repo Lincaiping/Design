@@ -6,12 +6,12 @@ function pageInit(){
       {
         url : "/advise/getAllAdvise.do",
         datatype : "json",
-        colNames : [ 'id', '用户名', '标题','描述','操作'],
+        colNames : [ 'id', '描述', '手机号码','邮箱','操作'],
         colModel : [ 
                      {name : 'id',index : 'id',width : 55,editable:true}, 
-                     {name : 'userName',index : 'userName',width : 90,editable:true}, 
-                     {name : 'title',index : 'password',width : 100,editable:true},
-                     {name : 'describle',index : 'age',width : 80,editable:true},
+                     {name : 'describle',index : 'describle',width : 90,editable:true},
+                     {name : 'tel',index : 'tel',width : 100,editable:true},
+                     {name : 'email',index : 'email',width : 80,editable:true},
                      {name : 'oprate',width : 80,editable:false},
                    ],
         rowNum : 10,
@@ -43,7 +43,7 @@ function pageInit(){
   $("#edit").click(function() {
         var gr = jQuery("#advise").jqGrid('getGridParam', 'selrow');
         if (gr != null)
-          jQuery("#user").jqGrid('editGridRow', gr, {
+          jQuery("#advise").jqGrid('editGridRow', gr, {
             height : 300,
             reloadAfterSubmit : true,
           });
@@ -61,7 +61,7 @@ function pageInit(){
       if (gr != null){
     	  $.ajax({
     			type : "POST",
-    			url : "/user/delAdvise.do",
+    			url : "/advise/delAdvise.do",
     			data : {
     				id:gr,
     			},

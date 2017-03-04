@@ -2,7 +2,10 @@ package web.personal.controller;
 
 import com.base.BaseController;
 import com.base.HttpUtils;
+import com.base.dao.PageBean;
 import com.base.idCard.IdcardValidator;
+import com.table.house.entity.House;
+import com.table.house.service.HouseService;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
 
@@ -11,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -24,6 +29,9 @@ public class PersonalController extends BaseController {
 	private UserService userService;
 	@Autowired
 	private IndexService indexService;
+
+	@Autowired
+	private HouseService houseService;
 
 	@RequestMapping("/toPersonal")
 	public String toPersonal(HttpServletRequest request) {
@@ -139,6 +147,15 @@ public class PersonalController extends BaseController {
 		user.setRealName(realName);
 		userService.saveOrUpdate(user);
 		return "success";
+	}
+
+	@RequestMapping("/myHouse")
+	public String myHouse(HttpServletRequest request, Model model) {
+		HttpSession session = HttpUtils.getSession(request);
+		String userId = (String) session.getAttribute("userId");
+		List<House> houseList = houseService.getHouseByOwnerId(userId);
+		model.addAttribute("houseList", houseList);
+		return "web/index";
 	}
 
 	@RequestMapping("/toRendOut")

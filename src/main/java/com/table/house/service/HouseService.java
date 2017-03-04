@@ -28,4 +28,5 @@ public interface HouseService {
 
 	House getHouseById(String userId);
 
+	List<House> getHouseByOwnerId(String userId);
 }

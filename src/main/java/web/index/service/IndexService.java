@@ -21,46 +21,52 @@ import web.login.entity.PassType;
 @Service
 public class IndexService {
 	@Autowired
-	LimitService limitService;
+	private LimitService limitService;
 
 	@Autowired
-	CodeService codeService;
+	private CodeService codeService;
 
 	@Autowired
-	UserService userService;
+	private UserService userService;
 
-	public boolean setTelCode(String tel,String code) {
+	public boolean setTelCode(String tel, String code) {
 		try {
 			User user = userService.getUserByPhone(tel);
 			Code securityCode = new Code();
-			if(null!=user){
+			if (null != user) {
 				String userId = user.getId();
 				securityCode.setUserId(userId);
 			}
+			String enableTime = HttpUtils.getTime();
 			securityCode.setCode(code);
 			securityCode.setTel(tel);
 			securityCode.setType(Define.telPhone);
+			securityCode.setEnableTime(enableTime);
 			codeService.saveOrUpdate(securityCode);
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 			return false;
 		}
 	}
 
-	public boolean setEmailCode(String email,String code) {
+	public boolean setEmailCode(String email, String code) {
 		try {
 			User user = userService.getUserByEmail(email);
-			String userId = user.getId();
 			Code securityCode = new Code();
+			if (null != user) {
+				String userId = user.getId();
+				securityCode.setUserId(userId);
+			}
+			String enableTime = HttpUtils.getTime();
+			securityCode.setEnableTime(enableTime);
 			securityCode.setCode(code);
 			securityCode.setEmail(email);
 			securityCode.setType(Define.telPhone);
-			securityCode.setUserId(userId);
 			codeService.saveOrUpdate(securityCode);
 			return true;
 		} catch (Exception e) {
-			// TODO: handle exception
 			return false;
 		}
 	}
@@ -87,7 +93,7 @@ public class IndexService {
 		return securityCode.getCode().equals(code);
 	}
 
-	public boolean checkCode(HttpServletRequest request, String  code) {
+	public boolean checkCode(HttpServletRequest request, String code) {
 		HttpSession session = HttpUtils.getSession(request);
 		String userId = (String) session.getAttribute("userId");
 		Code securityCode = codeService.getCodeById(userId);

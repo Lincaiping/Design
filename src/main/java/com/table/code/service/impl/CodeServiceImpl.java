@@ -70,7 +70,7 @@ public class CodeServiceImpl extends BaseService implements CodeService {
 	}
 
 	public Code getCodeById(String codeId) {
-		String hql = "from Code where id =?";
+		String hql = "from Code where userId =?";
 		return dao.findObject(hql, codeId);
 	}
 

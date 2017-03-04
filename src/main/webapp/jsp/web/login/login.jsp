@@ -11,14 +11,18 @@
 <body>
 <body>
 	<div class="login">
-            <div class="login-title"><p>账号安全中心登录</p>
+            <div class="login-title"><p>家家乐登录</p>
                 <i></i>
             </div>
             <form method="post" action="/login/login.do">
             <div class="login-bar">
                 <ul>
-                    <li><img src="/css/web/images/login_user.png"><input type="text" class="text" name="userName" placeholder="请输入用户名" required="required"/></li>
-                    <li><img src="/css/web/images/login_pwd.png"><input type="password" class="psd"  name="password" placeholder="请输入密码" /></li>
+                    <li><img src="/css/web/images/login_user.png">
+                        <input type="text" class="text" name="userName" placeholder="请输入用户名" required="required"/>
+                    </li>
+                    <li><img src="/css/web/images/login_pwd.png">
+                        <input type="password" class="psd"  name="password" placeholder="请输入密码" />
+                    </li>
                 </ul>
             </div>
             <div class="login-btn">
@@ -29,6 +33,6 @@
             </form>
         </div>
 		<div style="text-align:center;">
-<div class="bottom">欢迎使用账户中心 <a href="#" style="color: #555555">系统登陆</a></div>
+<div class="bottom">欢迎使用家家乐 <a href="#" style="color: #555555">系统登录</a></div>
 </div>
 </body>

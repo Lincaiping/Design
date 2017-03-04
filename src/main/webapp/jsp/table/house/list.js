@@ -6,12 +6,13 @@ function pageInit() {
         {
             url: "/house/getAllHouse.do",
             datatype: "json",
-            colNames: ['id', '用户名', '标题', '描述', '操作'],
+            colNames: ['id', '房东', '地区', '房租', '类型','操作'],
             colModel: [
                 {name: 'id', index: 'id', width: 55, editable: true},
-                {name: 'title', index: 'title', width: 100, editable: true},
-                {name: 'describle', index: 'describle', width: 80, editable: true},
-                {name: 'location', index: 'location', width: 90, editable: true},
+                {name: 'owner', index: 'owner', width: 100, editable: true},
+                {name: 'location', index: 'location', width: 80, editable: true},
+                {name: 'cost', index: 'cost', width: 90, editable: true},
+                {name: 'type', index: 'type', width: 90, editable: true},
                 {name: 'oprate', width: 80, editable: false},
             ],
             rowNum: 10,
@@ -43,7 +44,7 @@ function pageInit() {
     $("#edit").click(function () {
         var gr = jQuery("#house").jqGrid('getGridParam', 'selrow');
         if (gr != null)
-            jQuery("#user").jqGrid('editGridRow', gr, {
+            jQuery("#house").jqGrid('editGridRow', gr, {
                 height: 300,
                 reloadAfterSubmit: true,
             });

@@ -6,12 +6,12 @@ function pageInit(){
       {
         url : "/user/getAllUser.do",
         datatype : "json",
-        colNames : [ 'id', '用户名', '密码','年龄','操作'],
+        colNames : [ 'id', '用户名', '密码','真实姓名','操作'],
         colModel : [ 
-                     {name : 'id',index : 'id',hidden:'true',width : 55,editable:true}, 
+                     {name : 'id',index : 'id',width : 90,editable:true},
                      {name : 'userName',index : 'userName',width : 90,editable:true}, 
                      {name : 'password',index : 'password',width : 100,editable:true},
-                     {name : 'age',index : 'age',width : 80,editable:true},
+                     {name : 'realName',index : 'realName',width : 80,editable:true},
                      {name : 'oprate',width : 80,editable:false},
                    ],
         rowNum : 10,

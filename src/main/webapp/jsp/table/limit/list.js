@@ -6,12 +6,12 @@ function pageInit(){
       {
         url : "/limit/getAllAdvise.do",
         datatype : "json",
-        colNames : [ 'id', '用户名', '标题','描述','操作'],
+        colNames : [ 'id', 'userId', '限制时间','类型','操作'],
         colModel : [ 
                      {name : 'id',index : 'id',width : 55,editable:true}, 
-                     {name : 'userName',index : 'userName',width : 90,editable:true}, 
-                     {name : 'title',index : 'password',width : 100,editable:true},
-                     {name : 'describle',index : 'age',width : 80,editable:true},
+                     {name : 'userId',index : 'userId',width : 90,editable:true},
+                     {name : 'enableTime',index : 'enableTime',width : 100,editable:true},
+                     {name : 'type',index : 'type',width : 80,editable:true},
                      {name : 'oprate',width : 80,editable:false},
                    ],
         rowNum : 10,
@@ -36,14 +36,14 @@ function pageInit(){
       });
   jQuery("#m1").click(function() {
     var rowId;
-    rowId = jQuery("#user").jqGrid('getGridParam', 'selarrrow');
+    rowId = jQuery("#limit").jqGrid('getGridParam', 'selarrrow');
     var celldata = $("#user").jqGrid('getCell',rowId,'id');
     alert(celldata);
   });
   $("#edit").click(function() {
-        var gr = jQuery("#user").jqGrid('getGridParam', 'selrow');
+        var gr = jQuery("#limit").jqGrid('getGridParam', 'selrow');
         if (gr != null)
-          jQuery("#user").jqGrid('editGridRow', gr, {
+          jQuery("#limit").jqGrid('editGridRow', gr, {
             height : 300,
             reloadAfterSubmit : true,
           });
@@ -51,13 +51,13 @@ function pageInit(){
           alert("请选择需要编辑的记录");
       });
   $("#add").click(function() {
-        jQuery("#user").jqGrid('editGridRow', "new", {
+        jQuery("#limit").jqGrid('editGridRow', "new", {
           height : 300,
           reloadAfterSubmit : false
         });
       });
   $("#delete").click(function() {
-      var gr = jQuery("#user").jqGrid('getGridParam', 'selrow');
+      var gr = jQuery("#limit").jqGrid('getGridParam', 'selrow');
       if (gr != null){
     	  $.ajax({
     			type : "POST",

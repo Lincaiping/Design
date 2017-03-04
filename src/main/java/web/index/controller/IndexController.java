@@ -113,6 +113,7 @@ public class IndexController extends BaseController {
 			advise.setUserId(userId);
 		}
 		advise.setDescrible(content);
+		System.out.println(content);
 		advise.setEmail(email);
 		advise.setTel(tel);
 		advise.setUsername(userName);

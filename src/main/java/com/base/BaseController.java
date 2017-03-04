@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class BaseController {
+public class    BaseController {
     protected Log log = LogFactory.getLog(BaseController.class);
 
     /**

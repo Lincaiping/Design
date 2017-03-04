@@ -75,18 +75,16 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 		return dao.findObject(hql, houseId);
 	}
 
-
-
-
-
-
-
-
-
 	@Override
 	public void disable(String id) {
 		// TODO Auto-generated method stub
 		String hql = "update House set enable=0 where id=?";
 		dao.executeSql(hql, id);
+	}
+
+	@Override
+	public List<House> getHouseByOwnerId(String userId){
+		String hql = "from House where owner =?";
+		return dao.findList(hql);
 	}
 }

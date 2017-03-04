@@ -6,7 +6,7 @@ function pageInit(){
       {
         url : "/managers/getAllManager.do",
         datatype : "json",
-        colNames : [ 'id', '用户名','管理员类型', '密码','最后登录时间','登录次数'],
+        colNames : [ 'id', '用户名','管理员类型', '密码','最后登录时间','登录次数',"操作"],
         colModel : [ 
                      {name : 'id',index : 'id',width : 55,editable:true}, 
                      {name : 'username',index : 'username',width : 90,editable:true},
@@ -14,6 +14,7 @@ function pageInit(){
                      {name : 'password',index : 'password',width : 100,editable:true},
                      {name : 'lastPassTime',index : 'lastPassTime',width : 80,editable:true},
                      {name : 'passCount',width : 80,editable:false},
+                     {name : 'oprate',width : 80,editable:false}
                    ],
         rowNum : 10,
         rowList : [ 10, 20, 30 ],
@@ -44,7 +45,7 @@ function pageInit(){
   $("#edit").click(function() {
         var gr = jQuery("#managers").jqGrid('getGridParam', 'selrow');
         if (gr != null)
-          jQuery("#user").jqGrid('editGridRow', gr, {
+          jQuery("#managers").jqGrid('editGridRow', gr, {
             height : 300,
             reloadAfterSubmit : true,
           });

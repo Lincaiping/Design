@@ -58,6 +58,7 @@ public class ContractController extends BaseController {
 	@RequestMapping("/saveOrUpdate")
 	@ResponseBody
 	public boolean saveOrUpdate(Contract contract) {
+		contract.setCreateTime(HttpUtils.getTime());
 		contractService.saveOrUpdate(contract);
 		return true;
 	}

@@ -35,7 +35,7 @@ public class User implements Serializable {
 	@Column(length = 300)
 	private String password;
 
-	@Column(length = 25)
+	@Column(length = 30)
 	private String tel;
 
 	@Column(length = 25)

@@ -17,14 +17,18 @@
         <ul>
             <p id="err_msg"></p>
             <li><i class="un"><img src="/css/web/images/user_name.png"></i>
-                <input id="serviceNum" class="username" type="text" placeholder="请输入手机号码"/></li>
+                <input id="serviceNum" class="username" type="text" placeholder="请输入手机号码"/>
+            </li>
             <li><i class="yz"><img src="/css/web/images/msg.png"></i>
                 <input class="yzm" id="code" type="text" placeholder="请输入手机验证码"/>
-                <input type="button" id="send" value="获取验证码"/></li>
+                <input type="button" id="send" value="获取验证码"/>
+            </li>
             <li><i class="pw"><img src="/css/web/images/pwd.png"></i>
-                <input class="pwd" type="password" id="password" placeholder="请输入密码"/></li>
+                <input class="pwd" type="password" id="password" placeholder="请输入密码"/>
+            </li>
             <li><i class="pw2"><img src="/css/web/images/pwd.png"></i>
-                <input class="pwd2" type="password" placeholder="请输入确认密码"/></li>
+                <input class="pwd2" type="password" placeholder="请输入确认密码"/>
+            </li>
         </ul>
         <div class="reg_btn">
             <input type="button" class="submit" type="submit" onclick="submitTel()" value="确认重置">
