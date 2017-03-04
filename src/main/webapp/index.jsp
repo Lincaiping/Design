@@ -27,15 +27,24 @@
             <div class="swipe" id="mySwipe">
                 <div class="swipe-wrap">
                     <div><a href="javascript:;"><img class="img-responsive"
-                                                     src="images/index/lunbo_1.jpg"/></a></div>
+                                                     src="images/index/tu2.jpg"/></a></div>
                     <div><a href="javascript:;"><img class="img-responsive"
-                                                     src="images/index/lunbo_2.jpg"/></a></div>
+                                                     src="images/index/tu7.jpg"/></a></div>
                     <div><a href="javascript:;"><img class="img-responsive"
-                                                     src="images/index/lunbo_3.png"/></a></div>
+                                                     src="images/index/tu3.jpg"/></a></div>
+                    <div><a href="javascript:;"><img class="img-responsive"
+                                                     src="images/index/tu4.jpg"/></a></div>
+                    <div><a href="javascript:;"><img class="img-responsive"
+                                                     src="images/index/tu5.jpg"/></a></div>
+                    <div><a href="javascript:;"><img class="img-responsive"
+                                                     src="images/index/tu6.jpg"/></a></div>
                 </div>
             </div>
             <ul id="position">
                 <li class="cur"></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
                 <li class=""></li>
                 <li class=""></li>
             </ul>
