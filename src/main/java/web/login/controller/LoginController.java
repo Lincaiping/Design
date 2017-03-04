@@ -1,6 +1,9 @@
 package web.login.controller;
 
 import com.base.BaseController;
+import com.base.dao.PageBean;
+import com.table.house.entity.House;
+import com.table.house.service.HouseService;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
 
@@ -9,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -25,6 +30,9 @@ public class LoginController extends BaseController {
 	@Autowired
 	private UserService userService;
 
+	@Autowired
+	private HouseService houseService;
+
 	@RequestMapping("/login")
 	public String login(HttpServletRequest request, String userName, String password, Model model) {
 		User user = loginService.userLogin(request, userName, password, null);
@@ -36,7 +44,11 @@ public class LoginController extends BaseController {
 			model.addAttribute("tel", user.getTel());
 			model.addAttribute("email", user.getEmail());
 			model.addAttribute("idNum", user.getIdNum());
-			model.addAttribute("houseList", null);
+			PageBean pageBean = new PageBean();
+			pageBean.setPageNo(0);
+			pageBean.setPageSize(20);
+			List<House> houseList = houseService.getByPage(pageBean).getRows();
+			model.addAttribute("houseList", houseList);
 			return "web/index";
 		}
 		return "404";
