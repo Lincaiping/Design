@@ -14,7 +14,9 @@ function getCode(){
 		}
 	});
 }
-function submitEmail(){
+
+
+function submitTel(){
 	var serviceNum = $("#serviceNum").val();
 	var code = $("#code").val();
 	$.ajax({

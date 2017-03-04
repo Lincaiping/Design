@@ -23,9 +23,11 @@
         <li class="bg1"><a href="${ctx }/faWap/myFlow!index.action"><i class="house-icon"></i>首页</a>
         </li>
         <li><img src="/images/personal/jt1.jpg" height="60"/></li>
-        <li class="bg2"><a href="${ctx}/faWap/personalCenter!account.action">我的账户</a></li>
+        <li class="bg2"><a href="${ctx}/faWap/personalCenter!account.action">我的账户</a>
+        </li>
         <li><img src="/images/personal/jt2.jpg" height="60"/></li>
-        <li class="bg3"><a href="${ctx}/faWap/personalCenter!bandingPhone.action">绑定手机</a></li>
+        <li class="bg3"><a href="${ctx}/faWap/personalCenter!bandingPhone.action">绑定手机</a>
+        </li>
         <li><img src="/images/personal/jt3.jpg" height="60"/></li>
     </ul>
 </div>
@@ -39,16 +41,18 @@
     <div class="wrap80 ph1_zs">绑定手机后，可使用手机号登录</div>
 </div>
 <div class="wrap100">
-    <div class="wrap90 mar20"><input name="serviceNum" id="serviceNum" class="input70" type="text"
-                                     placeholder="手机号"></div>
+    <div class="wrap90 mar20">
+        <input name="serviceNum" id="serviceNum" class="input70" type="text" placeholder="手机号">
+    </div>
 </div>
 
 <div class="down_button">
     <a id="a_getMobileCode" href="javascript:getCode();" class="phone_back">获取验证码</a>
 </div>
 <div class="wrap100">
-    <div class="wrap90 mar20"><input name="code" id="code" class="input70" type="text"
-                                     placeholder="验证码"></div>
+    <div class="wrap90 mar20">
+        <input name="code" id="code" class="input70" type="text" placeholder="验证码">
+    </div>
 </div>
 <div class="down_button">
     <a id="a_getMobileCode_1" href="javascript:submitTel();" class="phone_back">确定</a>
