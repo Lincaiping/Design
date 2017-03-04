@@ -98,7 +98,7 @@
 </a>
 <a href="index/toUpload.do">
     <footer>
-        同城租赁提供服务
+        家家乐提供服务
     </footer>
 </a>
 <div class="blankwhite" style="height: 30px;"></div>
