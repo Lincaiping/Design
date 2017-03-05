@@ -37,11 +37,11 @@
         <div class="reg_btn">
             <button class="submit" type="submit">注册</button>
             <a href="/login/toLogin.do">
-                <div class="reg-login"><p>已有帐号，立即登陆</p></div>
+                <div class="reg-login"><p>已有帐号，立即登录</p></div>
             </a>
         </div>
     </form>
 </div>
-<div class="bottom">欢迎使用账户中心 <a href="#" style="color: #555555">系统登陆</a></div>
+<div class="bottom">欢迎使用账户中心 <a href="#" style="color: #555555">系统登录</a></div>
 </body>
 </html>
