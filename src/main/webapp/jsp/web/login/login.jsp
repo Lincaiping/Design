@@ -21,7 +21,7 @@
                         <input type="text" class="text" name="userName" placeholder="请输入用户名" required="required"/>
                     </li>
                     <li><img src="/css/web/images/login_pwd.png">
-                        <input type="password" class="psd"  name="password" placeholder="请输入密码" />
+                        <input type="password" class="psd"  name="password" placeholder="请输入密码"  required="required"/>
                     </li>
                 </ul>
             </div>
