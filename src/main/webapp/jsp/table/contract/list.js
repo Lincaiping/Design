@@ -47,7 +47,7 @@ function pageInit() {
     $("#edit").click(function () {
         var gr = jQuery("#contract").jqGrid('getGridParam', 'selrow');
         if (gr != null)
-            jQuery("#advise").jqGrid('editGridRow', gr, {
+            jQuery("#contract").jqGrid('editGridRow', gr, {
                 height: 300,
                 reloadAfterSubmit: true,
             });
@@ -67,12 +67,12 @@ function pageInit() {
         if (gr != null) {
             $.ajax({
                 type: "POST",
-                url: "/limit/delContract.do",
+                url: "/contract/delContract.do",
                 data: {
                     id: gr,
                 },
                 success: function (data) {
-
+                    alert("删除成功，请刷新页面");
                 },
                 error: function () {
                     alert("获取连接异常");

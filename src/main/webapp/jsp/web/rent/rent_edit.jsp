@@ -17,15 +17,15 @@
     <p>你可以再次点击，上传多张图片，但是每次只能上传一张哦</p>
 
     <form name="userForm1" action="/webHouse/rentHouse.do" method="post">
-        <input type="text" value="${houseId}" hidden id="house_id" name="houseId">
+        <input type="text" value="${house.id}" id="house_id" name="houseId">
         <input type="text" class="input-style" id="images" hidden name="images">
-        <input type="text" class="input-style"  id="title" name="title" placeholder="标题">
-        <input type="text" class="input-style"  id="describle" name="describle" placeholder="描述">
-        <input type="number"  class="input-style" id="cost" name="cost" placeholder="房租">
-        <input type="text"  class="input-style" id="type" name="type" placeholder="户型">
-        <input type="text" class="input-style"  id="location" name="location" placeholder="位置">
-        <input type="number"  class="input-style" id="area" name="area" placeholder="面积">
-        <input type="text" class="input-style"  id="floor" name="floor" placeholder="楼层">
+        <input type="text" value="${house.title}" class="input-style"  id="title" name="title" placeholder="标题">
+        <input type="text" value="${house.describle}"class="input-style"  id="describle" name="describle" placeholder="描述">
+        <input type="number" value="${house.cost}" class="input-style" id="cost" name="cost" placeholder="房租">
+        <input type="text" value="${house.type}"  class="input-style" id="type" name="type" placeholder="户型">
+        <input type="text" value="${house.location}" class="input-style"  id="location" name="location" placeholder="位置">
+        <input type="number" value="${house.area}"class="input-style" id="area" name="area" placeholder="面积">
+        <input type="text" value="${house.floor}" class="input-style"  id="floor" name="floor" placeholder="楼层">
         <input type="submit"  class="input-style"  value="确定">
     </form>
 

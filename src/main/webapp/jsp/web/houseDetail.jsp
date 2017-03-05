@@ -44,7 +44,7 @@
     <div>${house.cost}</div>
     <div>${house.floor}</div>
 </div>
-<form action="/webHouse/toEditHouse.do">
+<form action="/webHouse/toEditHouse.do" method="post">
     <input type="text" hidden id="houseId" name="houseId" value="${house.id}">
     <input type="submit" class="input-style" value="编辑">
 </form>

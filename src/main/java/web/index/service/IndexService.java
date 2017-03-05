@@ -74,6 +74,9 @@ public class IndexService {
 	public boolean limitAble(HttpServletRequest request, Integer type) {
 		HttpSession session = HttpUtils.getSession(request);
 		String userId = (String) session.getAttribute("userId");
+		if(userId == null){
+			return false;
+		}
 		Integer maxCount = PassType.getCount(type);
 		int currentCount = limitService.getCurrentCount(userId, type);
 		if (maxCount < currentCount) {
