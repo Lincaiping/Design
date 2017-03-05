@@ -1,7 +1,7 @@
 package web.house.controller;
 
 import com.base.BaseController;
-import com.mysql.jdbc.log.LogUtils;
+import com.base.HttpUtils;
 import com.table.house.entity.House;
 import com.table.house.service.HouseService;
 
@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by gbq on 2017/2/27.
@@ -54,7 +55,10 @@ public class WebHouseController extends BaseController {
 	@RequestMapping("/toEditHouse")
 	public String toEditHouse(HttpServletRequest request, Model model, String houseId) {
 		House house = houseService.getHouse(houseId);
+		HttpSession session = HttpUtils.getSession(request);
+		session.setAttribute("houseId", houseId);
 		model.addAttribute("house", house);
+
 		return "/web/rent/rent_edit";
 	}
 }

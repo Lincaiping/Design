@@ -88,11 +88,16 @@ public class UploadController extends BaseController {
 					if (myFileName.trim() != "") {
 						System.out.println(myFileName);
 						// 重命名上传后的文件名
+						if(houseId == null){
+							HttpSession session =HttpUtils.getSession(request);
+							houseId = (String) session.getAttribute("houseId");
+						}
 						String fileName = "houseId" + System.currentTimeMillis() + file.getOriginalFilename();
 						// 定义上传路径
 						String path = "F:/design/files/" + fileName;
 						File localFile = new File(path);
 						file.transferTo(localFile);
+
 						House house = houseService.getHouse(houseId);
 						house.setImage(house.getImage() + fileName + ",");
 						houseService.saveOrUpdate(house);
@@ -115,13 +120,13 @@ public class UploadController extends BaseController {
 			return false;
 		}
 		// 生成jpeg图片
-		String imgFilePath = "E:/workplace/userSafe/src/main/webapp/images/upload/images/";// 新生成的图片F
+		String imgFilePath = "F:/design/files/images/";
 		HttpSession session = request.getSession();
 		String userId = (String) session.getAttribute("userId");
 		User user = userService.getUser(userId);
 		Long time = System.currentTimeMillis();// 获取当前时间戳
 		imgFilePath = imgFilePath + userId + time + ".png";
-		String truePath = "/images/upload/images/" + userId + time + ".png";
+		String truePath = imgFilePath;
 		if (uploadService.SaveManager(image, imgFilePath)) {
 			user.setImage(truePath);
 			userService.saveOrUpdate(user);
