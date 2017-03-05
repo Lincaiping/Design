@@ -7,13 +7,15 @@ function pageInit() {
         {
             url: "/contract/getAllContract.do",
             datatype: "json",
-            colNames: ['id', '房东', '用户', '房屋', '房租', '操作'],
+            colNames: ['id', '房东', '用户', '房屋', '房租','创建时间','可用时间', '操作'],
             colModel: [
                 {name: 'id', index: 'id', width: 55, editable: true},
                 {name: 'ownerId', index: 'ownerId', width: 90, editable: true},
                 {name: 'userId', index: 'userId', width: 100, editable: true},
                 {name: 'houseId', index: 'houseId', width: 80, editable: true},
                 {name: 'cost', index: 'cost', width: 80, editable: true},
+                {name: 'createTime', index: 'createTime', width: 80, editable: true},
+                {name: 'enableTime', index: 'enableTime', width: 80, editable: true},
                 {name: 'oprate', width: 80, editable: false},
             ],
             rowNum: 10,

@@ -6,14 +6,17 @@ function pageInit(){
       {
         url : "/managers/getAllManager.do",
         datatype : "json",
-        colNames : [ 'id', '用户名','管理员类型', '密码','最后登录时间','登录次数',"操作"],
+        colNames : [ 'id', '用户名','管理员类型', '密码','电话','邮箱','最后登录时间','登录次数','是否可用',"操作"],
         colModel : [ 
                      {name : 'id',index : 'id',width : 55,editable:true}, 
                      {name : 'username',index : 'username',width : 90,editable:true},
                      {name : 'type',index : 'type',width : 100,editable:true},
                      {name : 'password',index : 'password',width : 100,editable:true},
+                     {name : 'tel',index : 'tel',width : 100,editable:true},
+                     {name : 'email',index : 'email',width : 100,editable:true},
                      {name : 'lastPassTime',index : 'lastPassTime',width : 80,editable:true},
-                     {name : 'passCount',width : 80,editable:false},
+                     {name : 'passCount',width : 80,editable:true},
+                     {name : 'enable',width : 80,editable:true},
                      {name : 'oprate',width : 80,editable:false}
                    ],
         rowNum : 10,
@@ -46,7 +49,7 @@ function pageInit(){
         var gr = jQuery("#managers").jqGrid('getGridParam', 'selrow');
         if (gr != null)
           jQuery("#managers").jqGrid('editGridRow', gr, {
-            height : 300,
+            height : 500,
             reloadAfterSubmit : true,
           });
         else
@@ -54,7 +57,7 @@ function pageInit(){
       });
   $("#add").click(function() {
         jQuery("#managers").jqGrid('editGridRow', "new", {
-          height : 300,
+          height : 500,
           reloadAfterSubmit : false
         });
       });
