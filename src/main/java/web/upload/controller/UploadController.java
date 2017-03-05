@@ -92,14 +92,14 @@ public class UploadController extends BaseController {
 							HttpSession session =HttpUtils.getSession(request);
 							houseId = (String) session.getAttribute("houseId");
 						}
-						String fileName = "houseId" + System.currentTimeMillis() + file.getOriginalFilename();
+						String fileName = houseId + System.currentTimeMillis() + file.getOriginalFilename();
 						// 定义上传路径
-						String path = "F:/design/files/" + fileName;
+						String path = "E:\\code\\Designer\\Design\\target\\Design\\images\\upload\\" + fileName;
 						File localFile = new File(path);
 						file.transferTo(localFile);
-
+						String readPath = "images/upload/"+fileName;
 						House house = houseService.getHouse(houseId);
-						house.setImage(house.getImage() + fileName + ",");
+						house.setImage(house.getImage() + readPath + ",");
 						houseService.saveOrUpdate(house);
 					}
 				}
@@ -107,9 +107,9 @@ public class UploadController extends BaseController {
 				int finaltime = (int) System.currentTimeMillis();
 				System.out.println(finaltime - pre);
 			}
-			return "/success";
+			return "success";
 		}
-		return "/404";
+		return "404";
 	}
 
 	@RequestMapping("/uploadImg")
