@@ -9,7 +9,6 @@
 <link href="/css/web/house/rent_out.css" rel="stylesheet" type="text/css"/>
 <body>
 <a href="/personal/toPersonal.do">个人中心</a>
-<h1>图片上传</h1>
 <form name="userForm1" action="/webHouse/rentHouse.do" method="post">
     <input type="text" class="input-style" id="images" hidden name="images">
     <input type="text" class="input-style"  id="title" name="title" placeholder="标题">
