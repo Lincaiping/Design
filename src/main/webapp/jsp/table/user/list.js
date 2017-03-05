@@ -66,7 +66,7 @@ function pageInit(){
     				id:gr,
     			},
     			success : function(data) {
-    				
+                    alert("删除成功，请刷新页面");
     			},
     			error : function() {
     				alert("获取连接异常");

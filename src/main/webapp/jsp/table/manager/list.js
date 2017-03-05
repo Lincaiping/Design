@@ -63,12 +63,12 @@ function pageInit(){
       if (gr != null){
     	  $.ajax({
     			type : "POST",
-    			url : "/manager/delManager.do",
+    			url : "/managers/delManager.do",
     			data : {
     				id:gr,
     			},
     			success : function(data) {
-    				
+                    alert("删除成功，请刷新页面");
     			},
     			error : function() {
     				alert("获取连接异常");

@@ -28,7 +28,7 @@ import javax.servlet.http.HttpSession;
 import web.upload.service.UploadService;
 
 @Controller
-@RequestMapping("/file")
+@RequestMapping("/upload")
 public class UploadController extends BaseController {
 	@Autowired
 	private UserService userService;
@@ -53,6 +53,7 @@ public class UploadController extends BaseController {
 	 * @throws IOException
 	 */
 	@RequestMapping("/upload")
+	@ResponseBody
 	public String upload(HttpServletRequest request, String houseId)
 			throws IllegalStateException, IOException {
 		// 创建一个通用的多部分解析器
@@ -75,6 +76,7 @@ public class UploadController extends BaseController {
 				fileTypes.add("jpeg");
 				fileTypes.add("bmp");
 				fileTypes.add("gif");
+				fileTypes.add("png");
 				if (file != null) {
 					// 取得当前上传文件的文件名称
 					String myFileName = file.getOriginalFilename();
@@ -86,7 +88,7 @@ public class UploadController extends BaseController {
 					if (myFileName.trim() != "") {
 						System.out.println(myFileName);
 						// 重命名上传后的文件名
-						String fileName = "houseId" + HttpUtils.getTime() + file.getOriginalFilename();
+						String fileName = "houseId" + System.currentTimeMillis() + file.getOriginalFilename();
 						// 定义上传路径
 						String path = "F:/design/files/" + fileName;
 						File localFile = new File(path);

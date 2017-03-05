@@ -19,7 +19,7 @@
 <!--导航 begin-->
 <div class="wrap100 topNav">
     <ul>
-        <li class="bg1"><a href="/index/toRend/toIndex.do"><i
+        <li class="bg1"><a href="/index/toRend.do"><i
                 class="house-icon"></i>首页</a></li>
         <li><img src="/images/personal/jt1.jpg" height="60"/></li>
         <li class="bg2"><a
@@ -56,11 +56,11 @@
 <div class="wrap100 fl mar30">
     <div class="mus_cai">
         <ul>
-            <li><a
+            <%--<li><a
                     href="/personal/codeManage.do">
                 <img src="/images/personal/mus_cai_icon01.png"> <span
                     class="fl">密码管理</span> <i></i>
-            </a></li>
+            </a></li>--%>
             <li><a href="/personal/myHouse.do">
                 <img src="/images/personal/mus_cai_icon07.png"> <span
                     class="fl">我的出租</span> <i></i>

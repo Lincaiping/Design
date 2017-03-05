@@ -3,6 +3,7 @@ package com.table.user.controller;
 import com.base.BaseController;
 import com.base.dao.PageBean;
 import com.base.dao.Pager;
+import com.base.encrypt.aes.AES;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
 
@@ -56,6 +57,13 @@ public class UserController extends BaseController {
     @RequestMapping("/saveOrUpdate")
     @ResponseBody
     public boolean saveOrUpdate(User user) {
+        String safePassWord = null;
+        try {
+            safePassWord = AES.Encrypt(user.getPassword(), "1234567890123456");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        user.setPassword(safePassWord);
         userService.saveOrUpdate(user);
         return true;
     }

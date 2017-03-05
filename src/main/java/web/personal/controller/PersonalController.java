@@ -34,7 +34,14 @@ public class PersonalController extends BaseController {
 	private HouseService houseService;
 
 	@RequestMapping("/toPersonal")
-	public String toPersonal(HttpServletRequest request) {
+	public String toPersonal(HttpServletRequest request,Model model) {
+		HttpSession session = HttpUtils.getSession(request);
+		String userId = (String) session.getAttribute("userId");
+		User user = userService.getUser(userId);
+		model.addAttribute("image", user.getImage());
+		model.addAttribute("tel", user.getTel());
+		model.addAttribute("email", user.getEmail());
+		model.addAttribute("idNum", user.getIdNum());
 		return "web/personal/personal";
 	}
 	
