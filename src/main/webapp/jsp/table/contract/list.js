@@ -34,7 +34,7 @@ function pageInit() {
             sortorder: "desc",
             multiselect: true,
             editurl: "/contract/saveOrUpdate.do",
-            caption: "用户信息管理"
+            caption: "合同管理"
         });
 
     jQuery("#m1").click(function () {

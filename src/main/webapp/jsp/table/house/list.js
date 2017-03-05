@@ -33,7 +33,7 @@ function pageInit() {
             sortorder: "desc",
             multiselect: true,
             editurl: "/house/saveOrUpdate.do",
-            caption: "用户信息管理"
+            caption: "房屋管理"
         });
     jQuery("#m1").click(function () {
         var rowId;

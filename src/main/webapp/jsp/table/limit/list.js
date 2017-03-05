@@ -32,7 +32,7 @@ function pageInit(){
         sortorder : "desc",
         multiselect : true,
         editurl : "/limit/saveOrUpdate.do",
-        caption : "用户信息管理"
+        caption : "错误次数限制"
       });
   jQuery("#m1").click(function() {
     var rowId;

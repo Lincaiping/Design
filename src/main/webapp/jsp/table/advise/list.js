@@ -32,7 +32,7 @@ function pageInit(){
         sortorder : "desc",
         multiselect : true,
         editurl : "/advise/saveOrUpdate.do",
-        caption : "用户信息管理"
+        caption : "用户建议管理"
       });
   jQuery("#m1").click(function() {
     var rowId;

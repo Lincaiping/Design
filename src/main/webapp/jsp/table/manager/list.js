@@ -34,7 +34,7 @@ function pageInit(){
         sortorder : "desc",
         multiselect : true,
         editurl : "/managers/saveOrUpdate.do",
-        caption : "用户信息管理"
+        caption : "管理员权限管理"
       });
   jQuery("#m1").click(function() {
     var rowId;
