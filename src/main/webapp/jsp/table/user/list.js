@@ -6,7 +6,7 @@ function pageInit(){
       {
         url : "/user/getAllUser.do",
         datatype : "json",
-        colNames : [ 'id', '用户名', '密码','真实姓名','电话号码','是否可用','操作'],
+        colNames : [ 'id', '用户名', '密码', '真实姓名', '电话号码', '是否可用','操作'],
         colModel : [ 
                      {name : 'id',index : 'id',width : 90,editable:true},
                      {name : 'userName',index : 'userName',width : 90,editable:true}, 

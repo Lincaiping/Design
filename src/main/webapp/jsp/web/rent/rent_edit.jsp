@@ -8,25 +8,26 @@
 </head>
 <body>
 <a href="/personal/toPersonal.do">个人中心</a>
+<b>当前账户：&nbsp&nbsp&nbsp&nbsp${userName }</b>
 <h1>图片上传</h1>
 <form name="userForm1" action="/webHouse/rentHouse.do" method="post">
     <div id="newUpload1">
         <input type="file" id="file" name="file">
     </div>
 
-    <p>你可以再次点击，上传多张图片，但是每次只能上传一张哦</p>
+    <p>你可以再次点击，上传多张图片，但是每次只能上传一张哦！</p>
 
     <form name="userForm1" action="/webHouse/rentHouse.do" method="post">
-        <input type="text" value="${house.id}" id="house_id" name="houseId">
-        <input type="text" class="input-style" id="images" hidden name="images">
-        <input type="text" value="${house.title}" class="input-style"  id="title" name="title" placeholder="标题">
-        <input type="text" value="${house.describle}"class="input-style"  id="describle" name="describle" placeholder="描述">
-        <input type="number" value="${house.cost}" class="input-style" id="cost" name="cost" placeholder="房租">
-        <input type="text" value="${house.type}"  class="input-style" id="type" name="type" placeholder="户型">
-        <input type="text" value="${house.location}" class="input-style"  id="location" name="location" placeholder="位置">
-        <input type="number" value="${house.area}"class="input-style" id="area" name="area" placeholder="面积">
-        <input type="text" value="${house.floor}" class="input-style"  id="floor" name="floor" placeholder="楼层">
-        <input type="submit"  class="input-style"  value="确定">
+        id号：<input type="text" value="${house.id}" id="house_id" name="houseId">
+        <input type="text" class="input-style" id="images" hidden name="images"><br/><br/>
+        标题：<input type="text" value="${house.title}" class="input-style"  id="title" name="title" placeholder="标题"><br/><br/>
+        描述：<input type="text" value="${house.describle}"class="input-style"  id="describle" name="describle" placeholder="描述"><br/><br/>
+        房租：<input type="number" value="${house.cost}" class="input-style" id="cost" name="cost" placeholder="房租"><br/><br/>
+        户型：<input type="text" value="${house.type}"  class="input-style" id="type" name="type" placeholder="户型"><br/><br/>
+        位置：<input type="text" value="${house.location}" class="input-style"  id="location" name="location" placeholder="位置"><br/><br/>
+        面积：<input type="number" value="${house.area}"class="input-style" id="area" name="area" placeholder="面积"><br/><br/>
+        楼层：<input type="text" value="${house.floor}" class="input-style"  id="floor" name="floor" placeholder="楼层"><br/><br/>
+        <input type="submit"  class="input-style"  value="确定"><br/>
     </form>
 
 </form>
