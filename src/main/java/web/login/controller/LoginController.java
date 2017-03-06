@@ -31,7 +31,6 @@ public class LoginController extends BaseController {
 	private IndexService indexService;
 	@Autowired
 	private UserService userService;
-
 	@Autowired
 	private HouseService houseService;
 
@@ -49,18 +48,18 @@ public class LoginController extends BaseController {
 			PageBean pageBean = new PageBean();
 			pageBean.setPageNo(0);
 			pageBean.setPageSize(20);
-			List<House> houseList = houseService.getByPage(pageBean).getRows();
-			List<String> imageList = new ArrayList<>();
-			String firstImage;
-			for (House house:houseList) {
-				firstImage = house.getImage().split(",")[0];
-				imageList.add(firstImage);
-			}
-			List<House> webHouseList = houseList;
-			for (int i=0;i<imageList.size();i++){
-				webHouseList.get(i).setImage(imageList.get(i));
-			}
-			model.addAttribute("houseList", webHouseList);
+	//		List<House> houseList = houseService.getByPage(pageBean).getRows();
+	//		List<String> imageList = new ArrayList<>();
+	//		String firstImage;
+	//		for (House house:houseList) {
+	//			firstImage = house.getImage().split(",")[0];
+	//			imageList.add(firstImage);
+	//		}
+	//		List<House> webHouseList = houseList;
+	//		for (int i=0;i<imageList.size();i++){
+	//			webHouseList.get(i).setImage(imageList.get(i));
+	//		}
+	//		model.addAttribute("houseList", webHouseList);
 			return "web/index";
 		}
 		return "404";

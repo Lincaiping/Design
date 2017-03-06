@@ -31,7 +31,7 @@
             </li>
         </ul>
         <div class="reg_btn">
-            <input type="button" class="submit" type="submit" onclick="submitTel()" value="确认重置">
+            <input type="button" class="submit" type="submit"  onclick="submitTel()" value="确认重置">
             <a href="/login/toResetEmail.do">
                 <div class="reg-login"><p>邮箱重置</p></div>
             </a>
