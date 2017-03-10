@@ -70,7 +70,7 @@ public class LoginService {
 
 	}
 
-	public boolean register(String userName, String tel, String password) {
+	public boolean register(String userName, String tel,String email, String password) {
 		User user = new User();
 		String safePassWord;
 		try {
@@ -78,6 +78,7 @@ public class LoginService {
 			user.setPassword(safePassWord);
 			user.setUserName(userName);
 			user.setTel(tel);
+			user.setEmail(email);
 			userService.saveOrUpdate(user);
 			return true;
 		} catch (Exception e1) {

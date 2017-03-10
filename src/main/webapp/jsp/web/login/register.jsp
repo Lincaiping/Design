@@ -25,11 +25,13 @@
             <li><i class="yz"><img src="/css/web/images/msg.png"></i>
                 <input class="yzm" type="number" name="code" placeholder="请输入手机验证码"/>
                 <input type="button" id="send" value="获取验证码"/></li>
+            <li><i class="un"><img src="/css/web/images/msg.png"></i>
+            <input class="username" name="email"  type="text"
+                   placeholder="请输入电子邮箱"/></li>
             <li><i class="pw"><img src="/css/web/images/pwd.png"></i>
                 <input class="pwd" type="password" name="password" placeholder="请输入密码"/></li>
-            <li><i class="pw2"><img src="/css/web/images/pwd.png"></i><input class="pwd2"
-                                                                             type="password"
-                                                                             placeholder="请输入确认密码"/>
+            <li><i class="pw2"><img src="/css/web/images/pwd.png"></i>
+                <input class="pwd2" type="password" placeholder="请输入确认密码"/>
             </li>
             <div class="queren"><input class="fx" type="checkbox" checked="checked"/>
                 <p>我已阅读并同意《用户协议》</p></div>

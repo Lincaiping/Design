@@ -157,11 +157,11 @@ function submitTel() {
             "password": password
         },
         success: function (data) {
-            if (data.equals("success")) {
+           if (data.equals("success")) {
                 alert("设置成功！");
-            }
-            else {
-                alert("出现异常了！");
+           }
+           else {
+              alert("出现异常了！");
             }
         },
         error: function () {

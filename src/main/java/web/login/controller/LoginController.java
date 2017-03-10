@@ -92,12 +92,12 @@ public class LoginController extends BaseController {
 	}
 
 	@RequestMapping("/register")
-	public String register(HttpServletRequest request, String userName, String tel, String password, String code, Model model)
+	public String register(HttpServletRequest request, String userName, String tel,String email, String password, String code, Model model)
 			throws Exception {
 		if (!indexService.checkCodeByTel(tel, code)) {
 			return "404";
 		}
-		if (loginService.register(userName, tel, password)) {
+		if (loginService.register(userName, tel,email,password)) {
 			model.addAttribute("userName", userName);
 			return "web/login/showResult";
 		}

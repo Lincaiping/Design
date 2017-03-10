@@ -18,7 +18,7 @@
 			</div>
 			<div class="s_title">进行个人中心，开始家家乐之旅吧：</div>
 			<span class="s_redlink">
-			<a href="/personal/toPersonal.do" target="_blank">个人中心</a>
+			<a href="/login/toLogin.do" target="_blank">请先登录</a>
 			</span>
 		</div>
 	</div>
