@@ -8,10 +8,8 @@ $(function () {
             dataType: 'json',//返回数据的类型
             data: {houseId: houseId},//一同上传的数据
             success: function (data, status) {
-                debugger;
             },
             error: function (data, status, e) {
-                alert(e);
             }
         });
 

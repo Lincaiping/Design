@@ -17,6 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -144,6 +145,15 @@ public class IndexController extends BaseController {
 		pageBean.setPageNo(0);
 		pageBean.setPageSize(20);
 		List<House> houseList = houseService.getByPage(pageBean).getRows();
+		List<String> imageList = new ArrayList<>();
+		String firstImage;
+		for (House house:houseList) {
+			firstImage = house.getImage().split(",")[0];
+			imageList.add(firstImage);
+		}
+		for (int i=0;i<imageList.size();i++){
+			houseList.get(i).setImage(imageList.get(i));
+		}
 		model.addAttribute("houseList", houseList);
 		return "web/index";
 	}
