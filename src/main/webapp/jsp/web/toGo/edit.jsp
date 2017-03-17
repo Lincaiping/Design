@@ -6,6 +6,7 @@
     <title>操作成功！</title>
 </head>
 <body>
+<%@ include file="/jsp/web/toGo/toPersonal.jsp" %>
 管理员，恭喜你的操作成功了！
 </body>
 </html>

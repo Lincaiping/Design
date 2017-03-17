@@ -7,28 +7,29 @@
 <head>
     <%@ include file="/header.jsp" %>
     <title>房源</title>
+    <link href="/css/web/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<a href="/personal/toPersonal.do">个人中心</a>
-<select>
+<%@ include file="/jsp/web/toGo/toPersonal.jsp" %>
+<select class="select">
     <option value="">区域</option>
     <option value="saab">Saab</option>
     <option value="opel">Opel</option>
     <option value="audi">Audi</option>
 </select>
-<select>
+<select class="select">
     <option value="">价格</option>
     <option value="saab">Saab</option>
     <option value="opel">Opel</option>
     <option value="audi">Audi</option>
 </select>
-<select>
+<select class="select">
     <option value="">房型</option>
     <option value="saab">Saab</option>
     <option value="opel">Opel</option>
     <option value="audi">Audi</option>
 </select>
-<table border="0" cellspacing="0" cellpadding="0" width="100%" style="align:center;">
+<table border="0" cellspacing="0" cellpadding="0" width="90%" class="table" style="align:center;">
     <%
         //循环显示数据
         List<House> houseList = (List<House>) request.getAttribute("houseList"); // 取request里面的对象队列
@@ -39,14 +40,14 @@
     %>
     <tr onclick="toHouseDetail(${house.id})">
         <td hidden>${house.id}</td>
-        <td rowspan="3"><img src="${house.image}" width="100px" height="100px" alt="房子图片"/></td>
+        <td rowspan="3"><img src="${house.image}" width="150px" height="100px" alt="房子图片"/></td>
         <td>${house.title}</td>
     </tr>
     <tr onclick="toHouseDetail(${house.id})">
-        <td>${house.location}</td>
+        <td><span>所在地：</span>${house.location}</td>
     </tr>
     <tr onclick="toHouseDetail(${house.id})">
-        <td>${house.cost}/元</td>
+        <td><span>房租：</span>${house.cost}/元</td>
     </tr>
     <%
         }

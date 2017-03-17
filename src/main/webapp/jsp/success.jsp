@@ -5,8 +5,10 @@
     <%@ include file="/header.jsp" %>
     <title>操作成功！</title>
 </head>
+<link href="/css/web/toPersonal.css" rel="stylesheet" type="text/css"/>
 <body>
+<%@ include file="/jsp/web/toGo/toPersonal.jsp" %>
 恭喜你的操作成功了！
-<a href="/login/toIndex.do">回到主页</a>
+<a href="/login/toIndex.do" class="toPersonal">回到主页</a>
 </body>
 </html>
