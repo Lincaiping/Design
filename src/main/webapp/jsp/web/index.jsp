@@ -11,23 +11,26 @@
 </head>
 <body>
 <%@ include file="/jsp/web/toGo/toPersonal.jsp" %>
-<select class="select">
+<select name="location" class="select">
     <option value="">区域</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option>
+    <option value="1">泉州市</option>
+    <option value="2">安溪县</option>
+    <option value="3">城厢</option>
+    <option value="4">凤城</option>
 </select>
-<select class="select">
+<select name="cost" class="select">
     <option value="">价格</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option>
+    <option value="1">500以下</option>
+    <option value="2">500-1000</option>
+    <option value="3">1000-2000</option>
+    <option value="4">2000以上</option>
 </select>
-<select class="select">
+<select name="type" class="select">
     <option value="">房型</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option>
+    <option value="1">一室</option>
+    <option value="2">两室</option>
+    <option value="3">三室</option>
+    <option value="4">四室</option>
 </select>
 <table border="0" cellspacing="0" cellpadding="0" width="90%" class="table" style="align:center;">
     <%
