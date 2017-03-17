@@ -11,7 +11,8 @@
 <body>
 <body>
 	<div class="login">
-        <div class="reindex"><a href="http://127.0.0.1:8080/" target="_parent">返回首页</a></div>
+        <div class="login-return"><a href="http://127.0.0.1:8080/" target="_parent" style="font-size: 23px;
+             color: white;">返回首页</a></div>
             <div class="login-title"><p>家家乐登录</p>
                 <i></i>
             </div>

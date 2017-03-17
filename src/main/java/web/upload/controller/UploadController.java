@@ -94,8 +94,8 @@ public class UploadController extends BaseController {
 						}
 						String fileName = houseId + System.currentTimeMillis() + file.getOriginalFilename();
 						// 定义上传路径
-//						String path = "E:\\code\\Designer\\Design\\target\\Design\\images\\upload\\" + fileName;
-						String path = "E:\\idea\\Design\\target\\Design\\images\\upload\\" + fileName;
+						String path = "E:\\code\\Designer\\Design\\target\\Design\\images\\upload\\" + fileName;
+//						String path = "E:\\idea\\Design\\target\\Design\\images\\upload\\" + fileName;
 						File localFile = new File(path);
 						file.transferTo(localFile);
 						String readPath = "/images/upload/"+fileName;

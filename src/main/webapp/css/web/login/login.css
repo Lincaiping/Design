@@ -104,6 +104,11 @@ textarea::-webkit-input-placeholder {
     margin-top: 80px;
 }
 
+.login-return {
+    font-size: 23px;
+    color: white;
+}
+
 .submit {
     width: 70%;
     height: 35px;

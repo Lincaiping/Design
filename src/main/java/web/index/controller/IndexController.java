@@ -148,8 +148,10 @@ public class IndexController extends BaseController {
 		List<String> imageList = new ArrayList<>();
 		String firstImage;
 		for (House house:houseList) {
-			firstImage = house.getImage().split(",")[0];
-			imageList.add(firstImage);
+			if(house.getImage()!=null) {
+				firstImage = house.getImage().split(",")[0];
+				imageList.add(firstImage);
+			}
 		}
 		for (int i=0;i<imageList.size();i++){
 			houseList.get(i).setImage(imageList.get(i));
