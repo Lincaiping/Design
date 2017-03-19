@@ -16,6 +16,9 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import sun.rmi.runtime.Log;
+import web.Define;
+
 /**
  * Created by gbq on 2017/2/27.
  */
@@ -44,9 +47,17 @@ public class WebHouseController extends BaseController {
 			String[] imageList = house.getImage().split(",");
 			List list = Arrays.asList(imageList);
 			model.addAttribute("imageList", list);
+		} else {
+			model.addAttribute("imageList", null);
+		}
+		HttpSession session = HttpUtils.getSession(request);
+		String userId = (String) session.getAttribute(Define.USER_ID);
+		System.err.println(userId);
+		if(userId!=null) {
+			model.addAttribute("owner", userId.equals(house.getOwner()));
 		}
 		else {
-			model.addAttribute("imageList", null);
+			model.addAttribute("owner", null);
 		}
 		model.addAttribute("house", house);
 		return "/web/houseDetail";

@@ -1,9 +1,7 @@
 package web.login.controller;
 
 import com.base.BaseController;
-import com.base.dao.PageBean;
-import com.table.house.entity.House;
-import com.table.house.service.HouseService;
+import com.table.manager.service.ManagerService;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
 
@@ -13,12 +11,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import web.Define;
 import web.index.service.IndexService;
 import web.login.service.LoginService;
 
@@ -31,47 +27,40 @@ public class LoginController extends BaseController {
 	private IndexService indexService;
 	@Autowired
 	private UserService userService;
-	@Autowired
-	private HouseService houseService;
 
-	@RequestMapping("/login")
+	@Autowired
+	private ManagerService managerService;
+
+	@ResponseBody
+	@RequestMapping(value = "/login", produces = "text/html;charset=UTF-8")
 	public String login(HttpServletRequest request, String userName, String password, Model model) {
 		User user = loginService.userLogin(request, userName, password, null);
 		if (!indexService.limitAble(request, 1)) {
-			return "404";
+			return Define.ERROR_LIMIT;
 		}
 		if (null != user) {
-			model.addAttribute("image", user.getImage());
-			model.addAttribute("tel", user.getTel());
-			model.addAttribute("email", user.getEmail());
-			model.addAttribute("idNum", user.getIdNum());
-			PageBean pageBean = new PageBean();
-			pageBean.setPageNo(0);
-			pageBean.setPageSize(20);
-			List<House> houseList = houseService.getByPage(pageBean).getRows();
-			List<String> imageList = new ArrayList<>();
-			String firstImage;
-			for (House house:houseList) {
-				firstImage = house.getImage().split(",")[0];
-				imageList.add(firstImage);
-			}
-			for (int i=0;i<imageList.size();i++){
-				houseList.get(i).setImage(imageList.get(i));
-			}
-			model.addAttribute("houseList", houseList);
-			return "web/index";
+			return Define.RESULT_SUCCESS;
 		}
-		return "404";
+		return Define.ERROR_PASSWORD;
 	}
 
 	@RequestMapping("/toLogin")
-	public String toLogin(HttpServletRequest request) {
+	public String toLogin() {
 		log.debug("转到登录页面!");
 		return "web/login/login";
 	}
 
+	@RequestMapping(value = "/managerLogin", produces = "text/html;charset=UTF-8")
+	@ResponseBody
+	public String managerLogin(HttpServletRequest request, String loginName, String password) {
+		if (managerService.login(request, loginName, password)) {
+			return Define.RESULT_SUCCESS;
+		}
+		return Define.ERROR_PASSWORD;
+	}
+
 	@RequestMapping("/toIndex")
-	public String toIndex(HttpServletRequest request) {
+	public String toIndex() {
 		log.debug("转到主页面!");
 		return "/";
 	}
@@ -91,12 +80,12 @@ public class LoginController extends BaseController {
 	}
 
 	@RequestMapping("/register")
-	public String register(HttpServletRequest request, String userName, String tel,String email, String password, String code, Model model)
+	public String register(HttpServletRequest request, String userName, String tel, String email, String password, String code, Model model)
 			throws Exception {
 		if (!indexService.checkCodeByTel(tel, code)) {
 			return "404";
 		}
-		if (loginService.register(userName, tel,email,password)) {
+		if (loginService.register(userName, tel, email, password)) {
 			model.addAttribute("userName", userName);
 			return "web/login/showResult";
 		}

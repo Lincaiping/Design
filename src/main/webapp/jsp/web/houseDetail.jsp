@@ -9,7 +9,7 @@
 </head>
 <body>
 <%@ include file="/jsp/web/toGo/toPersonal.jsp" %>
-<div class="detailTitle"><span >房屋详情</span></div>
+<div class="detailTitle"><span>房屋详情</span></div>
 <div>
     <div id="imageswzi">
         <script src="/js/index/swipe2.js" type="text/javascript"></script>
@@ -27,14 +27,18 @@
         <script src="/js/jquery-1.11.0.min.js"></script>
         <script src="/js/index/index_01.js" type="text/javascript"></script>
     </div>
-    <div class="houseInfo" style="display: block;width: 90%;text-align: center"><span class="houseTitle">${house.title}</span></div>
+    <div class="houseInfo" style="display: block;width: 90%;text-align: center"><span
+            class="houseTitle">${house.title}</span></div>
     <div class="houseInfo">${house.describle}</div>
     <div class="houseInfo"><span>位置：</span>${house.location}</div>
-    <div class="houseInfo"><span>房租：</span> ${house.cost} <span style="margin-left: 30%">楼层：</span>${house.floor}</div>
+    <div class="houseInfo"><span>房租：</span> ${house.cost} <span
+            style="margin-left: 30%">楼层：</span>${house.floor}</div>
 </div>
 <form action="/webHouse/toEditHouse.do" method="post">
     <input type="text" hidden id="houseId" name="houseId" value="${house.id}">
-    <input type="submit" class="button_confirm" value="编辑">
+    <c:if test="${owner}">
+        <input type="submit" class="button_confirm" value="编辑">
+    </c:if>
 </form>
 </body>
 <script src="/js/jquery-1.11.0.min.js"></script>

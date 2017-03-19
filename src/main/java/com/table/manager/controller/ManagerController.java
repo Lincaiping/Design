@@ -20,6 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import web.Define;
+
 @SuppressWarnings("unused")
 @Controller
 @RequestMapping("/managers")
@@ -48,21 +50,14 @@ public class ManagerController extends BaseController {
 		return "index2";
 	}
 
-	@RequestMapping("/login")
-	public String login(HttpServletRequest request, String loginName, String password, Model model) {
-		if (loginName.length() == 0)
-			return "manager";
-		if (managerService.login(request, loginName, password)) {
-			HttpSession session = request.getSession();
-			model.addAttribute("managerName", session.getAttribute("managerName"));
-			return "manager";
-		}
-		return "/404";
-	}
-
 	@RequestMapping("/goList")
 	public String goList() {
 		return "table/manager/list";
+	}
+
+	@RequestMapping("/toManage")
+	public String toManage() {
+		return "manager";
 	}
 
 	@RequestMapping("/getAllManager")

@@ -36,13 +36,13 @@ function login() {
     $.ajax({
         type: "POST",
         dataType: "html",
-        url: "/login/login.do",
+        url: "/login/managerLogin.do",
         scriptCharset: 'utf-8',
         contentType: "application/x-www-form-urlencoded;charset=UTF-8",
-        data: $('#loginForm').serialize(),
+        data: $('#faLogin').serialize(),
         success: function (data) {
             if ($.trim(data) == $.trim("success")) {
-                window.location.href = "/index/toRend.do";
+                window.location.href = "/managers/toManage.do";
             }
             else {
                 alert(data)
