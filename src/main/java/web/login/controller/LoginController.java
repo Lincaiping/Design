@@ -101,7 +101,7 @@ public class LoginController extends BaseController {
 	@ResponseBody
 	public String resetTel(HttpServletRequest request, String tel, String code, String password) {
 		User user = userService.getUserByPhone(tel);
-		if (!indexService.resetCode(user.getId(), code)) {
+		if (!indexService.checkCodeByTel(tel, code)) {
 			return "error";
 		} else {
 			if (!loginService.resetPassword(user, password)) {
@@ -120,7 +120,7 @@ public class LoginController extends BaseController {
 	@ResponseBody
 	public String resetEmail(HttpServletRequest request, String email, String code, String password) {
 		User user = userService.getUserByEmail(email);
-		if (!indexService.resetCode(user.getId(), code)) {
+		if (!indexService.checkCodeByEmail(email, code)) {
 			return "error";
 		} else {
 			if (!loginService.resetPassword(user, password)) {

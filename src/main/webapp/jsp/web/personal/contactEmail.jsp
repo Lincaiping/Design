@@ -40,7 +40,7 @@
 </div>
 <div class="wrap100">
     <div class="wrap90 mar20"><input name="email" id="email" class="input70" type="text"
-                                     placeholder="手机号"></div>
+                                     placeholder="邮箱"></div>
 </div>
 
 <div class="down_button">

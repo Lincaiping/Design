@@ -60,12 +60,12 @@ public class CodeServiceImpl extends BaseService implements CodeService {
 	}
 
 	public Code getCodeByPhone(String tel) {
-		String hql = "from Code where tel=?";
+		String hql = "from Code where tel =? order by id desc";
 		return dao.findObject(hql, tel);
 	}
 
 	public Code getCodeByEmail(String email) {
-		String hql = "from Code where email =?";
+		String hql = "from Code where email =? order by id desc";
 		return dao.findObject(hql, email);
 	}
 

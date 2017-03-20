@@ -20,6 +20,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import web.Define;
 import web.index.service.IndexService;
 
 @Controller
@@ -97,7 +98,7 @@ public class PersonalController extends BaseController {
 	@RequestMapping("setPhone")
 	@ResponseBody
 	public String setPhone(HttpServletRequest request, String phone, String code) {
-		if (!indexService.checkCode(request, code)) {
+		if (!indexService.checkCodeByTel(phone, code)) {
 			return "error";
 		} else {
 			HttpSession session = HttpUtils.getSession(request);
@@ -128,8 +129,8 @@ public class PersonalController extends BaseController {
 	@RequestMapping("setEmail")
 	@ResponseBody
 	public String setEmail(HttpServletRequest request, String email, String code) {
-		if (!indexService.checkCode(request, code)) {
-			return "error";
+		if (!indexService.checkCodeByEmail(email, code)) {
+			return Define.ERROR_CODE;
 		} else {
 			HttpSession session = HttpUtils.getSession(request);
 			String userId = (String) session.getAttribute("userId");

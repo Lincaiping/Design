@@ -96,6 +96,11 @@ public class IndexService {
 		return securityCode.getCode().equals(code);
 	}
 
+	public boolean checkCodeByEmail(String email, String code) {
+		Code codeClass = codeService.getCodeByEmail(email);
+		return codeClass.getCode().equals(code);
+	}
+
 	public boolean checkCode(HttpServletRequest request, String code) {
 		HttpSession session = HttpUtils.getSession(request);
 		String userId = (String) session.getAttribute("userId");
