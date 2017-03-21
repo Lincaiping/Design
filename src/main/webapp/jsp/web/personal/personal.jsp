@@ -25,7 +25,8 @@
         <li class="bg2"><a
                 href="#">我的账户</a></li>
         <li><img src="/images/personal/jt2_2.png" height="60"/></li>
-        <div class="reindex"><a href="http://127.0.0.1:8080/" target="_parent">返回首页</a></div>
+        <div class="reindex"><a href="http://127.0.0.1:8080/" target="_parent" style=" font-size: 30px;
+       color: white;">返回首页</a></div>
     </ul>
 </div>
 <!--导航 end-->

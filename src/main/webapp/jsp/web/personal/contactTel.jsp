@@ -42,7 +42,7 @@
 </div>
 <div class="wrap100">
     <div class="wrap90 mar20">
-        <input name="serviceNum" id="serviceNum" class="input70" type="text" placeholder="手机号">
+        <input name="tel" id="tel" class="input70" type="text" placeholder="手机号">
     </div>
 </div>
 
