@@ -48,8 +48,8 @@
         </div>
         <br/><br/><br/><br/><br/><br/><br/><br/>
         <div>
-            <a href="javascript:showFlowDetails()"
-               style="cursor: pointer; color: #ffffff; font-size: 20px; text-decoration: underline; float: right; margin-right: 40px;">查看快捷登录记录</a>
+            <a href="/personal/myContract.do"
+               style="cursor: pointer; color: #ffffff; font-size: 20px; text-decoration: underline; float: right; margin-right: 40px;">查看租房记录</a>
         </div>
     </div>
 </div>

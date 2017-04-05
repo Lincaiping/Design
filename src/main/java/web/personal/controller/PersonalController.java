@@ -166,6 +166,11 @@ public class PersonalController extends BaseController {
 		return "web/index";
 	}
 
+	@RequestMapping("/myContract")
+	public String myContract() {
+		return "web/personal/contract/list";
+	}
+
 	@RequestMapping("/toRendOut")
 	public String toRendOut() {
 		return "web/rent/rent_out";

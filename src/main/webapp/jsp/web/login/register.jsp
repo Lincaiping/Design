@@ -13,7 +13,7 @@
 <body>
 <div id="layout">
     <span>注册账号安全管家</span>
-    <form method="post" action="/login/register.do">
+    <form method="post" id="registerForm" action="/login/register.do">
         <ul>
             <p id="err_msg"></p>
             <li><i class="un"><img src="/css/web/images/user_name.png"></i>
@@ -37,7 +37,7 @@
                 <p>我已阅读并同意《用户协议》</p></div>
         </ul>
         <div class="reg_btn">
-            <button class="submit" type="submit">注册</button>
+            <input class="submit" type="button" onclick="register()" value="注册"/>
             <a href="/login/toLogin.do">
                 <div class="reg-login"><p>已有帐号，立即登录</p></div>
             </a>

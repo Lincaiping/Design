@@ -4,6 +4,8 @@ import com.base.BaseController;
 import com.base.HttpUtils;
 import com.table.house.entity.House;
 import com.table.house.service.HouseService;
+import com.table.user.entity.User;
+import com.table.user.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,8 @@ import web.Define;
 public class WebHouseController extends BaseController {
 	@Autowired
 	private HouseService houseService;
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping("/rentHouse")
 	public String rentHouse(HttpServletRequest request, House house) {
@@ -58,7 +62,8 @@ public class WebHouseController extends BaseController {
 		else {
 			model.addAttribute("owner", null);
 		}
-		model.addAttribute("house", house);
+		User user = userService.getUser(house.getOwner());
+		model.addAttribute("tel", user.getTel());
 		return "/web/houseDetail";
 	}
 

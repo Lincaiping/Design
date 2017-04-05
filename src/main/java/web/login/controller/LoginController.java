@@ -1,6 +1,7 @@
 package web.login.controller;
 
 import com.base.BaseController;
+import com.base.HttpUtils;
 import com.table.manager.service.ManagerService;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
@@ -80,17 +81,31 @@ public class LoginController extends BaseController {
 	}
 
 	@RequestMapping("/register")
+	@ResponseBody
 	public String register(HttpServletRequest request, String userName, String tel, String email, String password, String code, Model model)
 			throws Exception {
 		if (!indexService.checkCodeByTel(tel, code)) {
-			return "404";
+			return Define.ERROR_CODE;
 		}
 		if (loginService.register(userName, tel, email, password)) {
-			model.addAttribute("userName", userName);
-			return "web/login/showResult";
+			HttpSession session = HttpUtils.getSession(request);
+			session.setAttribute("userName",userName);
+			return Define.RESULT_SUCCESS;
 		}
-		return "404";
+		else {
+			return Define.ERROR_ALREADY_REGITSTER;
+		}
 	}
+
+	@RequestMapping("/showResult")
+	public String showResult(HttpServletRequest request,Model model)
+			throws Exception {
+		HttpSession session = HttpUtils.getSession(request);
+		String userName = (String) session.getAttribute("userName");
+		model.addAttribute("userName", userName);
+		return "web/login/showResult";
+	}
+
 
 	@RequestMapping("/toReset")
 	public String toReset(HttpServletRequest request) {

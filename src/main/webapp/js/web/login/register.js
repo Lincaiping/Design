@@ -119,7 +119,29 @@ window.onload=function(){
             pwd2.style.border='1px solid #fff';
         }
     }
-        
+
+}
+
+function register() {
+    $.ajax({
+        type: "POST",
+        dataType: "html",
+        url: "/login/register.do",
+        scriptCharset: 'utf-8',
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        data: $('#registerForm').serialize(),
+        success: function (data) {
+            if ($.trim(data) == $.trim("success")) {
+                window.location.href = "/login/showResult.do";
+            }
+            else {
+                alert(data)
+            }
+        },
+        error: function (data) {
+            alert("error:" + data);
+        }
+    });
 }
 
 

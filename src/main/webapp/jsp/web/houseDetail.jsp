@@ -31,8 +31,9 @@
             class="houseTitle">${house.title}</span></div>
     <div class="houseInfo">${house.describle}</div>
     <div class="houseInfo"><span>位置：</span>${house.location}</div>
-    <div class="houseInfo"><span>房租：</span> ${house.cost} <span
-            style="margin-left: 30%">楼层：</span>${house.floor}</div>
+    <div class="houseInfo"><span>房租：</span> ${house.cost}
+        <span style="margin-left: 30%">楼层：</span>${house.floor}</div>
+    <div class="houseInfo"><span>联系电话：</span>${tel}</div>
 </div>
 <form action="/webHouse/toEditHouse.do" method="post">
     <input type="text" hidden id="houseId" name="houseId" value="${house.id}">

@@ -84,7 +84,7 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 
 	@Override
 	public List<House> getHouseByOwnerId(String userId){
-		String hql = "from House where owner =?";
+		String hql = "from House where owner ="+userId;
 		return dao.findList(hql);
 	}
 }
