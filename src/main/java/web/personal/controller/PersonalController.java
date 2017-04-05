@@ -95,16 +95,16 @@ public class PersonalController extends BaseController {
 		return "web/personal/contactTel";
 	}
 
-	@RequestMapping("setPhone")
+	@RequestMapping("setTel")
 	@ResponseBody
-	public String setPhone(HttpServletRequest request, String phone, String code) {
-		if (!indexService.checkCodeByTel(phone, code)) {
+	public String setPhone(HttpServletRequest request, String tel, String code) {
+		if (!indexService.checkCodeByTel(tel, code)) {
 			return "error";
 		} else {
 			HttpSession session = HttpUtils.getSession(request);
 			String userId = (String) session.getAttribute("userId");
 			User user = userService.getUser(userId);
-			user.setTel(phone);
+			user.setTel(tel);
 			userService.saveOrUpdate(user);
 			return "success";
 		}

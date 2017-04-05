@@ -1,10 +1,10 @@
 function getCode(){
-	var serviceNum = $("#serviceNum").val();
+	var tel = $("#tel").val();
 	$.ajax({
 		type : "POST",
 		url : "/index/getCode.do",
 		data : {
-			"serviceNum":serviceNum,
+			"tel":tel,
 		},
 		success : function(data) {
 			alert("请查看验证码！");
@@ -17,13 +17,13 @@ function getCode(){
 
 
 function submitTel(){
-	var serviceNum = $("#serviceNum").val();
+	var tel = $("#tel").val();
 	var code = $("#code").val();
 	$.ajax({
 		type : "POST",
 		url : "/personal/setTel.do",
 		data : {
-			"serviceNum":serviceNum,
+			"tel":tel,
 			"code":code,
 		},
 		success : function(data) {
