@@ -9,14 +9,14 @@ function pageInit() {
             datatype: "json",
             colNames: ['id', '房东', '用户', '房屋', '房租','创建时间','可用时间', '操作'],
             colModel: [
-                {name: 'id', index: 'id', width: 55, editable: false},
-                {name: 'ownerId', index: 'ownerId', width: 90, editable: false},
-                {name: 'userId', index: 'userId', width: 100, editable: false},
-                {name: 'houseId', index: 'houseId', width: 80, editable: false},
-                {name: 'cost', index: 'cost', width: 80, editable: false},
-                {name: 'createTime', index: 'createTime', width: 80, editable: false},
-                {name: 'enableTime', index: 'enableTime', width: 80, editable: false},
-                {name: 'oprate', width: 80, editable: false},
+                {name: 'id', index: 'id', width: 55, editable: true},
+                {name: 'ownerId', index: 'ownerId', width: 90, editable: true},
+                {name: 'userId', index: 'userId', width: 100, editable: true},
+                {name: 'houseId', index: 'houseId', width: 80, editable: true},
+                {name: 'cost', index: 'cost', width: 80, editable: true},
+                {name: 'createTime', index: 'createTime', width: 80, editable: true},
+                {name: 'enableTime', index: 'enableTime', width: 80, editable: true},
+                {name: 'oprate', width: 80, editable: true},
             ],
             rowNum: 10,
             rowList: [10, 20, 30],
@@ -50,7 +50,7 @@ function pageInit() {
         var gr = jQuery("#contract").jqGrid('getGridParam', 'selrow');
         if (gr != null)
             jQuery("#contract").jqGrid('editGridRow', gr, {
-                height: 300,
+                height: 580,
                 reloadAfterSubmit: true,
             });
         else
@@ -59,7 +59,7 @@ function pageInit() {
 
     $("#add").click(function () {
         jQuery("#contract").jqGrid('editGridRow', "new", {
-            height: 300,
+            height: 580,
             reloadAfterSubmit: false
         });
     });

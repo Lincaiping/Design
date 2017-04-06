@@ -127,13 +127,13 @@ public class UploadController extends BaseController {
 			return false;
 		}
 		// 生成jpeg图片
-		String imgFilePath = "E:\\idea\\Design\\target\\Design\\images\\upload\\images\\";
+		String imgFilePath = "E:\\code\\Designer\\Design\\target\\Design\\images\\upload\\";
 		HttpSession session = request.getSession();
 		String userId = (String) session.getAttribute("userId");
 		User user = userService.getUser(userId);
 		Long time = System.currentTimeMillis();// 获取当前时间戳
 		imgFilePath = imgFilePath + userId + time + ".png";
-		String truePath = "/images/upload/images/" + userId + time + ".png";
+		String truePath = "/images/upload/" + userId + time + ".png";
 		if (uploadService.SaveManager(image, imgFilePath)) {
 			user.setImage(truePath);
 			userService.saveOrUpdate(user);

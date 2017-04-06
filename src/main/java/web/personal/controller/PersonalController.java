@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -162,6 +163,17 @@ public class PersonalController extends BaseController {
 		HttpSession session = HttpUtils.getSession(request);
 		String userId = (String) session.getAttribute("userId");
 		List<House> houseList = houseService.getHouseByOwnerId(userId);
+		List<String> imageList = new ArrayList<>();
+		String firstImage;
+		for (House house:houseList) {
+			if(house.getImage()!=null) {
+				firstImage = house.getImage().split(",")[0];
+				imageList.add(firstImage);
+			}
+		}
+		for (int i=0;i<imageList.size();i++){
+			houseList.get(i).setImage(imageList.get(i));
+		}
 		model.addAttribute("houseList", houseList);
 		return "web/index";
 	}

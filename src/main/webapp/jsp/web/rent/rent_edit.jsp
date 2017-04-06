@@ -9,7 +9,6 @@
 </head>
 <body>
 <%@ include file="/jsp/web/toGo/toPersonal.jsp" %>
-<b>当前账户：&nbsp&nbsp&nbsp&nbsp${userName }</b>
 <h1>图片上传</h1>
 <form name="userForm1" action="/webHouse/rentHouse.do" method="post">
     <div id="newUpload1" class="file">选择文件

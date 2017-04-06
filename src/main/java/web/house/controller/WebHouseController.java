@@ -62,6 +62,7 @@ public class WebHouseController extends BaseController {
 		else {
 			model.addAttribute("owner", null);
 		}
+		model.addAttribute("house", house);
 		User user = userService.getUser(house.getOwner());
 		model.addAttribute("tel", user.getTel());
 		return "/web/houseDetail";
