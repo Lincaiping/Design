@@ -80,7 +80,7 @@ public class LoginController extends BaseController {
 		return "web/login/register";
 	}
 
-	@RequestMapping("/register")
+	@RequestMapping(value = "/register", produces = "text/html;charset=UTF-8")
 	@ResponseBody
 	public String register(HttpServletRequest request, String userName, String tel, String email, String password, String code, Model model)
 			throws Exception {

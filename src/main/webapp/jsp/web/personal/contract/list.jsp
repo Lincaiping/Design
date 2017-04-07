@@ -16,9 +16,6 @@
 <body>
 	<table id="contract"></table>
 	<div id="pager"></div>
-	<input type="BUTTON" id="add" value="add" style="margin-right: 100px" />
-	<input type="BUTTON" id="edit" value="编辑" style="margin-right: 100px"/>
-	<input type="BUTTON" id="delete" value="删除" style="margin-right: 100px"/>
 </body>
 <script type="text/javascript" src="/jsp/table/contract/list.js"></script>
 </html>

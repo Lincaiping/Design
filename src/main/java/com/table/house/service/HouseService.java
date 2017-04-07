@@ -29,4 +29,6 @@ public interface HouseService {
 	House getHouseById(String userId);
 
 	List<House> getHouseByOwnerId(String userId);
+
+	Pager<House> getSelectHouse(PageBean pageBean,String location,String type);
 }

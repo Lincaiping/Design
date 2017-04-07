@@ -13,7 +13,7 @@ import java.util.List;
 @SuppressWarnings("unused")
 @Service("houseService")
 public class HouseServiceImpl extends BaseService implements HouseService {
-	
+
 	@Override
 	public House getHouse(String id) {
 		// TODO Auto-generated method stub
@@ -29,10 +29,9 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 	@Override
 	public void saveOrUpdate(House house) {
 		// TODO Auto-generated method stub
-		if (null==house.getId()) {
+		if (null == house.getId()) {
 			dao.saveObject(house);
-		}
-		else {
+		} else {
 			dao.updateObject(house);
 		}
 	}
@@ -48,29 +47,40 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 	@Override
 	public Pager<House> getByPage(PageBean pageBean) {
 		// TODO Auto-generated method stub
-		String hql="from House";
+		String hql = "from House";
 		int page = pageBean.getPageNo();
 		int rows = pageBean.getPageSize();
 		return dao.findPager(hql, page, rows);
 	}
-	
+
 	@Override
-	public House getHouseByName(String name){
+	public Pager<House> getSelectHouse(PageBean pageBean, String location, String type) {
+		// TODO Auto-generated method stub
+		String hql = "from House where location like ? and type like ?";
+		location = "%" + location + "%";
+		type = "%" + type + "%";
+		int page = pageBean.getPageNo();
+		int rows = pageBean.getPageSize();
+		return dao.findPager(hql, page, rows, location, type);
+	}
+
+	@Override
+	public House getHouseByName(String name) {
 		String hql = "from House where userName =?";
 		return dao.findObject(hql, name);
 	}
-	
-	public House getHouseByPhone(String tel){
+
+	public House getHouseByPhone(String tel) {
 		String hql = "from House where tel=?";
 		return dao.findObject(hql, tel);
 	}
-	
-	public House getHouseByEmail(String email){
+
+	public House getHouseByEmail(String email) {
 		String hql = "from House where email =?";
 		return dao.findObject(hql, email);
 	}
-	
-	public House getHouseById(String houseId){
+
+	public House getHouseById(String houseId) {
 		String hql = "from House where id =?";
 		return dao.findObject(hql, houseId);
 	}
@@ -83,8 +93,8 @@ public class HouseServiceImpl extends BaseService implements HouseService {
 	}
 
 	@Override
-	public List<House> getHouseByOwnerId(String userId){
-		String hql = "from House where owner ="+userId;
+	public List<House> getHouseByOwnerId(String userId) {
+		String hql = "from House where owner =" + userId;
 		return dao.findList(hql);
 	}
 }

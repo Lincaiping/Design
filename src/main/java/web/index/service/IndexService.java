@@ -88,7 +88,7 @@ public class IndexService {
 
 	public boolean checkCodeByTel(String tel, String code) {
 		Code codeClass = codeService.getCodeByPhone(tel);
-		return codeClass.getCode().equals(code);
+		return codeClass != null && codeClass.getCode().equals(code);
 	}
 
 	public boolean resetCode(String userId, String code) {

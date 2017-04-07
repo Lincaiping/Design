@@ -36,7 +36,7 @@ public class House implements Serializable {
 	@Column(length = 25)
 	private String image;
 
-	@Column(length = 4)
+	@Column(length = 20)
 	private String type;
 
 	@Column(length = 100)

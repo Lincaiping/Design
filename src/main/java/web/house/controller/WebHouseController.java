@@ -2,6 +2,7 @@ package web.house.controller;
 
 import com.base.BaseController;
 import com.base.HttpUtils;
+import com.base.dao.PageBean;
 import com.table.house.entity.House;
 import com.table.house.service.HouseService;
 import com.table.user.entity.User;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -56,10 +58,9 @@ public class WebHouseController extends BaseController {
 		HttpSession session = HttpUtils.getSession(request);
 		String userId = (String) session.getAttribute(Define.USER_ID);
 		System.err.println(userId);
-		if(userId!=null) {
+		if (userId != null) {
 			model.addAttribute("owner", userId.equals(house.getOwner()));
-		}
-		else {
+		} else {
 			model.addAttribute("owner", null);
 		}
 		model.addAttribute("house", house);
@@ -76,5 +77,27 @@ public class WebHouseController extends BaseController {
 		model.addAttribute("house", house);
 
 		return "/web/rent/rent_edit";
+	}
+
+	@RequestMapping("/getSelectHouse")
+	// @ResponseBody 返回json数据
+	public String getSelectHouse(Model model, String location, String cost, String type) {
+		PageBean pageBean = new PageBean();
+		pageBean.setPageNo(0);
+		pageBean.setPageSize(20);
+		List<House> houseList = houseService.getSelectHouse(pageBean, location, type).getRows();
+		List<String> imageList = new ArrayList<>();
+		String firstImage;
+		for (House house : houseList) {
+			if (house.getImage() != null) {
+				firstImage = house.getImage().split(",")[0];
+				imageList.add(firstImage);
+			}
+		}
+		for (int i = 0; i < imageList.size(); i++) {
+			houseList.get(i).setImage(imageList.get(i));
+		}
+		model.addAttribute("houseList", houseList);
+		return "/web/index";
 	}
 }

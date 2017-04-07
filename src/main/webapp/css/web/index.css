@@ -1,6 +1,7 @@
 .select{
     font-family: '微软雅黑', '宋体', serif;
     font-size: larger;
+    width: 18%;
     margin-bottom: 15px;
     margin-left: 5%;
 }
@@ -8,4 +9,18 @@
 .table{
     font-family: '微软雅黑', '宋体', serif;
     margin-left: 5%;
+}
+
+.button_confirm {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    margin-top: 30px;
+    height: 30px;
+    margin-bottom: 15px;
 }
