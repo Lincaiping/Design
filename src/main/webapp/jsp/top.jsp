@@ -22,15 +22,12 @@
 	</div>
 
 	<ul class="nav">
-		<li><a href="/jsp/index2.html" target="rightFrame"
+		<li><a href="/managers/index2.do" target="rightFrame"
 			class="selected"><img src="/images/manage/icon01.png" title="工作台" />
 			<h2>工作台</h2></a></li>
 		<!-- <li><a href="/jsp/manage/computer.html" target="rightFrame"><img
 				src="/images/manage/icon05.png" title="文件管理" />
 			<h2>文件管理</h2></a></li> -->
-		<li><a href="/jsp/manage/tab.html" target="rightFrame"><img
-				src="/images/manage/icon06.png" title="系统设置" />
-			<h2>系统设置</h2></a></li>
 	</ul>
 
 	<div class="topright">
