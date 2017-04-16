@@ -128,6 +128,7 @@ public class UploadController extends BaseController {
 		}
 		// 生成jpeg图片
 		String imgFilePath = "E:\\code\\Designer\\Design\\target\\Design\\images\\upload\\";
+		//String imgFilePath = "E:\\idea\\Design\\target\\Design\\images\\upload\\";
 		HttpSession session = request.getSession();
 		String userId = (String) session.getAttribute("userId");
 		User user = userService.getUser(userId);
