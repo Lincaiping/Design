@@ -9,6 +9,6 @@
 <body>
 <%@ include file="/jsp/web/toGo/toPersonal.jsp" %>
 恭喜你的操作成功了！
-<a href="/login/toIndex.do" class="toPersonal">回到主页</a>
+<a href="http://127.0.0.1:8080/" class="toPersonal">回到主页</a>
 </body>
 </html>

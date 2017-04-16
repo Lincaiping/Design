@@ -44,6 +44,17 @@ public class ContractController extends BaseController {
 		return contractService.getByPage(pageBean);
 	}
 
+	@RequestMapping("/getUserContract")
+	@ResponseBody
+	public Pager<Contract> getUserContract(HttpServletRequest request,Integer page, Integer rows) {
+		PageBean pageBean = new PageBean();
+		pageBean.setPageNo(page);
+		pageBean.setPageSize(rows);
+        HttpSession session = HttpUtils.getSession(request);
+        String userId = (String) session.getAttribute("userId");
+		return contractService.getContractByUserId(pageBean,userId);
+	}
+
 	@RequestMapping("/getContract")
 	public String getContract(String id, HttpServletRequest request) {
 		request.setAttribute("contract", contractService.getContract(id));

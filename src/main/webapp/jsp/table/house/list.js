@@ -1,12 +1,13 @@
 $(function () {
     pageInit();
 });
+
 function pageInit() {
     jQuery("#house").jqGrid(
         {
             url: "/house/getAllHouse.do",
             datatype: "json",
-            colNames: ['id','图片', '房东', '位置','面积','楼层', '房租', '类型','详细信息','操作'],
+            colNames: ['id', '图片', '房东', '位置', '面积', '楼层', '房租', '类型', '详细信息', '操作'],
             colModel: [
                 {name: 'id', index: 'id', width: 55, editable: true},
                 {name: 'image', index: 'image', width: 55, editable: true},

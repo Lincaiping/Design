@@ -54,6 +54,7 @@ public class PersonalController extends BaseController {
 		User user = userService.getUser(userId);
 		user.setEnable(0);
 		userService.saveOrUpdate(user);
+		session.setAttribute("userId",null);
 		return "success";
 	}
 

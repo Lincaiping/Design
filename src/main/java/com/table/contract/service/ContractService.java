@@ -28,4 +28,5 @@ public interface ContractService {
 
 	Contract getContractById(String userId);
 
+	Pager<Contract> getContractByUserId(PageBean pageBean,String userId);
 }

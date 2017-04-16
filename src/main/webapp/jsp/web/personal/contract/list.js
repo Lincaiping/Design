@@ -36,7 +36,7 @@ function pageInit() {
             sortorder: "desc",
             multiselect: true,
             editurl: "/contract/saveOrUpdate.do",
-            caption: "合同管理"
+            caption: "住房记录"
         });
 
     jQuery("#m1").click(function () {

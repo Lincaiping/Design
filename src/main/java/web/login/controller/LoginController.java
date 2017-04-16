@@ -63,7 +63,7 @@ public class LoginController extends BaseController {
 	@RequestMapping("/toIndex")
 	public String toIndex() {
 		log.debug("转到主页面!");
-		return "/";
+		return "../index";
 	}
 
 	@RequestMapping("/userOut")

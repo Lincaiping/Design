@@ -10,7 +10,7 @@ function pageInit() {
             colNames: ['id', '房东', '用户', '房屋', '房租','创建时间','可用时间', '操作'],
             colModel: [
                 {name: 'id', index: 'id', width: 55, editable: true},
-                {name: 'ownerId', index: 'ownerId', width: 90, editable: true},
+                {name: 'ownerId', index: 'ownerId', width: 55, editable: true},
                 {name: 'userId', index: 'userId', width: 100, editable: true},
                 {name: 'houseId', index: 'houseId', width: 80, editable: true},
                 {name: 'cost', index: 'cost', width: 80, editable: true},
@@ -50,7 +50,7 @@ function pageInit() {
         var gr = jQuery("#contract").jqGrid('getGridParam', 'selrow');
         if (gr != null)
             jQuery("#contract").jqGrid('editGridRow', gr, {
-                height: 300,
+                height: 400,
                 reloadAfterSubmit: true,
             });
         else
@@ -59,7 +59,7 @@ function pageInit() {
 
     $("#add").click(function () {
         jQuery("#contract").jqGrid('editGridRow', "new", {
-            height: 300,
+            height: 400,
             reloadAfterSubmit: false
         });
     });

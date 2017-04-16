@@ -80,4 +80,13 @@ public class ContractServiceImpl extends BaseService implements ContractService 
 		String hql = "update Contract set enable=0 where id=?";
 		dao.executeSql(hql, id);
 	}
+
+	@Override
+	public Pager<Contract> getContractByUserId(PageBean pageBean, String userId) {
+		// TODO Auto-generated method stub
+		String hql = "from Contract where userId =?";
+		int page = pageBean.getPageNo();
+		int rows = pageBean.getPageSize();
+		return dao.findPager(hql, page, rows, userId);
+	}
 }
