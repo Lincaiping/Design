@@ -78,19 +78,24 @@ public class ManagerServiceImpl extends BaseService implements ManagerService {
 		// TODO Auto-generated method stub
 		if (null == manager.getId() || manager.getId().length() == 0) {
 			try {
-				Map<String, Object> keyMap = RSAUtils.genKeyPair();
-				String publicKey = RSAUtils.getPublicKey(keyMap);
-				String privateKey = RSAUtils.getPrivateKey(keyMap);
-				String safePassWord;
-				byte[] data = Base64Utils.decodeFromString(manager.getPassword());
-				byte[] encodedData = RSAUtils.encryptByPublicKey(data, publicKey);
-				safePassWord = Base64Utils.encodeToString(encodedData);
-				manager.setPassword(safePassWord);
+				if (manager.getId() == null || manager.getId().equals("")) {
+					Map<String, Object> keyMap = RSAUtils.genKeyPair();
+					String publicKey = RSAUtils.getPublicKey(keyMap);
+					String privateKey = RSAUtils.getPrivateKey(keyMap);
+					String safePassWord;
+					//转换成二进制码
+					byte[] data = Base64Utils.decodeFromString(manager.getPassword());
+					//rsa加密
+					byte[] encodedData = RSAUtils.encryptByPublicKey(data, publicKey);
+					//将二进制码转换成String
+					safePassWord = Base64Utils.encodeToString(encodedData);
+					manager.setPassword(safePassWord);
+					manager.setPrivateKey(privateKey);
+				}
 				manager.setLastPassTime(null);
 				manager.setPassCount(0);
-				manager.setPrivateKey(privateKey);
 				manager.setEnable(1);
-				dao.saveObject(manager);
+				dao.saveOrUpdateObject(manager);
 			} catch (Exception e) {
 				// TODO: handle exception
 				log.debug(e);

@@ -29,7 +29,7 @@ public class ContractServiceImpl extends BaseService implements ContractService 
 	@Override
 	public void saveOrUpdate(Contract contract) {
 		// TODO Auto-generated method stub
-		if (null == contract.getId()) {
+		if (null == contract.getId() || contract.getId().equals("")) {
 			dao.saveObject(contract);
 		} else {
 			dao.updateObject(contract);

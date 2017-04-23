@@ -14,10 +14,10 @@
 <form action="/webHouse/getSelectHouse.do" >
     <select name="location" class="select">
         <option value="">区域</option>
-        <option value="1">泉州市</option>
-        <option value="2">安溪县</option>
-        <option value="3">城厢</option>
-        <option value="4">凤城</option>
+        <option value="泉州市">泉州市</option>
+        <option value="安溪">安溪县</option>
+        <option value="城厢">城厢</option>
+        <option value="凤城">凤城</option>
     </select>
     <select name="cost" class="select">
         <option value="">价格</option>
@@ -28,10 +28,10 @@
     </select>
     <select name="type" class="select">
         <option value="">房型</option>
-        <option value="1">一室</option>
-        <option value="2">两室</option>
-        <option value="3">三室</option>
-        <option value="4">四室</option>
+        <option value="1室">一室</option>
+        <option value="2室">两室</option>
+        <option value="3室">三室</option>
+        <option value="4室">四室</option>
     </select>
     <input type="submit" value="查询" class="button_confirm">
 </form>
