@@ -8,6 +8,7 @@ import com.table.house.service.HouseService;
 import com.table.user.entity.User;
 import com.table.user.service.UserService;
 
+import org.apache.poi.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,6 +38,10 @@ public class WebHouseController extends BaseController {
 	public String rentHouse(HttpServletRequest request, House house) {
 		System.out.print("rentHouse");
 		String userId = (String) request.getSession().getAttribute("userId");
+		User user = userService.getUser(userId);
+		if (user.getIdNum() == null ||user.getIdNum().equals("")) {
+			return "404";
+		}
 		if (userId != null) {
 			house.setOwner(userId);
 		}
